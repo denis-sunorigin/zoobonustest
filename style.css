@@ -1,0 +1,284 @@
+:root {                       
+	--zbColorBlack: #000;
+	--zbColorWhite: #FFF;
+	--zbColorWhite70: rgba(255, 255, 255, 0.7);
+	--zbColorTransparent: rgba(128, 128, 128, 0);
+	--zbColorLightGray: #CCC;
+	--zbColorLightGray60: rgba(200, 200, 200, 0.6);
+	--zbColorGreen90: rgba(50, 200, 70, 0.9);
+}
+
+/* RESET */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr,
+acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong,
+sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table,
+caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption,
+footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video, button,
+input, textarea {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+	outline: none;
+	box-sizing: border-box;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+html {
+	scroll-behavior: smooth;
+}
+div {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: flex-start;
+	text-align: left;
+}
+body {
+	background-color: var(--zbColorWhite);
+	color: var(--zbColorBlack);
+	overflow: overlay;
+	transition-duration: 0.4s;
+	background-image: URL('images/background.png');
+}
+h1, h2, h3, h4, h5 {
+	line-height: 120%;
+	margin: 0px;
+}
+svg {
+	width: 24px;
+	height: 24px;
+}
+a {
+	text-decoration: none;
+	color: var(--zbColorBlack);
+}
+.fullPageBlock {
+	flex-direction: column;
+	min-height: 100vh;
+	width: 100%;
+	align-items: center;
+}
+.fullPageColumn {
+	flex-direction: column;
+	position: relative;
+	flex-grow: 1;
+	width: 90vw;
+}
+.menuBarBlock {
+	position: sticky;
+	justify-content: space-between;
+	align-items: center;
+	min-height: 64px;
+	width: 100%;
+	top: 0px;
+	padding: 10px 20px 10px 20px;
+	background-color: var(--zbColorGreen90);
+}
+.menuBarMenuBlock {
+	align-items: center;
+	justify-content: center;
+	column-gap: 20px;
+	row-gap: 10px;
+	flex-wrap: wrap;
+}
+.fullWidthContainer {
+	width: 100%;
+}
+.alignCenterHor {
+	justify-content: center;
+	text-align: center;
+}
+.alignCenterVert {
+	align-items: center;
+}
+.columnGap15 {
+	column-gap: 15px;
+	row-gap: 10px;
+}
+.rowGap15 {
+	row-gap: 15px;
+}
+.canWrap {
+	flex-wrap: wrap;
+}
+.mainContentBlock {
+	flex-direction: column;
+	flex-grow: 1;
+	width: 100%;
+}
+.mainContentAsForm {
+	width: 100%;
+	flex-grow: 1;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding-bottom: 10vh;
+}
+.mainContentAsTwoColumns {
+	width: 100%;
+	align-items: stretch;
+	min-height: calc(90vh - 64px);
+	flex-wrap: wrap;
+}
+.mainContentAsSingleColumn {
+	width: 100%;
+	flex-direction: column;
+	row-gap: 20px;
+	padding: 20px;
+}
+.mainContentFirstColumn, .mainContentSecondColumn {
+	flex-direction: column;
+	padding: 20px;
+	column-gap: 20px;
+	row-gap: 20px;
+}
+.mainContentFirstColumn {
+	width: 18%;
+	min-width: 200px;
+	flex-grow: 1;
+}
+.mainContentSecondColumn {
+	width: 80%;
+	min-width: 200px;
+	flex-grow: 1;
+	row-gap: 10px;
+}
+.productItemsContainer {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(calc(260px * 0.95), 1fr));
+	column-gap: 20px;
+	row-gap: 20px;
+	width: 100%;
+}
+.productItemsContainerSmallItems {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(calc(120px * 0.95), 1fr));
+	column-gap: 10px;
+	row-gap: 10px;
+	width: 100%;
+}
+.productItem {
+	height: 260px;
+	max-width: 350px;
+	flex-direction: column;
+	justify-content: space-between;
+	border-radius: 10px;
+	border: 1px solid var(--zbColorGreen90);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-image: URL('images/pic0.png');
+	overflow: hidden;
+}
+.productItem.smallItem {
+	height: 140px;
+	max-width: 220px;
+}
+.productItemName, .productItemPrice {
+	padding: 4px 10px 4px 10px;
+	background-color: var(--zbColorLightGray60);
+	width: 100%;
+}
+.productItemPrice {
+	column-gap: 10px;
+}
+.productCardPhotoAndMainInfo {
+	width: 100%;
+	column-gap: 20px;
+	row-gap: 20px;
+	flex-wrap: wrap;
+	margin-bottom: 20px;
+}
+.productCardPhoto {
+	width: 500px;
+	height: 500px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-image: URL('images/pic0.png');
+	border: 1px solid var(--zbColorGreen90);
+	border-radius: 20px;
+}
+.productCardMainInfo {
+	flex-direction: column;
+	row-gap: 20px;
+}
+.productCardCode1C {
+	font-size: 70%;
+}
+.productCardDescription {
+	font-size: 105%;
+	line-height: 150%;
+	font-weight: 500;
+}
+.zbTable {
+	width: 100%;
+	flex-direction: column;
+	background-color: var(--zbColorLightGray);
+	row-gap: 1px;
+}
+.zbTableHeader, .zbTableRow {
+	width: 100%;
+	background-color: var(--zbColorLightGray);
+	column-gap: 1px;
+	flex-wrap: wrap;
+}
+.zbTableHeader>div, .zbTableRow>div {
+	padding: 5px;
+	background-color: var(--zbColorWhite);
+	align-self: stretch;
+	align-items: center;
+	flex-grow: 1;
+	text-overflow: ellipsis;
+}
+.zbTableHeader>div {
+	min-height: 35px;
+}
+.zbTableRow>div {
+	min-height: 90px;
+}
+.zbTableHeader>div.size1, .zbTableRow>div.size1 {
+	flex-basis: 25px;
+}
+.zbTableHeader>div.size2, .zbTableRow>div.size2 {
+	flex-basis: 50px;
+}
+.zbTableHeader>div.size3, .zbTableRow>div.size3 {
+	flex-basis: 75px;
+}
+.zbTableHeader>div.size4, .zbTableRow>div.size4 {
+	flex-basis: 100px;
+}
+.zbTableHeader>div.size5, .zbTableRow>div.size5 {
+	flex-basis: 125px;
+}
+.zbTableHeader {
+	font-weight: 500;
+}
+.zbTablePhotoCell {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-image: URL('images/pic0.png');	
+}
+.zbTableNameCell {
+	font-weight: 500;
+}
+.propertySelectGroup {
+	flex-direction: column;
+	min-width: 180px;
+	width: 240px;
+}
+.adminProductCardPhoto {
+	height: 150px;
+	width: 150px;
+	border-radius: 10px;
+	border: 1px solid var(--bs-border-color);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-image: URL('images/pic0.png');
+	overflow: hidden;
+}
