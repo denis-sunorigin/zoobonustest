@@ -40,7 +40,7 @@ body {
 	color: var(--zbColorBlack);
 	overflow: overlay;
 	transition-duration: 0.4s;
-	background-image: URL('images/background.png');
+	background-image: URL('images_static/background.png');
 }
 h1, h2, h3, h4, h5 {
 	line-height: 120%;
@@ -169,7 +169,7 @@ a {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-image: URL('images/pic0.png');
+	background-image: URL('images_static/pic0.png');
 	overflow: hidden;
 }
 .productItem.smallItem {
@@ -197,7 +197,7 @@ a {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-image: URL('images/pic0.png');
+	background-image: URL('images_static/pic0.png');
 	border: 1px solid var(--zbColorGreen90);
 	border-radius: 20px;
 }
@@ -261,7 +261,7 @@ a {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-image: URL('images/pic0.png');	
+	background-image: URL('images_static/pic0.png');	
 }
 .zbTableNameCell {
 	font-weight: 500;
@@ -279,6 +279,6 @@ a {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-image: URL('images/pic0.png');
+	background-image: URL('images_static/pic0.png');
 	overflow: hidden;
 }
