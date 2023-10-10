@@ -1,10 +1,10 @@
 <?php
 
-use Models\Brand;
+use Models\Category;
 
     require_once('helpers.php');
 
-    function render($error = '', $brandList = array()) {
+    function render($error = '', $itemsList = array(), $dictName = '') {
         if (empty($error)) {
             include('templates/admindict.php');
         } else {
@@ -15,9 +15,9 @@ use Models\Brand;
     }
 
 
-    $brand = new Brand();
-    $brandList = $brand->GetAll();
+    $category = new Category();
+    $itemsList = $category->GetAll();
 
-    render('', $brandList);
+    render('', $itemsList, 'довідник категорій');
 
 ?>

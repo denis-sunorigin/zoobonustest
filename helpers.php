@@ -24,13 +24,11 @@
     }
 
     function filled($anyValue): bool {
-        // Для швидкої перевірки наявності значень всередині html, бо функція isset працює інакше, а !empty погано сприймається.
+        // Для швидкої перевірки наявності значення, бо функція isset працює інакше, а !empty погано сприймається, особливо всередині html.
         return empty($anyValue) ? false : !($anyValue === false);
     }
 
-    function zbAutoLoader(string $className) {
+    spl_autoload_register(function (string $className) {
         require_once __DIR__.'/'.str_replace('\\', '/', $className).'.php';
-    }
-
-    spl_autoload_register('zbAutoLoader');
+    });
 ?>

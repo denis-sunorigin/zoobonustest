@@ -1,88 +1,39 @@
 <?php include('header.php'); ?>
 
           <div class="mainContentAsSingleColumn">
-            <h2>Адміністрування. Редагування довідника статусів.</h2>
-            <? if (filled($brandList)) { ?>
+            <h2>Адміністрування. Редагування довідника "<?=$dictName?>".</h2>
 
-            <div class="columnGap15 canWrap fullWidthContainer">
-              <div class="propertySelectGroup">
-                <div class="input-group">
-                  <span class="input-group-text" id="property2">Назва:</span>
-                  <input type="number" class="form-control is-invalid" id="property2input" aria-describedby="property2">
-                  <div class="invalid-feedback">
-                    Текст помилки
+            <? if (filled($itemsList)) { ?>
+              <? foreach ($itemsList as $dictElem) { ?>
+                <div class="columnGap15 canWrap fullWidthContainer">
+                  <div class="propertySelectGroup">
+                    <div class="input-group">
+                      <span class="input-group-text" id="dictElem<?=$dictElem["id"]?>Name">Назва:</span>
+                      <input disabled type="text" value="<?=$dictElem["name"]?>" class="form-control" id="dictElem<?=$dictElem["id"]?>NameInput" aria-describedby="dictElem<?=$dictElem["id"]?>Name">
+                      <div class="invalid-feedback" id="dictElem<?=$dictElem["id"]?>Error">
+                        Текст помилки
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-              <div class="propertySelectGroup">
-                <div class="input-group">
-                  <span class="input-group-text" id="property3">Опис:</span>
-                  <input type="number" class="form-control is-invalid" id="property3input" aria-describedby="property3">
-                  <div class="invalid-feedback">
-                    Текст помилки
+                  <div class="propertySelectGroup">
+                    <div class="input-group">
+                      <span class="input-group-text" id="dictElem<?=$dictElem["id"]?>Description">Опис:</span>
+                      <input disabled type="text" value="<?=$dictElem["description"]?>" class="form-control" id="dictElem<?=$dictElem["id"]?>DescriptionInput" aria-describedby="dictElem<?=$dictElem["id"]?>Description">
+                      <div class="invalid-feedback" id="dictElem<?=$dictElem["id"]?>Error">
+                        Текст помилки
+                      </div>
+                    </div>
                   </div>
+                  <button class="btn btn-outline-primary" type="button">Редагувати</button>
+                  <button class="btn btn-outline-danger" type="button">Видалити</button>
+                  <button class="btn btn-primary zbHidden" type="button">Зберегти</button>
+                  <button class="btn btn-primary zbHidden" type="button">Скасувати</button>
                 </div>
-              </div>
-              <button class="btn btn-outline-primary" type="button">Редагувати</button>
-              <button class="btn btn-outline-danger" type="button">Видалити</button>
-              <button class="btn btn-primary" type="button">Зберегти</button>
-              <button class="btn btn-primary" type="button">Скасувати</button>
-            </div>
-
+              <? } ?>
             <? } else { ?>
               <h4>Довідник порожній</h4>
             <? } ?>
 
-
-            <div class="columnGap15 canWrap fullWidthContainer">
-              <div class="propertySelectGroup">
-                <div class="input-group">
-                  <span class="input-group-text" id="property2">Назва:</span>
-                  <input type="number" class="form-control is-invalid" id="property2input" aria-describedby="property2">
-                  <div class="invalid-feedback">
-                    Текст помилки
-                  </div>
-                </div>
-              </div>
-              <div class="propertySelectGroup">
-                <div class="input-group">
-                  <span class="input-group-text" id="property3">Опис:</span>
-                  <input type="number" class="form-control is-invalid" id="property3input" aria-describedby="property3">
-                  <div class="invalid-feedback">
-                    Текст помилки
-                  </div>
-                </div>
-              </div>
-              <button class="btn btn-outline-primary" type="button">Редагувати</button>
-              <button class="btn btn-outline-danger" type="button">Видалити</button>
-              <button class="btn btn-primary" type="button">Зберегти</button>
-              <button class="btn btn-primary" type="button">Скасувати</button>
-            </div>
-            <div class="columnGap15 canWrap fullWidthContainer">
-              <div class="propertySelectGroup">
-                <div class="input-group">
-                  <span class="input-group-text" id="property32">Назва:</span>
-                  <input type="number" class="form-control is-invalid" id="property32input" aria-describedby="property32">
-                  <div class="invalid-feedback">
-                    Текст помилки
-                  </div>
-                </div>
-              </div>
-              <div class="propertySelectGroup">
-                <div class="input-group">
-                  <span class="input-group-text" id="property33">Опис:</span>
-                  <input type="number" class="form-control is-invalid" id="property33input" aria-describedby="property33">
-                  <div class="invalid-feedback">
-                    Текст помилки
-                  </div>
-                </div>
-              </div>
-
-              <button class="btn btn-outline-primary" type="button">Редагувати</button>
-              <button class="btn btn-outline-danger" type="button">Видалити</button>
-              <button class="btn btn-primary" type="button">Зберегти</button>
-              <button class="btn btn-primary" type="button">Скасувати</button>
-            </div>
             <div></div>
             <div class="columnGap15 canWrap fullWidthContainer">
               <button class="btn btn-primary" type="button">Додати елемент</button>

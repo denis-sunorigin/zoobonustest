@@ -22,12 +22,14 @@
                 Адміністрування
               </button>
               <ul class="dropdown-menu dropdown-menu-end">
-                <li><h6 class="dropdown-header">Довідники</h6></li>
-                <li><a class="dropdown-item" href="admindict.php">Категорії</a></li>
-                <li><a class="dropdown-item" href="admindict.php">Бренди</a></li>
-                <li><a class="dropdown-item" href="admindict.php">Статуси товару</a></li>
-                <li><hr class="dropdown-divider"></li>
                 <li><a class="dropdown-item" href="admincatalog.php">Каталог товарів</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><h6 class="dropdown-header">Довідники</h6></li>
+                <li><a class="dropdown-item" href="admindictcategories.php">Категорії</a></li>
+                <li><a class="dropdown-item" href="admindictbrands.php">Бренди</a></li>
+                <li><a class="dropdown-item" href="admindictstatuses.php">Статуси товару</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="dbdiag.php">Діагностика БД</a></li>
               </ul>
             </div>
             <a href="login.php">Вхід</a>

@@ -131,7 +131,7 @@
                                 $keys = array_keys($singleRecordForTable);
                                 $values = array_values($singleRecordForTable);
                                 $keysStringForSQL = implode(', ',$keys);
-                                $valuesStringForSQL = str_replace("'NULL'", 'NULL', "'".implode("', '",$values)."'");
+                                $valuesStringForSQL = str_replace('"NULL"', "NULL", '"'.implode('", "',$values).'"');
                                 $sql = "INSERT INTO ".$tableName." (".$keysStringForSQL.") VALUES (".$valuesStringForSQL.");";
                                 $sqlresult = $mysqli->query($sql);
                                 if (!$sqlresult) ddlog("Не вдалось виконати запит додавання запису в таблицю ".$tableName.". ".$mysqli->errno.': '.$mysqli->error);

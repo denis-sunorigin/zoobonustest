@@ -2,10 +2,11 @@
 
 use Models\Brand;
 use Models\Category;
+use Models\Product;
 
     require_once('helpers.php');
 
-    function render($error = '', $brandList = array(), $categoriesList = array()) {
+    function render($error = '', $brandList = array(), $categoriesList = array(), $productList = array()) {
         if (empty($error)) {
             include('templates/index.php');
         } else {
@@ -20,8 +21,13 @@ use Models\Category;
     $brandList = $brand->GetAll();
     $category = new Category();
     $categoriesList = $category->GetAll();
+    $product = new Product();
+    $productList = $product->GetAll();
 
-    render('', $brandList, $categoriesList);
+    $error = '';
+    //$error = print_r($productList, true);
+
+    render($error, $brandList, $categoriesList, $productList);
 
     
 

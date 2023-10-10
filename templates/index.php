@@ -34,83 +34,25 @@
                 </div>
               </div>
               <div class="productItemsContainer">
-                <a href="#">
-                  <div class="productItem" style="background-image: URL('images_user/pic2.png');">
-                    <div class="productItemName">
-                      <h4>Корм "Chappi"</h4>
-                    </div>
-                    <div class="productItemPrice">
-                      <div><strong>9.99</strong></div>
-                      <svg style="fill: green;"><use href="templates/images_static/icon24_approve.svg#icon24"></use></svg>
-                    </div>
-                  </div>
-                </a>
-                <a href="#">
-                  <div class="productItem" style="background-image: URL('images_user/pic4.png');">
-                    <div class="productItemName">
-                      <h4>Корм "Chappi"</h4>
-                    </div>
-                    <div class="productItemPrice">
-                      <div style="color: gray;"><strong>9.99</strong></div>
-                      <svg style="fill: red;"><use href="templates/images_static/icon24_close.svg#icon24"></use></svg>
-                    </div>
-                  </div>
-                </a>
-                <a href="#">
-                  <div class="productItem">
-                    <div class="productItemName">
-                      <h4>Корм "Chappi"</h4>
-                    </div>
-                    <div class="productItemPrice">
-                      <div><strong>9.99</strong></div>
-                      <svg style="fill: green;"><use href="templates/images_static/icon24_approve.svg#icon24"></use></svg>
-                    </div>
-                  </div>
-                </a>
-                <a href="#">
-                  <div class="productItem" style="background-image: URL('images_user/pic3.png');">
-                    <div class="productItemName">
-                      <h4>Корм "Chappi"</h4>
-                    </div>
-                    <div class="productItemPrice">
-                      <div><strong>9.99</strong></div>
-                      <svg style="fill: green;"><use href="templates/images_static/icon24_approve.svg#icon24"></use></svg>
-                    </div>
-                  </div>
-                </a>
-                <a href="#">
-                  <div class="productItem" style="background-image: URL('images_user/pic5.png');">
-                    <div class="productItemName">
-                      <h4>Корм "Chappi"</h4>
-                    </div>
-                    <div class="productItemPrice">
-                      <div><strong>9.99</strong></div>
-                      <svg style="fill: green;"><use href="templates/images_static/icon24_approve.svg#icon24"></use></svg>
-                    </div>
-                  </div>
-                </a>
-                <a href="#">
-                  <div class="productItem" style="background-image: URL('images_user/pic6.png');">
-                    <div class="productItemName">
-                      <h4>Корм "Chappi"</h4>
-                    </div>
-                    <div class="productItemPrice">
-                      <div style="color: gray;"><strong>9.99</strong></div>
-                      <svg style="fill: red;"><use href="templates/images_static/icon24_close.svg#icon24"></use></svg>
-                    </div>
-                  </div>
-                </a>
-                <a href="#">
-                  <div class="productItem" style="background-image: URL('images_user/pic7.png');">
-                    <div class="productItemName">
-                      <h4>Корм "Chappi"</h4>
-                    </div>
-                    <div class="productItemPrice">
-                      <div><strong>9.99</strong></div>
-                      <svg style="fill: green;"><use href="templates/images_static/icon24_approve.svg#icon24"></use></svg>
-                    </div>
-                  </div>
-                </a>
+
+                <? if (filled($productList)) { ?>
+                  <? foreach($productList as $product) { ?>
+                    <a href="#">
+                      <div class="productItem" style="background-image: URL('<?=PATHFORUSERIMAGES.$product["image"]?>');">
+                        <div class="productItemName">
+                          <h4><?=$product["name"]?></h4>
+                        </div>
+                        <div class="productItemPrice">
+                          <div><strong><?=$product["price"]?></strong></div>
+                          <svg style="fill: green;"><use href="templates/images_static/icon24_approve.svg#icon24"></use></svg>
+                        </div>
+                      </div>
+                    </a>
+                  <? } ?>
+                <? } else { ?>
+                  <h4>Не знайдено жодного товара із зазначеними параметрами</h4>
+                <? } ?>
+
               </div>
             </div>
           </div>

@@ -1022,3 +1022,97 @@ id, name, description, value, price, code1c, image, brandid, categoryid, statusi
 
 )
 
+2023-10-10 16:24:13 aaaa
+2023-10-10 16:25:12 
+2023-10-10 16:25:50 
+2023-10-10 16:26:08 
+2023-10-10 16:28:55 product get all: підʼєднано до сервера БД
+2023-10-10 16:28:55 product get all: sql-запит виконано
+2023-10-10 16:28:55 product get all: результат запиту до БД не false
+2023-10-10 16:28:55 
+2023-10-10 16:32:00 Не вдалось виконати запит додавання запису в таблицю brands. 1062: Duplicate entry '2' for key 'brands.PRIMARY'
+2023-10-10 16:32:00 Не вдалось виконати запит додавання запису в таблицю brands. 1062: Duplicate entry '3' for key 'brands.PRIMARY'
+2023-10-10 16:32:00 Не вдалось виконати запит додавання запису в таблицю brands. 1062: Duplicate entry '4' for key 'brands.PRIMARY'
+2023-10-10 16:32:00 Не вдалось виконати запит додавання запису в таблицю brands. 1062: Duplicate entry '5' for key 'brands.PRIMARY'
+2023-10-10 16:32:00 Не вдалось виконати запит додавання запису в таблицю brands. 1062: Duplicate entry '6' for key 'brands.PRIMARY'
+2023-10-10 16:32:00 Не вдалось виконати запит додавання запису в таблицю categories. 1062: Duplicate entry '2' for key 'categories.PRIMARY'
+2023-10-10 16:32:00 Не вдалось виконати запит додавання запису в таблицю categories. 1062: Duplicate entry '3' for key 'categories.PRIMARY'
+2023-10-10 16:32:00 Не вдалось виконати запит додавання запису в таблицю categories. 1062: Duplicate entry '4' for key 'categories.PRIMARY'
+2023-10-10 16:32:00 Не вдалось виконати запит додавання запису в таблицю categories. 1062: Duplicate entry '5' for key 'categories.PRIMARY'
+2023-10-10 16:32:00 Не вдалось виконати запит додавання запису в таблицю categories. 1062: Duplicate entry '6' for key 'categories.PRIMARY'
+2023-10-10 16:32:00 Не вдалось виконати запит додавання запису в таблицю product_statuses. 1062: Duplicate entry '2' for key 'product_statuses.PRIMARY'
+2023-10-10 16:32:00 Не вдалось виконати запит додавання запису в таблицю product_statuses. 1062: Duplicate entry '3' for key 'product_statuses.PRIMARY'
+2023-10-10 16:32:00 Не вдалось виконати запит додавання запису в таблицю products. 1064: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'яній паличці (верба) із сумішшю насіння, злаÐ' at line 1
+2023-10-10 16:32:00 Не вдалось виконати запит додавання запису в таблицю products. 1064: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'яній паличці (верба) із сумішшю насіння, злаÐ' at line 1
+2023-10-10 16:32:00 Не вдалось виконати запит додавання запису в таблицю products. 1452: Cannot add or update a child row: a foreign key constraint fails (`zoobonustest102023`.`products`, CONSTRAINT `products_ibfk_2` FOREIGN KEY (`categoryid`) REFERENCES `categories` (`id`))
+2023-10-10 16:32:00 Не вдалось виконати запит додавання запису в таблицю products. 1064: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'я собак і котів на клітинному рівні, забезпе' at line 14
+2023-10-10 16:32:00 Не вдалось виконати запит додавання запису в таблицю products. 1064: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'який матеріал, який не травмує ясна цуценя. Ð' at line 1
+2023-10-10 16:32:00 Не вдалось виконати запит додавання запису в таблицю products. 1064: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'язової маси, зниження навантаження на сугло' at line 13
+2023-10-10 16:32:00 Не вдалось виконати запит додавання запису в таблицю products. 1064: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'яким милом. Не використовуйте жорстких миюч' at line 2
+2023-10-10 16:32:08 product get all: підʼєднано до сервера БД
+2023-10-10 16:32:08 product get all: sql-запит виконано
+2023-10-10 16:32:08 product get all: результат запиту до БД не false
+2023-10-10 16:32:08 
+2023-10-10 16:34:12 product get all: підʼєднано до сервера БД
+2023-10-10 16:34:12 product get all: sql-запит виконано
+2023-10-10 16:34:12 product get all: результат запиту до БД не false
+2023-10-10 16:34:12 
+2023-10-10 16:34:21 Не вдалось виконати запит додавання запису в таблицю brands. 1062: Duplicate entry '2' for key 'brands.PRIMARY'
+2023-10-10 16:34:21 Не вдалось виконати запит додавання запису в таблицю brands. 1062: Duplicate entry '3' for key 'brands.PRIMARY'
+2023-10-10 16:34:21 Не вдалось виконати запит додавання запису в таблицю brands. 1062: Duplicate entry '4' for key 'brands.PRIMARY'
+2023-10-10 16:34:21 Не вдалось виконати запит додавання запису в таблицю brands. 1062: Duplicate entry '5' for key 'brands.PRIMARY'
+2023-10-10 16:34:21 Не вдалось виконати запит додавання запису в таблицю brands. 1062: Duplicate entry '6' for key 'brands.PRIMARY'
+2023-10-10 16:34:21 Не вдалось виконати запит додавання запису в таблицю categories. 1062: Duplicate entry '2' for key 'categories.PRIMARY'
+2023-10-10 16:34:21 Не вдалось виконати запит додавання запису в таблицю categories. 1062: Duplicate entry '3' for key 'categories.PRIMARY'
+2023-10-10 16:34:21 Не вдалось виконати запит додавання запису в таблицю categories. 1062: Duplicate entry '4' for key 'categories.PRIMARY'
+2023-10-10 16:34:21 Не вдалось виконати запит додавання запису в таблицю categories. 1062: Duplicate entry '5' for key 'categories.PRIMARY'
+2023-10-10 16:34:21 Не вдалось виконати запит додавання запису в таблицю categories. 1062: Duplicate entry '6' for key 'categories.PRIMARY'
+2023-10-10 16:34:21 Не вдалось виконати запит додавання запису в таблицю product_statuses. 1062: Duplicate entry '2' for key 'product_statuses.PRIMARY'
+2023-10-10 16:34:21 Не вдалось виконати запит додавання запису в таблицю product_statuses. 1062: Duplicate entry '3' for key 'product_statuses.PRIMARY'
+2023-10-10 16:34:21 Не вдалось виконати запит додавання запису в таблицю products. 1452: Cannot add or update a child row: a foreign key constraint fails (`zoobonustest102023`.`products`, CONSTRAINT `products_ibfk_1` FOREIGN KEY (`brandid`) REFERENCES `brands` (`id`))
+2023-10-10 16:34:21 Не вдалось виконати запит додавання запису в таблицю products. 1452: Cannot add or update a child row: a foreign key constraint fails (`zoobonustest102023`.`products`, CONSTRAINT `products_ibfk_1` FOREIGN KEY (`brandid`) REFERENCES `brands` (`id`))
+2023-10-10 16:34:21 Не вдалось виконати запит додавання запису в таблицю products. 1452: Cannot add or update a child row: a foreign key constraint fails (`zoobonustest102023`.`products`, CONSTRAINT `products_ibfk_2` FOREIGN KEY (`categoryid`) REFERENCES `categories` (`id`))
+2023-10-10 16:34:21 Не вдалось виконати запит додавання запису в таблицю products. 1452: Cannot add or update a child row: a foreign key constraint fails (`zoobonustest102023`.`products`, CONSTRAINT `products_ibfk_1` FOREIGN KEY (`brandid`) REFERENCES `brands` (`id`))
+2023-10-10 16:34:21 Не вдалось виконати запит додавання запису в таблицю products. 1452: Cannot add or update a child row: a foreign key constraint fails (`zoobonustest102023`.`products`, CONSTRAINT `products_ibfk_2` FOREIGN KEY (`categoryid`) REFERENCES `categories` (`id`))
+2023-10-10 16:35:39 Не вдалось виконати запит зміни поточної БД. 1049: Unknown database 'zoobonustest102023'
+2023-10-10 16:35:42 
+2023-10-10 16:35:53 Базу даних з імʼям "zoobonustest102023" не виявлено. Рекомендується виконати її створення.
+2023-10-10 16:36:24 База "zoobonustest102023" існує, але таблиці не виявлено, або виявлено не всі. Знайдено 0 з 5 необхідних таблиць. Рекомендується виконати (повторне) створення таблиць.
+2023-10-10 16:36:30 Таблиця users містить 1 рядків.<br>
+Таблиця brands містить 1 рядків.<br>
+Таблиця categories містить 1 рядків.<br>
+Таблиця product_statuses містить 1 рядків.<br>
+Таблиця products містить 0 рядків.<br>
+Рекомендується виконати первинне наповнення таблиць.
+2023-10-10 16:36:36 Не вдалось виконати запит додавання запису в таблицю products. 1452: Cannot add or update a child row: a foreign key constraint fails (`zoobonustest102023`.`products`, CONSTRAINT `products_ibfk_1` FOREIGN KEY (`brandid`) REFERENCES `brands` (`id`))
+2023-10-10 16:36:36 Не вдалось виконати запит додавання запису в таблицю products. 1452: Cannot add or update a child row: a foreign key constraint fails (`zoobonustest102023`.`products`, CONSTRAINT `products_ibfk_1` FOREIGN KEY (`brandid`) REFERENCES `brands` (`id`))
+2023-10-10 16:36:36 Не вдалось виконати запит додавання запису в таблицю products. 1452: Cannot add or update a child row: a foreign key constraint fails (`zoobonustest102023`.`products`, CONSTRAINT `products_ibfk_2` FOREIGN KEY (`categoryid`) REFERENCES `categories` (`id`))
+2023-10-10 16:36:36 Не вдалось виконати запит додавання запису в таблицю products. 1452: Cannot add or update a child row: a foreign key constraint fails (`zoobonustest102023`.`products`, CONSTRAINT `products_ibfk_1` FOREIGN KEY (`brandid`) REFERENCES `brands` (`id`))
+2023-10-10 16:36:36 Не вдалось виконати запит додавання запису в таблицю products. 1452: Cannot add or update a child row: a foreign key constraint fails (`zoobonustest102023`.`products`, CONSTRAINT `products_ibfk_2` FOREIGN KEY (`categoryid`) REFERENCES `categories` (`id`))
+2023-10-10 16:36:39 product get all: підʼєднано до сервера БД
+2023-10-10 16:36:39 product get all: sql-запит виконано
+2023-10-10 16:36:39 product get all: результат запиту до БД не false
+2023-10-10 16:36:39 product get all: результат запиту до БД містить більше ніж 0 строк
+2023-10-10 16:36:39 
+2023-10-10 16:43:05 Базу даних з імʼям "zoobonustest102023" не виявлено. Рекомендується виконати її створення.
+2023-10-10 16:43:10 База "zoobonustest102023" існує, але таблиці не виявлено, або виявлено не всі. Знайдено 0 з 5 необхідних таблиць. Рекомендується виконати (повторне) створення таблиць.
+2023-10-10 16:43:16 Таблиця users містить 1 рядків.<br>
+Таблиця brands містить 1 рядків.<br>
+Таблиця categories містить 1 рядків.<br>
+Таблиця product_statuses містить 1 рядків.<br>
+Таблиця products містить 0 рядків.<br>
+Рекомендується виконати первинне наповнення таблиць.
+2023-10-10 16:43:21 Не вдалось виконати запит додавання запису в таблицю products. 1452: Cannot add or update a child row: a foreign key constraint fails (`zoobonustest102023`.`products`, CONSTRAINT `products_ibfk_3` FOREIGN KEY (`statusid`) REFERENCES `product_statuses` (`id`))
+2023-10-10 16:43:31 product get all: підʼєднано до сервера БД
+2023-10-10 16:43:31 product get all: sql-запит виконано
+2023-10-10 16:43:31 product get all: результат запиту до БД не false
+2023-10-10 16:43:31 product get all: результат запиту до БД містить більше ніж 0 строк
+2023-10-10 16:43:31 
+2023-10-10 16:44:27 product get all: підʼєднано до сервера БД
+2023-10-10 16:44:27 product get all: sql-запит виконано
+2023-10-10 16:44:27 product get all: результат запиту до БД не false
+2023-10-10 16:44:27 product get all: результат запиту до БД містить більше ніж 0 строк
+2023-10-10 16:55:38 product get all: підʼєднано до сервера БД
+2023-10-10 16:55:38 product get all: sql-запит виконано
+2023-10-10 16:55:38 product get all: результат запиту до БД не false
+2023-10-10 16:55:39 product get all: результат запиту до БД містить більше ніж 0 строк
