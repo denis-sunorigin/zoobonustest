@@ -4,20 +4,20 @@
             <div style="flex-direction: column; text-align: left; align-items: flex-start; max-width: 500px;">
               <h3 class="mb-3">Діагностика з'єднання з БД</h3>
               <h4>Поточні налаштування:</h4>
-              <div>Сервер: <?=DBHOST?></div>
-              <div>Порт: <?=DBPORT?></div>
-              <div>Ім'я БД: <?=DBNAME?></div>
-              <div>Користувач БД: <?=DBUSER?></div>
+              <div>Сервер: <?php echo(DBHOST); ?></div>
+              <div>Порт: <?php echo(DBPORT); ?></div>
+              <div>Ім'я БД: <?php echo(DBNAME); ?></div>
+              <div>Користувач БД: <?php echo(DBUSER); ?></div>
               <div>Пароль: <приховано></div>
               <div>Налаштування зберігаються в файлі settings.php</div>
               <div>&nbsp;</div>
-              <? if (empty($error)) { ?>
+              <?php if (empty($error)) { ?>
                 <h4>Помилок не виявлено</h4>
                 <a style="color: var(--zbColorGreen90);" href="index.php">Перейти на головну сторінку.</a>
-              <? } else { ?>
+              <?php } else { ?>
                 <h4>Поточна помилка:</h4>
-                <div><?=$error?></div>
-              <? } ?>
+                <div><?php echo($error); ?></div>
+              <?php } ?>
               <button class="btn btn-primary" type="button" style="white-space: nowrap;" onclick="document.location='dbdiag.php';">Оновити статус</button>
               <div>&nbsp;</div>
               <h4>Службові функції:</h4>
