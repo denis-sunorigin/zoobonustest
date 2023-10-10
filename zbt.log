@@ -1573,3 +1573,444 @@ id, name, description, value, price, code1c, image, brandid, categoryid, statusi
 
 )
 
+2023-10-10 19:36:50 Models\DBTable::GetById(products): під час виклику функції отримано коректний id="11"
+2023-10-10 19:36:50 Models\DBTable::GetById(products): підʼєднано до сервера БД
+2023-10-10 19:36:50 Models\DBTable::GetById(products): sql-запит виконано
+2023-10-10 19:36:50 Models\DBTable::GetById(products): результат запиту до БД не false
+2023-10-10 19:36:50 Array
+(
+    [id] => 11
+    [category] => 3
+    [sort] => blabla
+    [brand] => Array
+        (
+            [0] => 1
+            [1] => 2
+            [2] => 3
+        )
+
+)
+
+2023-10-10 19:37:02 Models\DBTable::GetById(products): під час виклику функції отримано коректний id="11"
+2023-10-10 19:37:02 Models\DBTable::GetById(products): підʼєднано до сервера БД
+2023-10-10 19:37:02 Models\DBTable::GetById(products): sql-запит виконано
+2023-10-10 19:37:02 Models\DBTable::GetById(products): результат запиту до БД не false
+2023-10-10 19:37:45 Models\DBTable::GetById(products): під час виклику функції отримано коректний id="11"
+2023-10-10 19:37:45 Models\DBTable::GetById(products): підʼєднано до сервера БД
+2023-10-10 19:37:45 Models\DBTable::GetById(products): sql-запит виконано
+2023-10-10 19:37:45 Models\DBTable::GetById(products): результат запиту до БД не false
+2023-10-10 19:42:16 Models\DBTable::GetById(products): під час виклику функції отримано коректний id="11"
+2023-10-10 19:42:16 Models\DBTable::GetById(products): підʼєднано до сервера БД
+2023-10-10 19:42:16 Models\DBTable::GetById(products): sql-запит виконано
+2023-10-10 19:42:16 Models\DBTable::GetById(products): результат запиту до БД не false
+2023-10-10 19:42:22 Models\DBTable::GetById(products): під час виклику функції отримано коректний id="1"
+2023-10-10 19:42:22 Models\DBTable::GetById(products): підʼєднано до сервера БД
+2023-10-10 19:42:22 Models\DBTable::GetById(products): sql-запит виконано
+2023-10-10 19:42:22 Models\DBTable::GetById(products): результат запиту до БД не false
+2023-10-10 19:42:22 Models\DBTable::GetById(products): результат запиту до БД містить більше ніж 0 строк
+2023-10-10 19:45:40 Models\DBTable::GetById(products): під час виклику функції отримано коректний id="1"
+2023-10-10 19:45:40 Models\DBTable::GetById(products): підʼєднано до сервера БД
+2023-10-10 19:45:40 Models\DBTable::GetById(products): sql-запит виконано
+2023-10-10 19:45:40 Models\DBTable::GetById(products): результат запиту до БД не false
+2023-10-10 19:45:40 Models\DBTable::GetById(products): результат запиту до БД містить більше ніж 0 строк
+2023-10-10 19:45:40 Array
+(
+    [id] => 1
+    [category] => 3
+    [sort] => blabla
+    [brand] => Array
+        (
+            [0] => 1
+            [1] => 2
+            [2] => 3
+        )
+
+)
+
+2023-10-10 19:45:52 Array
+(
+    [id] => 0
+    [category] => 3
+    [sort] => blabla
+    [brand] => Array
+        (
+            [0] => 1
+            [1] => 2
+            [2] => 3
+        )
+
+)
+
+2023-10-10 19:46:28 empty
+2023-10-10 19:59:50 Models\DBTable::GetListBySingleCondition(products): під час визова функції запиту з фільтрацією отримано коректні назву і значення поля, а саме "categoryid"="3".
+2023-10-10 19:59:50 Models\DBTable::GetListBySingleCondition(products): підʼєднано до сервера БД
+2023-10-10 19:59:50 Models\DBTable::GetListBySingleCondition(products): sql-запит виконано
+2023-10-10 19:59:50 Models\DBTable::GetListBySingleCondition(products): результат запиту до БД не false
+2023-10-10 19:59:50 Models\DBTable::GetListBySingleCondition(products): результат запиту до БД містить більше ніж 0 строк
+2023-10-10 20:03:35 Models\DBTable::GetListBySingleCondition(products): під час визова функції запиту з фільтрацією отримано коректні назву і значення поля, а саме "categoryid"="3".
+2023-10-10 20:03:35 Models\DBTable::GetListBySingleCondition(products): підʼєднано до сервера БД
+2023-10-10 20:03:35 Models\DBTable::GetListBySingleCondition(products): sql-запит виконано
+2023-10-10 20:03:35 Models\DBTable::GetListBySingleCondition(products): результат запиту до БД не false
+2023-10-10 20:03:35 Models\DBTable::GetListBySingleCondition(products): результат запиту до БД містить більше ніж 0 строк
+2023-10-10 20:03:43 Models\DBTable::GetListBySingleCondition(products): під час визова функції запиту з фільтрацією отримано коректні назву і значення поля, а саме "categoryid"="3".
+2023-10-10 20:03:43 Models\DBTable::GetListBySingleCondition(products): підʼєднано до сервера БД
+2023-10-10 20:03:43 Models\DBTable::GetListBySingleCondition(products): sql-запит виконано
+2023-10-10 20:03:43 Models\DBTable::GetListBySingleCondition(products): результат запиту до БД не false
+2023-10-10 20:03:43 Models\DBTable::GetListBySingleCondition(products): результат запиту до БД містить більше ніж 0 строк
+2023-10-10 20:15:33 Models\DBTable::GetListBySingleCondition(products): під час визова функції запиту з фільтрацією отримано коректні назву і значення поля, а саме "categoryid"="3".
+2023-10-10 20:15:33 Models\DBTable::GetListBySingleCondition(products): підʼєднано до сервера БД
+2023-10-10 20:15:33 Models\DBTable::GetListBySingleCondition(products): sql-запит виконано
+2023-10-10 20:15:33 Models\DBTable::GetListBySingleCondition(products): результат запиту до БД не false
+2023-10-10 20:15:33 Models\DBTable::GetListBySingleCondition(products): результат запиту до БД містить більше ніж 0 строк
+2023-10-10 20:15:52 Models\DBTable::GetListBySingleCondition(products): під час визова функції запиту з фільтрацією отримано коректні назву і значення поля, а саме "categoryid"="3".
+2023-10-10 20:15:52 Models\DBTable::GetListBySingleCondition(products): підʼєднано до сервера БД
+2023-10-10 20:15:52 Models\DBTable::GetListBySingleCondition(products): sql-запит виконано
+2023-10-10 20:15:52 Models\DBTable::GetListBySingleCondition(products): результат запиту до БД не false
+2023-10-10 20:15:52 Models\DBTable::GetListBySingleCondition(products): результат запиту до БД містить більше ніж 0 строк
+2023-10-10 20:15:52 empty
+2023-10-10 20:15:59 Models\DBTable::GetListBySingleCondition(products): під час визова функції запиту з фільтрацією отримано коректні назву і значення поля, а саме "categoryid"="3".
+2023-10-10 20:15:59 Models\DBTable::GetListBySingleCondition(products): підʼєднано до сервера БД
+2023-10-10 20:15:59 Models\DBTable::GetListBySingleCondition(products): sql-запит виконано
+2023-10-10 20:15:59 Models\DBTable::GetListBySingleCondition(products): результат запиту до БД не false
+2023-10-10 20:15:59 Models\DBTable::GetListBySingleCondition(products): результат запиту до БД містить більше ніж 0 строк
+2023-10-10 20:15:59 empty
+2023-10-10 20:16:04 Models\DBTable::GetListBySingleCondition(products): під час визова функції запиту з фільтрацією отримано коректні назву і значення поля, а саме "categoryid"="3".
+2023-10-10 20:16:04 Models\DBTable::GetListBySingleCondition(products): підʼєднано до сервера БД
+2023-10-10 20:16:04 Models\DBTable::GetListBySingleCondition(products): sql-запит виконано
+2023-10-10 20:16:04 Models\DBTable::GetListBySingleCondition(products): результат запиту до БД не false
+2023-10-10 20:16:04 Models\DBTable::GetListBySingleCondition(products): результат запиту до БД містить більше ніж 0 строк
+2023-10-10 20:16:04 empty
+2023-10-10 20:16:12 Models\DBTable::GetListBySingleCondition(products): під час визова функції запиту з фільтрацією отримано коректні назву і значення поля, а саме "categoryid"="3".
+2023-10-10 20:16:12 Models\DBTable::GetListBySingleCondition(products): підʼєднано до сервера БД
+2023-10-10 20:16:12 Models\DBTable::GetListBySingleCondition(products): sql-запит виконано
+2023-10-10 20:16:12 Models\DBTable::GetListBySingleCondition(products): результат запиту до БД не false
+2023-10-10 20:16:12 Models\DBTable::GetListBySingleCondition(products): результат запиту до БД містить більше ніж 0 строк
+2023-10-10 20:16:12 empty
+2023-10-10 20:16:13 Models\DBTable::GetListBySingleCondition(products): під час визова функції запиту з фільтрацією отримано коректні назву і значення поля, а саме "categoryid"="3".
+2023-10-10 20:16:13 Models\DBTable::GetListBySingleCondition(products): підʼєднано до сервера БД
+2023-10-10 20:16:13 Models\DBTable::GetListBySingleCondition(products): sql-запит виконано
+2023-10-10 20:16:13 Models\DBTable::GetListBySingleCondition(products): результат запиту до БД не false
+2023-10-10 20:16:13 Models\DBTable::GetListBySingleCondition(products): результат запиту до БД містить більше ніж 0 строк
+2023-10-10 20:16:13 empty
+2023-10-10 20:21:26 Models\DBTable::GetListBySingleCondition(products): під час визова функції запиту з фільтрацією отримано коректні назву і значення поля, а саме "categoryid"="3".
+2023-10-10 20:21:26 Models\DBTable::GetListBySingleCondition(products): підʼєднано до сервера БД
+2023-10-10 20:21:26 Models\DBTable::GetListBySingleCondition(products): sql-запит виконано
+2023-10-10 20:21:26 Models\DBTable::GetListBySingleCondition(products): результат запиту до БД не false
+2023-10-10 20:21:26 Models\DBTable::GetListBySingleCondition(products): результат запиту до БД містить більше ніж 0 строк
+2023-10-10 20:25:23 Models\DBTable::GetListBySingleCondition(products): під час визова функції запиту з фільтрацією отримано коректні назву і значення поля, а саме "categoryid"="3".
+2023-10-10 20:25:23 Models\DBTable::GetListBySingleCondition(products): підʼєднано до сервера БД
+2023-10-10 20:25:23 Models\DBTable::GetListBySingleCondition(products): sql-запит виконано
+2023-10-10 20:25:23 Models\DBTable::GetListBySingleCondition(products): результат запиту до БД не false
+2023-10-10 20:25:23 Models\DBTable::GetListBySingleCondition(products): результат запиту до БД містить більше ніж 0 строк
+2023-10-10 20:26:09 Models\DBTable::GetById(products): під час виклику функції отримано коректний id="4"
+2023-10-10 20:26:09 Models\DBTable::GetById(products): підʼєднано до сервера БД
+2023-10-10 20:26:09 Models\DBTable::GetById(products): sql-запит виконано
+2023-10-10 20:26:09 Models\DBTable::GetById(products): результат запиту до БД не false
+2023-10-10 20:26:09 Models\DBTable::GetById(products): результат запиту до БД містить більше ніж 0 строк
+2023-10-10 20:26:09 Models\DBTable::GetListBySingleCondition(products): під час визова функції запиту з фільтрацією отримано коректні назву і значення поля, а саме "categoryid"="3".
+2023-10-10 20:26:09 Models\DBTable::GetListBySingleCondition(products): підʼєднано до сервера БД
+2023-10-10 20:26:09 Models\DBTable::GetListBySingleCondition(products): sql-запит виконано
+2023-10-10 20:26:09 Models\DBTable::GetListBySingleCondition(products): результат запиту до БД не false
+2023-10-10 20:26:09 Models\DBTable::GetListBySingleCondition(products): результат запиту до БД містить більше ніж 0 строк
+2023-10-10 20:26:39 Models\DBTable::GetListBySingleCondition(products): під час визова функції запиту з фільтрацією отримано коректні назву і значення поля, а саме "categoryid"="3".
+2023-10-10 20:26:39 Models\DBTable::GetListBySingleCondition(products): підʼєднано до сервера БД
+2023-10-10 20:26:39 Models\DBTable::GetListBySingleCondition(products): sql-запит виконано
+2023-10-10 20:26:39 Models\DBTable::GetListBySingleCondition(products): результат запиту до БД не false
+2023-10-10 20:26:39 Models\DBTable::GetListBySingleCondition(products): результат запиту до БД містить більше ніж 0 строк
+2023-10-10 20:26:53 Models\DBTable::GetById(products): під час виклику функції отримано коректний id="4"
+2023-10-10 20:26:53 Models\DBTable::GetById(products): підʼєднано до сервера БД
+2023-10-10 20:26:53 Models\DBTable::GetById(products): sql-запит виконано
+2023-10-10 20:26:53 Models\DBTable::GetById(products): результат запиту до БД не false
+2023-10-10 20:26:53 Models\DBTable::GetById(products): результат запиту до БД містить більше ніж 0 строк
+2023-10-10 20:29:33 Models\DBTable::GetById(products): під час виклику функції отримано коректний id="4"
+2023-10-10 20:29:33 Models\DBTable::GetById(products): підʼєднано до сервера БД
+2023-10-10 20:29:33 Models\DBTable::GetById(products): sql-запит виконано
+2023-10-10 20:29:33 Models\DBTable::GetById(products): результат запиту до БД не false
+2023-10-10 20:29:33 Models\DBTable::GetById(products): результат запиту до БД містить більше ніж 0 строк
+2023-10-10 20:29:33 Models\DBTable::GetListBySingleCondition(products): під час визова функції запиту з фільтрацією отримано коректні назву і значення поля, а саме "categoryid"="3".
+2023-10-10 20:29:33 Models\DBTable::GetListBySingleCondition(products): підʼєднано до сервера БД
+2023-10-10 20:29:33 Models\DBTable::GetListBySingleCondition(products): sql-запит виконано
+2023-10-10 20:29:33 Models\DBTable::GetListBySingleCondition(products): результат запиту до БД не false
+2023-10-10 20:29:33 Models\DBTable::GetListBySingleCondition(products): результат запиту до БД містить більше ніж 0 строк
+2023-10-10 20:29:38 Models\DBTable::GetById(products): під час виклику функції отримано коректний id="5"
+2023-10-10 20:29:38 Models\DBTable::GetById(products): підʼєднано до сервера БД
+2023-10-10 20:29:38 Models\DBTable::GetById(products): sql-запит виконано
+2023-10-10 20:29:38 Models\DBTable::GetById(products): результат запиту до БД не false
+2023-10-10 20:29:38 Models\DBTable::GetById(products): результат запиту до БД містить більше ніж 0 строк
+2023-10-10 20:29:38 Models\DBTable::GetListBySingleCondition(products): під час визова функції запиту з фільтрацією отримано коректні назву і значення поля, а саме "categoryid"="3".
+2023-10-10 20:29:38 Models\DBTable::GetListBySingleCondition(products): підʼєднано до сервера БД
+2023-10-10 20:29:38 Models\DBTable::GetListBySingleCondition(products): sql-запит виконано
+2023-10-10 20:29:38 Models\DBTable::GetListBySingleCondition(products): результат запиту до БД не false
+2023-10-10 20:29:38 Models\DBTable::GetListBySingleCondition(products): результат запиту до БД містить більше ніж 0 строк
+2023-10-10 20:31:00 Models\DBTable::GetById(products): під час виклику функції отримано коректний id="5"
+2023-10-10 20:31:00 Models\DBTable::GetById(products): підʼєднано до сервера БД
+2023-10-10 20:31:00 Models\DBTable::GetById(products): sql-запит виконано
+2023-10-10 20:31:00 Models\DBTable::GetById(products): результат запиту до БД не false
+2023-10-10 20:31:00 Models\DBTable::GetById(products): результат запиту до БД містить більше ніж 0 строк
+2023-10-10 20:31:00 Models\DBTable::GetListBySingleCondition(products): під час визова функції запиту з фільтрацією отримано коректні назву і значення поля, а саме "categoryid"="3".
+2023-10-10 20:31:00 Models\DBTable::GetListBySingleCondition(products): підʼєднано до сервера БД
+2023-10-10 20:31:00 Models\DBTable::GetListBySingleCondition(products): sql-запит виконано
+2023-10-10 20:31:00 Models\DBTable::GetListBySingleCondition(products): результат запиту до БД не false
+2023-10-10 20:31:00 Models\DBTable::GetListBySingleCondition(products): результат запиту до БД містить більше ніж 0 строк
+2023-10-10 20:38:53 Models\DBTable::GetById(products): під час виклику функції отримано коректний id="4"
+2023-10-10 20:38:53 Models\DBTable::GetById(products): підʼєднано до сервера БД
+2023-10-10 20:38:53 Models\DBTable::GetById(products): sql-запит виконано
+2023-10-10 20:38:53 Models\DBTable::GetById(products): результат запиту до БД не false
+2023-10-10 20:38:53 Models\DBTable::GetById(products): результат запиту до БД містить більше ніж 0 строк
+2023-10-10 20:38:53 Models\DBTable::GetListBySingleCondition(products): під час визова функції запиту з фільтрацією отримано коректні назву і значення поля, а саме "categoryid"="3".
+2023-10-10 20:38:53 Models\DBTable::GetListBySingleCondition(products): підʼєднано до сервера БД
+2023-10-10 20:38:53 Models\DBTable::GetListBySingleCondition(products): sql-запит виконано
+2023-10-10 20:38:53 Models\DBTable::GetListBySingleCondition(products): результат запиту до БД не false
+2023-10-10 20:38:53 Models\DBTable::GetListBySingleCondition(products): результат запиту до БД містить більше ніж 0 строк
+2023-10-10 20:38:56 Models\DBTable::GetById(products): під час виклику функції отримано коректний id="5"
+2023-10-10 20:38:56 Models\DBTable::GetById(products): підʼєднано до сервера БД
+2023-10-10 20:38:56 Models\DBTable::GetById(products): sql-запит виконано
+2023-10-10 20:38:56 Models\DBTable::GetById(products): результат запиту до БД не false
+2023-10-10 20:38:56 Models\DBTable::GetById(products): результат запиту до БД містить більше ніж 0 строк
+2023-10-10 20:38:56 Models\DBTable::GetListBySingleCondition(products): під час визова функції запиту з фільтрацією отримано коректні назву і значення поля, а саме "categoryid"="3".
+2023-10-10 20:38:56 Models\DBTable::GetListBySingleCondition(products): підʼєднано до сервера БД
+2023-10-10 20:38:56 Models\DBTable::GetListBySingleCondition(products): sql-запит виконано
+2023-10-10 20:38:56 Models\DBTable::GetListBySingleCondition(products): результат запиту до БД не false
+2023-10-10 20:38:56 Models\DBTable::GetListBySingleCondition(products): результат запиту до БД містить більше ніж 0 строк
+2023-10-10 20:42:07 Models\DBTable::GetById(products): під час виклику функції отримано коректний id="4"
+2023-10-10 20:42:07 Models\DBTable::GetById(products): підʼєднано до сервера БД
+2023-10-10 20:42:07 Models\DBTable::GetById(products): sql-запит виконано
+2023-10-10 20:42:07 Models\DBTable::GetById(products): результат запиту до БД не false
+2023-10-10 20:42:07 Models\DBTable::GetById(products): результат запиту до БД містить більше ніж 0 строк
+2023-10-10 20:42:07 Models\DBTable::GetListBySingleCondition(products): під час визова функції запиту з фільтрацією отримано коректні назву і значення поля, а саме "categoryid"="3".
+2023-10-10 20:42:07 Models\DBTable::GetListBySingleCondition(products): підʼєднано до сервера БД
+2023-10-10 20:42:07 Models\DBTable::GetListBySingleCondition(products): sql-запит виконано
+2023-10-10 20:42:07 Models\DBTable::GetListBySingleCondition(products): результат запиту до БД не false
+2023-10-10 20:42:07 Models\DBTable::GetListBySingleCondition(products): результат запиту до БД містить більше ніж 0 строк
+2023-10-10 20:43:09 Models\DBTable::GetById(products): під час виклику функції отримано коректний id="4"
+2023-10-10 20:43:09 Models\DBTable::GetById(products): підʼєднано до сервера БД
+2023-10-10 20:43:09 Models\DBTable::GetById(products): sql-запит виконано
+2023-10-10 20:43:09 Models\DBTable::GetById(products): результат запиту до БД не false
+2023-10-10 20:43:09 Models\DBTable::GetById(products): результат запиту до БД містить більше ніж 0 строк
+2023-10-10 20:43:09 Models\DBTable::GetListBySingleCondition(products): під час визова функції запиту з фільтрацією отримано коректні назву і значення поля, а саме "categoryid"="3".
+2023-10-10 20:43:09 Models\DBTable::GetListBySingleCondition(products): підʼєднано до сервера БД
+2023-10-10 20:43:09 Models\DBTable::GetListBySingleCondition(products): sql-запит виконано
+2023-10-10 20:43:09 Models\DBTable::GetListBySingleCondition(products): результат запиту до БД не false
+2023-10-10 20:43:09 Models\DBTable::GetListBySingleCondition(products): результат запиту до БД містить більше ніж 0 строк
+2023-10-10 20:43:11 Models\DBTable::GetById(products): під час виклику функції отримано коректний id="4"
+2023-10-10 20:43:11 Models\DBTable::GetById(products): підʼєднано до сервера БД
+2023-10-10 20:43:11 Models\DBTable::GetById(products): sql-запит виконано
+2023-10-10 20:43:11 Models\DBTable::GetById(products): результат запиту до БД не false
+2023-10-10 20:43:11 Models\DBTable::GetById(products): результат запиту до БД містить більше ніж 0 строк
+2023-10-10 20:43:11 Models\DBTable::GetListBySingleCondition(products): під час визова функції запиту з фільтрацією отримано коректні назву і значення поля, а саме "categoryid"="3".
+2023-10-10 20:43:11 Models\DBTable::GetListBySingleCondition(products): підʼєднано до сервера БД
+2023-10-10 20:43:11 Models\DBTable::GetListBySingleCondition(products): sql-запит виконано
+2023-10-10 20:43:11 Models\DBTable::GetListBySingleCondition(products): результат запиту до БД не false
+2023-10-10 20:43:11 Models\DBTable::GetListBySingleCondition(products): результат запиту до БД містить більше ніж 0 строк
+2023-10-10 20:45:39 Models\DBTable::GetById(products): під час виклику функції отримано коректний id="4"
+2023-10-10 20:45:39 Models\DBTable::GetById(products): підʼєднано до сервера БД
+2023-10-10 20:45:39 Models\DBTable::GetById(products): sql-запит виконано
+2023-10-10 20:45:39 Models\DBTable::GetById(products): результат запиту до БД не false
+2023-10-10 20:45:39 Models\DBTable::GetById(products): результат запиту до БД містить більше ніж 0 строк
+2023-10-10 20:45:39 Models\DBTable::GetListBySingleCondition(products): під час визова функції запиту з фільтрацією отримано коректні назву і значення поля, а саме "categoryid"="3".
+2023-10-10 20:45:39 Models\DBTable::GetListBySingleCondition(products): підʼєднано до сервера БД
+2023-10-10 20:45:39 Models\DBTable::GetListBySingleCondition(products): sql-запит виконано
+2023-10-10 20:45:39 Models\DBTable::GetListBySingleCondition(products): результат запиту до БД не false
+2023-10-10 20:45:39 Models\DBTable::GetListBySingleCondition(products): результат запиту до БД містить більше ніж 0 строк
+2023-10-10 20:50:37 Models\DBTable::GetById(products): під час виклику функції отримано коректний id="4"
+2023-10-10 20:50:37 Models\DBTable::GetById(products): підʼєднано до сервера БД
+2023-10-10 20:50:37 Models\DBTable::GetById(products): sql-запит виконано
+2023-10-10 20:50:37 Models\DBTable::GetById(products): результат запиту до БД не false
+2023-10-10 20:50:37 Models\DBTable::GetById(products): результат запиту до БД містить більше ніж 0 строк
+2023-10-10 20:50:37 Models\DBTable::GetListBySingleCondition(products): під час визова функції запиту з фільтрацією отримано коректні назву і значення поля, а саме "categoryid"="3".
+2023-10-10 20:50:37 Models\DBTable::GetListBySingleCondition(products): підʼєднано до сервера БД
+2023-10-10 20:50:37 Models\DBTable::GetListBySingleCondition(products): sql-запит виконано
+2023-10-10 20:50:37 Models\DBTable::GetListBySingleCondition(products): результат запиту до БД не false
+2023-10-10 20:50:37 Models\DBTable::GetListBySingleCondition(products): результат запиту до БД містить більше ніж 0 строк
+2023-10-10 20:50:37 Models\DBTable::GetAll(categories): підʼєднано до сервера БД
+2023-10-10 20:50:37 Models\DBTable::GetAll(categories): sql-запит виконано
+2023-10-10 20:50:37 Models\DBTable::GetAll(categories): результат запиту до БД не false
+2023-10-10 20:50:37 Models\DBTable::GetAll(categories): результат запиту до БД містить більше ніж 0 строк
+2023-10-10 20:50:41 Models\DBTable::GetAll(brands): підʼєднано до сервера БД
+2023-10-10 20:50:41 Models\DBTable::GetAll(brands): sql-запит виконано
+2023-10-10 20:50:41 Models\DBTable::GetAll(brands): результат запиту до БД не false
+2023-10-10 20:50:41 Models\DBTable::GetAll(brands): результат запиту до БД містить більше ніж 0 строк
+2023-10-10 20:50:41 Models\DBTable::GetAll(categories): підʼєднано до сервера БД
+2023-10-10 20:50:41 Models\DBTable::GetAll(categories): sql-запит виконано
+2023-10-10 20:50:41 Models\DBTable::GetAll(categories): результат запиту до БД не false
+2023-10-10 20:50:41 Models\DBTable::GetAll(categories): результат запиту до БД містить більше ніж 0 строк
+2023-10-10 20:50:41 Models\DBTable::GetAll(products): підʼєднано до сервера БД
+2023-10-10 20:50:41 Models\DBTable::GetAll(products): sql-запит виконано
+2023-10-10 20:50:41 Models\DBTable::GetAll(products): результат запиту до БД не false
+2023-10-10 20:50:41 Models\DBTable::GetAll(products): результат запиту до БД містить більше ніж 0 строк
+2023-10-10 20:57:35 Models\DBTable::GetById(products): під час виклику функції отримано коректний id="4"
+2023-10-10 20:57:35 Models\DBTable::GetById(products): підʼєднано до сервера БД
+2023-10-10 20:57:35 Models\DBTable::GetById(products): sql-запит виконано
+2023-10-10 20:57:35 Models\DBTable::GetById(products): результат запиту до БД не false
+2023-10-10 20:57:35 Models\DBTable::GetById(products): результат запиту до БД містить більше ніж 0 строк
+2023-10-10 20:57:35 Models\DBTable::GetListBySingleCondition(products): під час визова функції запиту з фільтрацією отримано коректні назву і значення поля, а саме "categoryid"="3".
+2023-10-10 20:57:35 Models\DBTable::GetListBySingleCondition(products): підʼєднано до сервера БД
+2023-10-10 20:57:35 Models\DBTable::GetListBySingleCondition(products): sql-запит виконано
+2023-10-10 20:57:35 Models\DBTable::GetListBySingleCondition(products): результат запиту до БД не false
+2023-10-10 20:57:35 Models\DBTable::GetListBySingleCondition(products): результат запиту до БД містить більше ніж 0 строк
+2023-10-10 20:57:51 Models\DBTable::GetById(products): під час виклику функції отримано коректний id="4"
+2023-10-10 20:57:51 Models\DBTable::GetById(products): підʼєднано до сервера БД
+2023-10-10 20:57:51 Models\DBTable::GetById(products): sql-запит виконано
+2023-10-10 20:57:51 Models\DBTable::GetById(products): результат запиту до БД не false
+2023-10-10 20:57:51 Models\DBTable::GetById(products): результат запиту до БД містить більше ніж 0 строк
+2023-10-10 20:57:51 Models\DBTable::GetListBySingleCondition(products): під час визова функції запиту з фільтрацією отримано коректні назву і значення поля, а саме "categoryid"="3".
+2023-10-10 20:57:51 Models\DBTable::GetListBySingleCondition(products): підʼєднано до сервера БД
+2023-10-10 20:57:51 Models\DBTable::GetListBySingleCondition(products): sql-запит виконано
+2023-10-10 20:57:51 Models\DBTable::GetListBySingleCondition(products): результат запиту до БД не false
+2023-10-10 20:57:51 Models\DBTable::GetListBySingleCondition(products): результат запиту до БД містить більше ніж 0 строк
+2023-10-10 20:57:51 Models\DBTable::GetById(categories): під час виклику функції отримано коректний id="3"
+2023-10-10 20:57:51 Models\DBTable::GetById(categories): підʼєднано до сервера БД
+2023-10-10 20:57:51 Models\DBTable::GetById(categories): sql-запит виконано
+2023-10-10 20:57:51 Models\DBTable::GetById(categories): результат запиту до БД не false
+2023-10-10 20:57:51 Models\DBTable::GetById(categories): результат запиту до БД містить більше ніж 0 строк
+2023-10-10 20:58:02 Models\DBTable::GetById(products): під час виклику функції отримано коректний id="4"
+2023-10-10 20:58:02 Models\DBTable::GetById(products): підʼєднано до сервера БД
+2023-10-10 20:58:02 Models\DBTable::GetById(products): sql-запит виконано
+2023-10-10 20:58:02 Models\DBTable::GetById(products): результат запиту до БД не false
+2023-10-10 20:58:02 Models\DBTable::GetById(products): результат запиту до БД містить більше ніж 0 строк
+2023-10-10 20:58:02 Models\DBTable::GetListBySingleCondition(products): під час визова функції запиту з фільтрацією отримано коректні назву і значення поля, а саме "categoryid"="3".
+2023-10-10 20:58:02 Models\DBTable::GetListBySingleCondition(products): підʼєднано до сервера БД
+2023-10-10 20:58:02 Models\DBTable::GetListBySingleCondition(products): sql-запит виконано
+2023-10-10 20:58:02 Models\DBTable::GetListBySingleCondition(products): результат запиту до БД не false
+2023-10-10 20:58:02 Models\DBTable::GetListBySingleCondition(products): результат запиту до БД містить більше ніж 0 строк
+2023-10-10 20:58:49 Models\DBTable::GetById(products): під час виклику функції отримано коректний id="4"
+2023-10-10 20:58:49 Models\DBTable::GetById(products): підʼєднано до сервера БД
+2023-10-10 20:58:49 Models\DBTable::GetById(products): sql-запит виконано
+2023-10-10 20:58:49 Models\DBTable::GetById(products): результат запиту до БД не false
+2023-10-10 20:58:49 Models\DBTable::GetById(products): результат запиту до БД містить більше ніж 0 строк
+2023-10-10 20:58:49 Models\DBTable::GetListBySingleCondition(products): під час визова функції запиту з фільтрацією отримано коректні назву і значення поля, а саме "categoryid"="3".
+2023-10-10 20:58:49 Models\DBTable::GetListBySingleCondition(products): підʼєднано до сервера БД
+2023-10-10 20:58:49 Models\DBTable::GetListBySingleCondition(products): sql-запит виконано
+2023-10-10 20:58:49 Models\DBTable::GetListBySingleCondition(products): результат запиту до БД не false
+2023-10-10 20:58:49 Models\DBTable::GetListBySingleCondition(products): результат запиту до БД містить більше ніж 0 строк
+2023-10-10 20:58:49 Models\DBTable::GetById(categories): під час виклику функції отримано коректний id="3"
+2023-10-10 20:58:49 Models\DBTable::GetById(categories): підʼєднано до сервера БД
+2023-10-10 20:58:49 Models\DBTable::GetById(categories): sql-запит виконано
+2023-10-10 20:58:49 Models\DBTable::GetById(categories): результат запиту до БД не false
+2023-10-10 20:58:49 Models\DBTable::GetById(categories): результат запиту до БД містить більше ніж 0 строк
+2023-10-10 20:59:42 Models\DBTable::GetById(products): під час виклику функції отримано коректний id="4"
+2023-10-10 20:59:42 Models\DBTable::GetById(products): підʼєднано до сервера БД
+2023-10-10 20:59:42 Models\DBTable::GetById(products): sql-запит виконано
+2023-10-10 20:59:42 Models\DBTable::GetById(products): результат запиту до БД не false
+2023-10-10 20:59:42 Models\DBTable::GetById(products): результат запиту до БД містить більше ніж 0 строк
+2023-10-10 20:59:42 Models\DBTable::GetListBySingleCondition(products): під час визова функції запиту з фільтрацією отримано коректні назву і значення поля, а саме "categoryid"="3".
+2023-10-10 20:59:42 Models\DBTable::GetListBySingleCondition(products): підʼєднано до сервера БД
+2023-10-10 20:59:42 Models\DBTable::GetListBySingleCondition(products): sql-запит виконано
+2023-10-10 20:59:42 Models\DBTable::GetListBySingleCondition(products): результат запиту до БД не false
+2023-10-10 20:59:42 Models\DBTable::GetListBySingleCondition(products): результат запиту до БД містить більше ніж 0 строк
+2023-10-10 20:59:42 Models\DBTable::GetById(categories): під час виклику функції отримано коректний id="3"
+2023-10-10 20:59:42 Models\DBTable::GetById(categories): підʼєднано до сервера БД
+2023-10-10 20:59:42 Models\DBTable::GetById(categories): sql-запит виконано
+2023-10-10 20:59:42 Models\DBTable::GetById(categories): результат запиту до БД не false
+2023-10-10 20:59:42 Models\DBTable::GetById(categories): результат запиту до БД містить більше ніж 0 строк
+2023-10-10 20:59:45 Models\DBTable::GetAll(brands): підʼєднано до сервера БД
+2023-10-10 20:59:45 Models\DBTable::GetAll(brands): sql-запит виконано
+2023-10-10 20:59:45 Models\DBTable::GetAll(brands): результат запиту до БД не false
+2023-10-10 20:59:45 Models\DBTable::GetAll(brands): результат запиту до БД містить більше ніж 0 строк
+2023-10-10 20:59:45 Models\DBTable::GetAll(categories): підʼєднано до сервера БД
+2023-10-10 20:59:45 Models\DBTable::GetAll(categories): sql-запит виконано
+2023-10-10 20:59:45 Models\DBTable::GetAll(categories): результат запиту до БД не false
+2023-10-10 20:59:45 Models\DBTable::GetAll(categories): результат запиту до БД містить більше ніж 0 строк
+2023-10-10 20:59:45 Models\DBTable::GetAll(products): підʼєднано до сервера БД
+2023-10-10 20:59:45 Models\DBTable::GetAll(products): sql-запит виконано
+2023-10-10 20:59:45 Models\DBTable::GetAll(products): результат запиту до БД не false
+2023-10-10 20:59:45 Models\DBTable::GetAll(products): результат запиту до БД містить більше ніж 0 строк
+2023-10-10 21:01:26 Models\DBTable::GetById(products): під час виклику функції отримано коректний id="4"
+2023-10-10 21:01:26 Models\DBTable::GetById(products): підʼєднано до сервера БД
+2023-10-10 21:01:26 Models\DBTable::GetById(products): sql-запит виконано
+2023-10-10 21:01:26 Models\DBTable::GetById(products): результат запиту до БД не false
+2023-10-10 21:01:26 Models\DBTable::GetById(products): результат запиту до БД містить більше ніж 0 строк
+2023-10-10 21:01:26 Models\DBTable::GetListBySingleCondition(products): під час визова функції запиту з фільтрацією отримано коректні назву і значення поля, а саме "categoryid"="3".
+2023-10-10 21:01:26 Models\DBTable::GetListBySingleCondition(products): підʼєднано до сервера БД
+2023-10-10 21:01:26 Models\DBTable::GetListBySingleCondition(products): sql-запит виконано
+2023-10-10 21:01:26 Models\DBTable::GetListBySingleCondition(products): результат запиту до БД не false
+2023-10-10 21:01:26 Models\DBTable::GetListBySingleCondition(products): результат запиту до БД містить більше ніж 0 строк
+2023-10-10 21:01:26 Models\DBTable::GetById(categories): під час виклику функції отримано коректний id="3"
+2023-10-10 21:01:26 Models\DBTable::GetById(categories): підʼєднано до сервера БД
+2023-10-10 21:01:26 Models\DBTable::GetById(categories): sql-запит виконано
+2023-10-10 21:01:26 Models\DBTable::GetById(categories): результат запиту до БД не false
+2023-10-10 21:01:26 Models\DBTable::GetById(categories): результат запиту до БД містить більше ніж 0 строк
+2023-10-10 21:01:30 Models\DBTable::GetAll(brands): підʼєднано до сервера БД
+2023-10-10 21:01:30 Models\DBTable::GetAll(brands): sql-запит виконано
+2023-10-10 21:01:30 Models\DBTable::GetAll(brands): результат запиту до БД не false
+2023-10-10 21:01:30 Models\DBTable::GetAll(brands): результат запиту до БД містить більше ніж 0 строк
+2023-10-10 21:01:30 Models\DBTable::GetAll(categories): підʼєднано до сервера БД
+2023-10-10 21:01:30 Models\DBTable::GetAll(categories): sql-запит виконано
+2023-10-10 21:01:30 Models\DBTable::GetAll(categories): результат запиту до БД не false
+2023-10-10 21:01:30 Models\DBTable::GetAll(categories): результат запиту до БД містить більше ніж 0 строк
+2023-10-10 21:01:30 Models\DBTable::GetAll(products): підʼєднано до сервера БД
+2023-10-10 21:01:30 Models\DBTable::GetAll(products): sql-запит виконано
+2023-10-10 21:01:30 Models\DBTable::GetAll(products): результат запиту до БД не false
+2023-10-10 21:01:30 Models\DBTable::GetAll(products): результат запиту до БД містить більше ніж 0 строк
+2023-10-10 21:03:52 Models\DBTable::GetById(products): під час виклику функції отримано коректний id="4"
+2023-10-10 21:03:52 Models\DBTable::GetById(products): підʼєднано до сервера БД
+2023-10-10 21:03:52 Models\DBTable::GetById(products): sql-запит виконано
+2023-10-10 21:03:52 Models\DBTable::GetById(products): результат запиту до БД не false
+2023-10-10 21:03:52 Models\DBTable::GetById(products): результат запиту до БД містить більше ніж 0 строк
+2023-10-10 21:03:52 Models\DBTable::GetListBySingleCondition(products): під час визова функції запиту з фільтрацією отримано коректні назву і значення поля, а саме "categoryid"="3".
+2023-10-10 21:03:52 Models\DBTable::GetListBySingleCondition(products): підʼєднано до сервера БД
+2023-10-10 21:03:52 Models\DBTable::GetListBySingleCondition(products): sql-запит виконано
+2023-10-10 21:03:52 Models\DBTable::GetListBySingleCondition(products): результат запиту до БД не false
+2023-10-10 21:03:52 Models\DBTable::GetListBySingleCondition(products): результат запиту до БД містить більше ніж 0 строк
+2023-10-10 21:03:52 Models\DBTable::GetById(categories): під час виклику функції отримано коректний id="3"
+2023-10-10 21:03:52 Models\DBTable::GetById(categories): підʼєднано до сервера БД
+2023-10-10 21:03:52 Models\DBTable::GetById(categories): sql-запит виконано
+2023-10-10 21:03:52 Models\DBTable::GetById(categories): результат запиту до БД не false
+2023-10-10 21:03:52 Models\DBTable::GetById(categories): результат запиту до БД містить більше ніж 0 строк
+2023-10-10 21:03:52 Models\DBTable::GetById(brands): під час виклику функції отримано коректний id="5"
+2023-10-10 21:03:52 Models\DBTable::GetById(brands): підʼєднано до сервера БД
+2023-10-10 21:03:52 Models\DBTable::GetById(brands): sql-запит виконано
+2023-10-10 21:03:52 Models\DBTable::GetById(brands): результат запиту до БД не false
+2023-10-10 21:03:52 Models\DBTable::GetById(brands): результат запиту до БД містить більше ніж 0 строк
+2023-10-10 21:05:44 Models\DBTable::GetById(products): під час виклику функції отримано коректний id="4"
+2023-10-10 21:05:44 Models\DBTable::GetById(products): підʼєднано до сервера БД
+2023-10-10 21:05:44 Models\DBTable::GetById(products): sql-запит виконано
+2023-10-10 21:05:44 Models\DBTable::GetById(products): результат запиту до БД не false
+2023-10-10 21:05:44 Models\DBTable::GetById(products): результат запиту до БД містить більше ніж 0 строк
+2023-10-10 21:05:44 Models\DBTable::GetListBySingleCondition(products): під час визова функції запиту з фільтрацією отримано коректні назву і значення поля, а саме "categoryid"="3".
+2023-10-10 21:05:44 Models\DBTable::GetListBySingleCondition(products): підʼєднано до сервера БД
+2023-10-10 21:05:44 Models\DBTable::GetListBySingleCondition(products): sql-запит виконано
+2023-10-10 21:05:44 Models\DBTable::GetListBySingleCondition(products): результат запиту до БД не false
+2023-10-10 21:05:44 Models\DBTable::GetListBySingleCondition(products): результат запиту до БД містить більше ніж 0 строк
+2023-10-10 21:05:44 Models\DBTable::GetById(categories): під час виклику функції отримано коректний id="3"
+2023-10-10 21:05:44 Models\DBTable::GetById(categories): підʼєднано до сервера БД
+2023-10-10 21:05:44 Models\DBTable::GetById(categories): sql-запит виконано
+2023-10-10 21:05:44 Models\DBTable::GetById(categories): результат запиту до БД не false
+2023-10-10 21:05:44 Models\DBTable::GetById(categories): результат запиту до БД містить більше ніж 0 строк
+2023-10-10 21:05:44 Models\DBTable::GetById(brands): під час виклику функції отримано коректний id="5"
+2023-10-10 21:05:44 Models\DBTable::GetById(brands): підʼєднано до сервера БД
+2023-10-10 21:05:44 Models\DBTable::GetById(brands): sql-запит виконано
+2023-10-10 21:05:44 Models\DBTable::GetById(brands): результат запиту до БД не false
+2023-10-10 21:05:44 Models\DBTable::GetById(brands): результат запиту до БД містить більше ніж 0 строк
+2023-10-10 21:05:49 Models\DBTable::GetAll(brands): підʼєднано до сервера БД
+2023-10-10 21:05:49 Models\DBTable::GetAll(brands): sql-запит виконано
+2023-10-10 21:05:49 Models\DBTable::GetAll(brands): результат запиту до БД не false
+2023-10-10 21:05:49 Models\DBTable::GetAll(brands): результат запиту до БД містить більше ніж 0 строк
+2023-10-10 21:05:49 Models\DBTable::GetAll(categories): підʼєднано до сервера БД
+2023-10-10 21:05:49 Models\DBTable::GetAll(categories): sql-запит виконано
+2023-10-10 21:05:49 Models\DBTable::GetAll(categories): результат запиту до БД не false
+2023-10-10 21:05:49 Models\DBTable::GetAll(categories): результат запиту до БД містить більше ніж 0 строк
+2023-10-10 21:05:49 Models\DBTable::GetAll(products): підʼєднано до сервера БД
+2023-10-10 21:05:49 Models\DBTable::GetAll(products): sql-запит виконано
+2023-10-10 21:05:49 Models\DBTable::GetAll(products): результат запиту до БД не false
+2023-10-10 21:05:49 Models\DBTable::GetAll(products): результат запиту до БД містить більше ніж 0 строк
+2023-10-10 21:09:05 Models\DBTable::GetById(products): під час виклику функції отримано коректний id="4"
+2023-10-10 21:09:05 Models\DBTable::GetById(products): підʼєднано до сервера БД
+2023-10-10 21:09:05 Models\DBTable::GetById(products): sql-запит виконано
+2023-10-10 21:09:05 Models\DBTable::GetById(products): результат запиту до БД не false
+2023-10-10 21:09:05 Models\DBTable::GetById(products): результат запиту до БД містить більше ніж 0 строк
+2023-10-10 21:09:05 Models\DBTable::GetListBySingleCondition(products): під час визова функції запиту з фільтрацією отримано коректні назву і значення поля, а саме "categoryid"="3".
+2023-10-10 21:09:05 Models\DBTable::GetListBySingleCondition(products): підʼєднано до сервера БД
+2023-10-10 21:09:05 Models\DBTable::GetListBySingleCondition(products): sql-запит виконано
+2023-10-10 21:09:05 Models\DBTable::GetListBySingleCondition(products): результат запиту до БД не false
+2023-10-10 21:09:05 Models\DBTable::GetListBySingleCondition(products): результат запиту до БД містить більше ніж 0 строк
+2023-10-10 21:09:05 Models\DBTable::GetById(categories): під час виклику функції отримано коректний id="3"
+2023-10-10 21:09:05 Models\DBTable::GetById(categories): підʼєднано до сервера БД
+2023-10-10 21:09:05 Models\DBTable::GetById(categories): sql-запит виконано
+2023-10-10 21:09:05 Models\DBTable::GetById(categories): результат запиту до БД не false
+2023-10-10 21:09:05 Models\DBTable::GetById(categories): результат запиту до БД містить більше ніж 0 строк
+2023-10-10 21:09:05 Models\DBTable::GetById(brands): під час виклику функції отримано коректний id="5"
+2023-10-10 21:09:05 Models\DBTable::GetById(brands): підʼєднано до сервера БД
+2023-10-10 21:09:05 Models\DBTable::GetById(brands): sql-запит виконано
+2023-10-10 21:09:05 Models\DBTable::GetById(brands): результат запиту до БД не false
+2023-10-10 21:09:05 Models\DBTable::GetById(brands): результат запиту до БД містить більше ніж 0 строк

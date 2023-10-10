@@ -44,11 +44,27 @@
             }
             if (array_key_exists("sort", $_GET)) {
                 $sort = preg_replace('/[^A-Za-z]/', '', $_GET["sort"]);
+                // Тут можна додати перевірку строки на наявність у певному наборі можливих варіантів сортування.
                 $result["sort"] = $sort;
             }
             if (array_key_exists("brand", $_GET)) {
                 $brand = preg_replace('/[^0-9\,]/', '', $_GET["brand"]);
                 $result["brand"] = explode(',',$brand);
+            }
+        }
+        return $result;
+    }
+
+    function paramsToURIString(array $params, $fullSetWithId = false) {
+        // Формування коректного готового рядку параметрів запиту для подальшої підстановки у посилання в шаблоні
+        $result = '';
+        if (isset($params) && !empty($params)) {
+            if ($fullSetWithId) if (filled($params["id"])) $result = "id=".$params["id"];
+            if (filled($params["category"])) $result .= empty($result) ? "category=".$params["category"] : "&category=".$params["category"];
+            if (filled($params["sort"])) $result .= empty($result) ? "sort=".$params["sort"] : "&sort=".$params["sort"];
+            if (filled($params["brand"])) {
+                $brands = implode(',', $params["brand"]);
+                $result .= '&brand='.$brands;
             }
         }
         return $result;
