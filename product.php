@@ -6,7 +6,7 @@ use Models\Product;
 
     require_once('helpers.php');
 
-    function render($error = '', $product = array(), $relevantProducts = array(), $category = array(), $brand = array(), $paramsString = '', $params = array()) {
+    function render($error = '', $product = array(), $relevantProducts = array(), $category = array(), $brand = array(), $paramsString = '') {
         if (empty($error)) {
             include('templates/product.php');
         } else {
@@ -39,7 +39,7 @@ use Models\Product;
         $category = false;
     }
 
-    if (filled($product["brandid"])) {
+    if ($product && filled($product["brandid"])) {
         $brandObj = new Brand();
         $brand = $brandObj->GetById($product["brandid"]);
     } else {
@@ -49,6 +49,6 @@ use Models\Product;
     $error = '';
     //$error = print_r($params, true);
 
-    render($error, $product, $relevantProducts, $category, $brand, $paramsString, $params);
+    render($error, $product, $relevantProducts, $category, $brand, $paramsString);
 
 ?>

@@ -3,8 +3,8 @@
           <div class="mainContentAsTwoColumns">
             <div class="mainContentFirstColumn">
               <a href="index.php<? if (filled($paramsString)) echo('?'.$paramsString); ?>"><h4><< Назад</h4></a>
-              <? if (filled($brand)) { ?><a href="index.php?brand=<?=$brand["id"]?>">Товари бренду "<?=$brand["name"]?>"</a><? } ?>
-              <? if (filled($category)) { ?><a href="index.php?category=<?=$category["id"]?>">Товари категорії "<?=$category["name"]?>"</a><? } ?>
+              <? if (filled($brand)) { ?><a href="index.php?brand=<?=$brand["id"]?>"><< Товари бренду "<?=$brand["name"]?>"</a><? } ?>
+              <? if (filled($category)) { ?><a href="index.php?category=<?=$category["id"]?>"><< Товари категорії "<?=$category["name"]?>"</a><? } ?>
               <? if (filled($relevantProducts)) { ?>
                 <h6>Рекомендовані товари:</h6>
                 <div class="productItemsContainerSmallItems">

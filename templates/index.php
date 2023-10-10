@@ -6,17 +6,17 @@
                 <legend><h4>Категорії:</h4></legend>
                 <? if (filled($categoriesList)) foreach($categoriesList as $category) { ?>
                   <div class="form-check">
-                    <input type="radio" name="radios" class="form-check-input" id="catOption<?=$category["id"]?>">
-                    <label class="form-check-label" for="catOption<?=$category["id"]?>"><?=$category["name"]?></label>
+                    <input <? if ($category["selected"]) { ?>checked<? } ?> type="radio" name="radios" class="form-check-input" id="catOption<?=$category["id"]?>" onclick="document.location='<?=$category["link"]?>';" title="<?=$category["description"]?>">
+                    <label class="form-check-label" for="catOption<?=$category["id"]?>" title="<?=$category["description"]?>"><?=$category["name"]?></label>
                   </div>
                 <? } ?>
               </fieldset>
               <fieldset class="mb-3">
                 <legend><h4>Бренди:</h4></legend>
-                <? if (filled($brandList)) foreach($brandList as $brand) if ($brand["id"] != 1) { ?>
+                <? if (filled($brandList)) foreach($brandList as $brand) { ?>
                   <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="brandOption<?=$brand["id"]?>">
-                    <label class="form-check-label" for="brandOption<?=$brand["id"]?>"><?=$brand["name"]?></label>
+                    <input <? if ($brand["selected"]) { ?>checked<? } ?> type="checkbox" class="form-check-input" id="brandOption<?=$brand["id"]?>" onclick="document.location='<?=$brand["link"]?>';" title="<?=$category["description"]?>">
+                    <label class="form-check-label" for="brandOption<?=$brand["id"]?>" title="<?=$category["description"]?>"><?=$brand["name"]?></label>
                   </div>
                 <? } ?>
               </fieldset>
@@ -24,20 +24,22 @@
             <div class="mainContentSecondColumn">
               <h2>Товари в категорії "Корм" брендів "Chappi", "Royal Canin" (18)</h2>
               <div class="alignCenterVert columnGap15 canWrap fullWidthContainer">
-                Сортування:
-                <div>
-                  <select class="form-select form-select-sm">
-                    <option value="1" selected>Зростання ціни</option>
-                    <option value="2">Зменшення ціни</option>
-                    <option value="3">Назва</option>
-                  </select>
-                </div>
+                <? if (filled($sortOptions)) { ?>
+                  Сортування:
+                  <div>
+                    <select class="form-select form-select-sm" onChange="document.location=this.value;">
+                      <? foreach ($sortOptions as $sort) { ?>
+                        <option value="<?=$sort["link"]?>" <? if ($sort["selected"]) { ?>selected<? } ?>><?=$sort["name"]?></option>
+                      <? } ?>
+                    </select>
+                  </div>
+                <? } ?>
               </div>
               <div class="productItemsContainer">
 
                 <? if (filled($productList)) { ?>
                   <? foreach($productList as $product) { ?>
-                    <a href="product.php?id=<?=$product["id"]?>">
+                    <a href="product.php?id=<? echo(filled($paramsString) ? $product["id"].'&'.$paramsString : $product["id"]) ?>" style="display: contents;">
                       <div class="productItem" <? if (filled($product["image"])) { ?>style="background-image: URL('<?=PATHFORUSERIMAGES.$product["image"]?>');"<? } ?>>
                         <div class="productItemName">
                           <h4><?=$product["name"]?></h4>

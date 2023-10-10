@@ -43,7 +43,7 @@
                 $result["category"] = (int)($category ?? 0);
             }
             if (array_key_exists("sort", $_GET)) {
-                $sort = preg_replace('/[^A-Za-z]/', '', $_GET["sort"]);
+                $sort = preg_replace('/[^A-Za-z\_]/', '', $_GET["sort"]);
                 // Тут можна додати перевірку строки на наявність у певному наборі можливих варіантів сортування.
                 $result["sort"] = $sort;
             }
@@ -55,16 +55,16 @@
         return $result;
     }
 
-    function paramsToURIString(array $params, $fullSetWithId = false) {
+    function paramsToURIString(array $params, bool $id = false, bool $category = true, bool $sort = true, bool $brand = true) {
         // Формування коректного готового рядку параметрів запиту для подальшої підстановки у посилання в шаблоні
         $result = '';
         if (isset($params) && !empty($params)) {
-            if ($fullSetWithId) if (filled($params["id"])) $result = "id=".$params["id"];
-            if (filled($params["category"])) $result .= empty($result) ? "category=".$params["category"] : "&category=".$params["category"];
-            if (filled($params["sort"])) $result .= empty($result) ? "sort=".$params["sort"] : "&sort=".$params["sort"];
-            if (filled($params["brand"])) {
+            if ($id) if (filled($params["id"])) $result = "id=".$params["id"];
+            if ($category) if (filled($params["category"])) $result .= empty($result) ? "category=".$params["category"] : "&category=".$params["category"];
+            if ($sort) if (filled($params["sort"])) $result .= empty($result) ? "sort=".$params["sort"] : "&sort=".$params["sort"];
+            if ($brand) if (filled($params["brand"])) {
                 $brands = implode(',', $params["brand"]);
-                $result .= '&brand='.$brands;
+                $result .= empty($result) ? 'brand='.$brands : '&brand='.$brands;
             }
         }
         return $result;
