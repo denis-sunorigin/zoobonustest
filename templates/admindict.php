@@ -2,6 +2,8 @@
 
           <div class="mainContentAsSingleColumn">
             <h2>Адміністрування. Редагування довідника статусів.</h2>
+            <? if (filled($brandList)) { ?>
+
             <div class="columnGap15 canWrap fullWidthContainer">
               <div class="propertySelectGroup">
                 <div class="input-group">
@@ -26,6 +28,12 @@
               <button class="btn btn-primary" type="button">Зберегти</button>
               <button class="btn btn-primary" type="button">Скасувати</button>
             </div>
+
+            <? } else { ?>
+              <h4>Довідник порожній</h4>
+            <? } ?>
+
+
             <div class="columnGap15 canWrap fullWidthContainer">
               <div class="propertySelectGroup">
                 <div class="input-group">

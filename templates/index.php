@@ -4,25 +4,21 @@
             <div class="mainContentFirstColumn">
               <fieldset class="mb-3">
                 <legend><h4>Категорії:</h4></legend>
-                <div class="form-check">
-                  <input type="radio" name="radios" class="form-check-input" id="catOption1">
-                  <label class="form-check-label" for="catOption1">Категорія 1</label>
-                </div>
-                <div class="mb-3 form-check">
-                  <input type="radio" name="radios" class="form-check-input" id="catOption2">
-                  <label class="form-check-label" for="catOption2">Категорія 2</label>
-                </div>
+                <? if (filled($categoriesList)) foreach($categoriesList as $category) { ?>
+                  <div class="form-check">
+                    <input type="radio" name="radios" class="form-check-input" id="catOption<?=$category["id"]?>">
+                    <label class="form-check-label" for="catOption<?=$category["id"]?>"><?=$category["name"]?></label>
+                  </div>
+                <? } ?>
               </fieldset>
               <fieldset class="mb-3">
                 <legend><h4>Бренди:</h4></legend>
-                <div class="form-check">
-                  <input type="checkbox" class="form-check-input" id="brandOption1">
-                  <label class="form-check-label" for="brandOption1">Chappi</label>
-                </div>
-                <div class="form-check">
-                  <input type="checkbox" class="form-check-input" id="brandOption2">
-                  <label class="form-check-label" for="brandOption2">Royal Canin</label>
-                </div>
+                <? if (filled($brandList)) foreach($brandList as $brand) if ($brand["id"] != 1) { ?>
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="brandOption<?=$brand["id"]?>">
+                    <label class="form-check-label" for="brandOption<?=$brand["id"]?>"><?=$brand["name"]?></label>
+                  </div>
+                <? } ?>
               </fieldset>
             </div>
             <div class="mainContentSecondColumn">

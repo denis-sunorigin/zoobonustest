@@ -1,5 +1,4 @@
 <?php
-    require_once('settings.php');
     require_once('helpers.php');
 
     // Діагностика з'єднання з БД.

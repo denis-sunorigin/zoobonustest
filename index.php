@@ -1,18 +1,29 @@
 <?php
-    use Models\ProductList;
 
-    require_once('settings.php');
+use Models\Brand;
+use Models\Category;
+
     require_once('helpers.php');
 
-    function render($error = '') {
-        if (!empty($error)) ddlog($error);
-        include('templates/index.php');
+    function render($error = '', $brandList = array(), $categoriesList = array()) {
+        if (empty($error)) {
+            include('templates/index.php');
+        } else {
+            ddlog($error);
+            include('templates/500.php');
+        }
         exit();
     }
 
-    render('айайай');
 
- //   $ProductList = new ProductList();
+    $brand = new Brand();
+    $brandList = $brand->GetAll();
+    $category = new Category();
+    $categoriesList = $category->GetAll();
+
+    render('', $brandList, $categoriesList);
+
+    
 
 
 ?>

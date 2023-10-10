@@ -1,4 +1,6 @@
 <?php
+    require_once('settings.php');
+
     function sendToTelega($message) {
         if (!empty(MAXTELEGAMESSAGELENGTH)) {
             $msglen = strlen($message);
@@ -20,4 +22,15 @@
         error_log(date('Y-m-d H:i:s ').$message.PHP_EOL, 3, LOGFILE);
         if ($isImportantError) sendToTelega('На сайті виникла важлива помилка, що потребує уваги. '.PHP_EOL.$message);
     }
+
+    function filled($anyValue): bool {
+        // Для швидкої перевірки наявності значень всередині html, бо функція isset працює інакше, а !empty погано сприймається.
+        return empty($anyValue) ? false : !($anyValue === false);
+    }
+
+    function zbAutoLoader(string $className) {
+        require_once __DIR__.'/'.str_replace('\\', '/', $className).'.php';
+    }
+
+    spl_autoload_register('zbAutoLoader');
 ?>
