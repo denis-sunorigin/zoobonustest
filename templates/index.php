@@ -37,14 +37,21 @@
 
                 <? if (filled($productList)) { ?>
                   <? foreach($productList as $product) { ?>
-                    <a href="#">
-                      <div class="productItem" style="background-image: URL('<?=PATHFORUSERIMAGES.$product["image"]?>');">
+                    <a href="product.php?id=<?=$product["id"]?>">
+                      <div class="productItem" <? if (filled($product["image"])) { ?>style="background-image: URL('<?=PATHFORUSERIMAGES.$product["image"]?>');"<? } ?>>
                         <div class="productItemName">
                           <h4><?=$product["name"]?></h4>
                         </div>
                         <div class="productItemPrice">
-                          <div><strong><?=$product["price"]?></strong></div>
-                          <svg style="fill: green;"><use href="templates/images_static/icon24_approve.svg#icon24"></use></svg>
+                          <? if ($product["value"] > 0) { ?>
+                            <!-- Товар є в наявності -->
+                            <div><strong><?=$product["price"]?></strong></div>
+                            <svg style="fill: green;"><use href="templates/images_static/icon24_approve.svg#icon24"></use></svg>
+                          <? } else { ?>
+                            <!-- Товара немає в наявності -->
+                            <div style="color: gray;"><strong><?=$product["price"]?></strong></div>
+                            <svg style="fill: red;"><use href="templates/images_static/icon24_close.svg#icon24"></use></svg>
+                          <? } ?>
                         </div>
                       </div>
                     </a>

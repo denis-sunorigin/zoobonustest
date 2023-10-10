@@ -40,19 +40,27 @@
               </div>
             </div>
             <div class="mainContentSecondColumn">
-              <h2>Корм для голубів "Сємкі"</h2>
-              <div class="productCardPhotoAndMainInfo">
-                <div class="productCardPhoto" style="background-image: URL('images_user/pic3.png');"></div>
-                <div class="productCardMainInfo">
-                  <div><h4>Ціна: 99.99 грн<h4></div>
-                  <div>Є в наявності (залишилось 8)</div>
-                  <div class="productCardCode1C">Код 1С: 285764</div>
+              <? if (filled($product)) { ?>
+                <h2><?=$product["name"]?></h2>
+                <div class="productCardPhotoAndMainInfo">
+                  <div class="productCardPhoto"<? if (filled($product["image"])) { ?> style="background-image: URL('<?=PATHFORUSERIMAGES.$product["image"]?>');"<? } ?>></div>
+                  <div class="productCardMainInfo">
+                    <div><h4>Ціна: <?=$product["price"]?> грн<h4></div>
+                    <? if ($product["value"] > 0) { ?>
+                      <div>Є в наявності (залишилось <?=$product["value"]?>)</div>
+                    <? } else { ?>
+                      <div>Немає в наявності</div>
+                    <? } ?>
+                    <div class="productCardCode1C">Код 1С: <?=$product["code1c"]?></div>
+                  </div>
                 </div>
-              </div>
-              <div class="productCardDescription">
-                Опис:<br>
-                Корм "Сємкі" - це найкращій вибір для вашого улюбленця. Завдяки вітамінам та мінералам, уруру стане ще більш дзвінким та насиченим.
-              </div>
+                <div class="productCardDescription">
+                  Опис:<br>
+                  <?=$product["description"]?>
+                </div>
+              <? } else { ?>
+                <h4>Відсутня інформація про продукт, можливо це застаріле посилання.</h4>
+              <? } ?>
             </div>
           </div>
 
