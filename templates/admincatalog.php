@@ -35,7 +35,7 @@
               </div>
               <div class="zbTableRow">
                 <div class="size1">1</div>
-                <div class="size2 zbTablePhotoCell" style="background-image: URL('images/pic4.png');"></div>
+                <div class="size2 zbTablePhotoCell" style="background-image: URL('images_user/pic4.png');"></div>
                 <div class="size4 zbTableNameCell">Корм для голубів</div>
                 <div class="size4">Комплекс збагачений вітамінами</div>
                 <div class="size2">9 999</div>
@@ -47,7 +47,7 @@
               </div>
               <div class="zbTableRow">
                 <div class="size1">2</div>
-                <div class="size2 zbTablePhotoCell" style="background-image: URL('images/pic5.png');"></div>
+                <div class="size2 zbTablePhotoCell" style="background-image: URL('images_user/pic5.png');"></div>
                 <div class="size4 zbTableNameCell">Корм для чіхуахуа</div>
                 <div class="size4">З мінералами і екстрактами</div>
                 <div class="size2">9 999</div>

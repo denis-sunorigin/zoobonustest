@@ -14,7 +14,7 @@
               <textarea rows="4" class="form-control"></textarea>
             </div>
             <div class="columnGap15 canWrap fullWidthContainer">
-              <div class="adminProductCardPhoto" style="background-image: URL('images/pic2.png');"></div>
+              <div class="adminProductCardPhoto" style="background-image: URL('images_user/pic2.png');"></div>
               <div class="propertySelectGroup rowGap15">
                 <button class="btn btn-primary btn-sm" type="button">Обрати зображення</button>
                 <button class="btn btn-secondary btn-sm" type="button">Видалити зображення</button>

@@ -8,7 +8,7 @@
               <h6>Рекомендовані товари:</h6>
               <div class="productItemsContainerSmallItems">
                 <a href="#">
-                  <div class="productItem smallItem" style="background-image: URL('images/pic2.png');">
+                  <div class="productItem smallItem" style="background-image: URL('images_user/pic2.png');">
                     <div class="productItemName">
                       <h5>Корм "Chappi"</h5>
                     </div>
@@ -18,7 +18,7 @@
                   </div>
                 </a>
                 <a href="#">
-                  <div class="productItem smallItem" style="background-image: URL('images/pic2.png');">
+                  <div class="productItem smallItem" style="background-image: URL('images_user/pic2.png');">
                     <div class="productItemName">
                       <h5>Корм "Chappi"</h5>
                     </div>
@@ -28,7 +28,7 @@
                   </div>
                 </a>
                 <a href="#">
-                  <div class="productItem smallItem" style="background-image: URL('images/pic2.png');">
+                  <div class="productItem smallItem" style="background-image: URL('images_user/pic2.png');">
                     <div class="productItemName">
                       <h5>Корм "Chappi"</h5>
                     </div>
@@ -42,7 +42,7 @@
             <div class="mainContentSecondColumn">
               <h2>Корм для голубів "Сємкі"</h2>
               <div class="productCardPhotoAndMainInfo">
-                <div class="productCardPhoto" style="background-image: URL('images/pic3.png');"></div>
+                <div class="productCardPhoto" style="background-image: URL('images_user/pic3.png');"></div>
                 <div class="productCardMainInfo">
                   <div><h4>Ціна: 99.99 грн<h4></div>
                   <div>Є в наявності (залишилось 8)</div>

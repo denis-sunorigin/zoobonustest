@@ -39,7 +39,7 @@
               </div>
               <div class="productItemsContainer">
                 <a href="#">
-                  <div class="productItem" style="background-image: URL('images/pic2.png');">
+                  <div class="productItem" style="background-image: URL('images_user/pic2.png');">
                     <div class="productItemName">
                       <h4>Корм "Chappi"</h4>
                     </div>
@@ -50,7 +50,7 @@
                   </div>
                 </a>
                 <a href="#">
-                  <div class="productItem" style="background-image: URL('images/pic4.png');">
+                  <div class="productItem" style="background-image: URL('images_user/pic4.png');">
                     <div class="productItemName">
                       <h4>Корм "Chappi"</h4>
                     </div>
@@ -72,7 +72,7 @@
                   </div>
                 </a>
                 <a href="#">
-                  <div class="productItem" style="background-image: URL('images/pic3.png');">
+                  <div class="productItem" style="background-image: URL('images_user/pic3.png');">
                     <div class="productItemName">
                       <h4>Корм "Chappi"</h4>
                     </div>
@@ -83,7 +83,7 @@
                   </div>
                 </a>
                 <a href="#">
-                  <div class="productItem" style="background-image: URL('images/pic5.png');">
+                  <div class="productItem" style="background-image: URL('images_user/pic5.png');">
                     <div class="productItemName">
                       <h4>Корм "Chappi"</h4>
                     </div>
@@ -94,7 +94,7 @@
                   </div>
                 </a>
                 <a href="#">
-                  <div class="productItem" style="background-image: URL('images/pic6.png');">
+                  <div class="productItem" style="background-image: URL('images_user/pic6.png');">
                     <div class="productItemName">
                       <h4>Корм "Chappi"</h4>
                     </div>
@@ -105,7 +105,7 @@
                   </div>
                 </a>
                 <a href="#">
-                  <div class="productItem" style="background-image: URL('images/pic7.png');">
+                  <div class="productItem" style="background-image: URL('images_user/pic7.png');">
                     <div class="productItemName">
                       <h4>Корм "Chappi"</h4>
                     </div>

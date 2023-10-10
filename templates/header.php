@@ -14,7 +14,7 @@
       <div class="fullPageColumn">
         <div class="menuBarBlock">
           <div class="menuBarLogoBlock">
-            <a href="index.php" title="На головну сторінку">ZooBonus тестовий</a>
+            <a href="index.php" title="На головну сторінку"><img src="templates/images_static/logo.png"></a>
           </div>
           <div class="menuBarMenuBlock">
             <div class="dropdown">
@@ -23,9 +23,9 @@
               </button>
               <ul class="dropdown-menu dropdown-menu-end">
                 <li><h6 class="dropdown-header">Довідники</h6></li>
-                <li><a class="dropdown-item" href="#">Категорії</a></li>
-                <li><a class="dropdown-item" href="#">Бренди</a></li>
-                <li><a class="dropdown-item" href="#">Статуси товару</a></li>
+                <li><a class="dropdown-item" href="admindict.php">Категорії</a></li>
+                <li><a class="dropdown-item" href="admindict.php">Бренди</a></li>
+                <li><a class="dropdown-item" href="admindict.php">Статуси товару</a></li>
                 <li><hr class="dropdown-divider"></li>
                 <li><a class="dropdown-item" href="admincatalog.php">Каталог товарів</a></li>
               </ul>
