@@ -5,7 +5,7 @@ use Models\Product;
 
     require_once('helpers.php');
 
-    function render($error = '', $categoriesList = array(), $productList = array(), $paramsString = '', $sortOptions = array()) {
+    function render($error = '', $categoriesList = array(), $productList = array(), $paramsString = '', $sorts = array()) {
         if (empty($error)) {
             include('templates/admincatalog.php');
         } else {
@@ -40,50 +40,34 @@ use Models\Product;
     }
     $tmpCategories[] = $lastCategoryOther;
     $categoriesList = $tmpCategories;
-
-                /*<div class="size1">ID</div>
-                <div class="size4">Фото</div>
-                <div class="size4">Назва</div>
-                <div class="size4">Опис</div>
-                <div class="size2">Наявн.</div>
-                <div class="size2">Ціна</div>
-                <div class="size3">Статус</div>
-                <div class="size3">Категорія</div>
-                <div class="size3">Бренд</div>
-                <div class="size2">Код 1С</div>
-
+    
+    // Добре було б зробити якийсь об'єкт page або request (чи навіть обидва), і в ньому розміщувати подібні константи. А також методи на кшталт "parseGetParams".
     $sortVariants = array(
-        "id" => ["order" => "id", "direction" => "asc"], "name" => ["order" => "id", "direction" => "asc"], "value" => ["order" => "id", "direction" => "asc"],
-        "price" => ["order" => "id", "direction" => "asc"], "status" => ["order" => "id", "direction" => "asc"], "category" => ["order" => "id", "direction" => "asc"],
-        // Зупинився на brand id / brand name */
-    $sortOptions = array(
-        array("selected_forward" => ($params["sort"] == "id"), "selected_backward" => ($params["sort"] == "id_reverse"), "link" => empty($paramsButSort) ? $page : $page."?".$paramsButSort),
-        array("name" => "Зменшення ціни", "selected" => ($params["sort"] == "price_reverse"), "link" => empty($paramsButSort) ? $page."?sort=price_reverse" : $page."?sort=price_reverse&".$paramsButSort),
-        array("name" => "Назва", "selected" => ($params["sort"] == "name"), "link" => empty($paramsButSort) ? $page."?sort=name" : $page."?sort=name&".$paramsButSort)
+        ["order" => "id", "direction" => "asc", "reverse" => "desc"], ["order" => "name", "direction" => "asc", "reverse" => "desc"],
+        ["order" => "value", "direction" => "asc", "reverse" => "desc"], ["order" => "price", "direction" => "asc", "reverse" => "desc"],
+        ["order" => "statusname", "direction" => "asc", "reverse" => "desc"], ["order" => "statusid", "direction" => "asc", "reverse" => "desc"],
+        ["order" => "categoryname", "direction" => "asc", "reverse" => "desc"], ["order" => "categoryid", "direction" => "asc", "reverse" => "desc"],
+        ["order" => "brandname", "direction" => "asc", "reverse" => "desc"], ["order" => "brandid", "direction" => "asc", "reverse" => "desc"],
+        ["order" => "code1c", "direction" => "asc", "reverse" => "desc"]
     );
-    $orderField = 'price'; $orderDirection = 'asc';
-    switch ($params["sort"]) {
-        case "price_reverse":
-            $orderField = 'price'; $orderDirection = 'desc';
-            break;
-        case "name":
-            $orderField = 'name'; $orderDirection = 'asc';
-            break;
+    $sorts = array(); $orderField = 'id'; $orderDirection = 'asc';
+    foreach($sortVariants as $sVariant) {
+        $tmpItem = ["link" => $page."?sort=".$sVariant["order"], "active_forward" => false, "active_backward" => false];
+        if ($sVariant["order"] == $params["sort"]) {
+            $tmpItem["active_forward"] = true;
+            $tmpItem["link"] = $page."?sort=".$sVariant["order"]."_reverse";
+            $orderField = $sVariant["order"]; $orderDirection = $sVariant["direction"];
+        } elseif (($sVariant["order"]."_reverse") == $params["sort"]) {
+            $tmpItem["active_backward"] = true;
+            $orderField = $sVariant["order"]; $orderDirection = $sVariant["reverse"];
+        }
+        if (filled($paramsButSort)) $tmpItem["link"] .= "&".$paramsButSort;
+        $sorts[] = $tmpItem;
     }
-
+        
     $productObj = new Product();
-    if (empty($params["category"])) {
-        //$productList = $productObj->GetAll($orderField, $orderDirection);
-        $productList = $productObj->GetWithJoinNamesFromDict('', '', $orderField, $orderDirection);
-    } else {
-        $productList = $productObj->GetWithJoinNamesFromDict('categoryid', $params["category"], $orderField, $orderDirection);
-    }
-    if (filled($params["brand"])) {       
-        $tmpProducts = array();
-        foreach ($productList as $product) if (in_array($product["brandid"],$params["brand"])) $tmpProducts[] = $product;
-        $productList = $tmpProducts;
-    }
+    $productList = $productObj->GetWithJoinNamesFromDict('categoryid', $params["category"], $orderField, $orderDirection);
 
-    render($error, $categoriesList, $productList, $paramsString, $sortOptions);
+    render($error, $categoriesList, $productList, $paramsString, $sorts);
 
 ?>

@@ -43,7 +43,7 @@
                 $result["category"] = (int)($category ?? 0);
             }
             if (array_key_exists("sort", $_GET)) {
-                $sort = preg_replace('/[^A-Za-z\_]/', '', $_GET["sort"]);
+                $sort = preg_replace('/[^A-Za-z0-9\_]/', '', $_GET["sort"]);
                 // Тут можна додати перевірку строки на наявність у певному наборі можливих варіантів сортування.
                 $result["sort"] = $sort;
             }
