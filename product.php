@@ -26,7 +26,7 @@ use Models\Product;
 
     $relevantProducts = (empty($params["category"])) ? false : $productObj->GetListBySingleCondition('categoryid', $params["category"]);
     if ($relevantProducts) {
-        // Виключає з "рекомендованих товарів" той самий, сторінку якого відкрито. Якесь некрасиве рішення, елегантного не знайшов.
+        // Виключає з "рекомендованих товарів" той самий, сторінку якого відкрито. Якесь некрасиве рішення, елегантного не знайшов. array_diff наче підходить.
         $tmpArray = array();
         foreach ($relevantProducts as $relevantProduct) if ($relevantProduct["id"] != $params["id"]) $tmpArray[] = $relevantProduct;
         $relevantProducts = $tmpArray;

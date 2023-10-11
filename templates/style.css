@@ -261,6 +261,7 @@ a {
 }
 .zbTableHeader>div.size4, .zbTableRow>div.size4 {
 	flex-basis: 100px;
+	min-width: 180px;
 }
 .zbTableHeader>div.size5, .zbTableRow>div.size5 {
 	flex-basis: 125px;

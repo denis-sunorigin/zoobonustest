@@ -4,14 +4,14 @@
             <h2>Адміністрування. Товари.</h2>
             <div class="alignCenterVert columnGap15 canWrap fullWidthContainer mb-3">
               <div>
-                <select class="form-select form-select-sm">
-                  <option value="1" selected>Всі категорії</option>
-                  <option value="2">Категорія 1</option>
-                  <option value="3">Категорія 2</option>
+                <select class="form-select form-select-sm" onChange="document.location=this.value;">
+                  <?php foreach($categoriesList as $category) { ?>
+                    <option value="<?php echo($category["link"]); ?>" <?php if ($category["selected"]) { ?>selected<?php } ?>><?php echo($category["name"]); ?></option>
+                  <?php } ?>
                 </select>
               </div>
               <div>
-                <select class="form-select form-select-sm">
+                <select disabled class="form-select form-select-sm">
                   <option value="1" selected>Всі бренди</option>
                   <option value="2">Chappi</option>
                   <option value="3">Royal Canin</option>
@@ -23,7 +23,7 @@
             <div class="zbTable">
               <div class="zbTableHeader">
                 <div class="size1">ID</div>
-                <div class="size2">Фото</div>
+                <div class="size4">Фото</div>
                 <div class="size4">Назва</div>
                 <div class="size4">Опис</div>
                 <div class="size2">Наявн.</div>
@@ -33,30 +33,20 @@
                 <div class="size3">Бренд</div>
                 <div class="size2">Код 1С</div>
               </div>
-              <div class="zbTableRow">
-                <div class="size1">1</div>
-                <div class="size2 zbTablePhotoCell" style="background-image: URL('images_user/pic4.png');"></div>
-                <div class="size4 zbTableNameCell">Корм для голубів</div>
-                <div class="size4">Комплекс збагачений вітамінами</div>
-                <div class="size2">9 999</div>
-                <div class="size2">9 999.99</div>
-                <div class="size3">Доступний</div>
-                <div class="size3">Категорія 1</div>
-                <div class="size3">Chappi</div>
-                <div class="size2">285367</div>
-              </div>
-              <div class="zbTableRow">
-                <div class="size1">2</div>
-                <div class="size2 zbTablePhotoCell" style="background-image: URL('images_user/pic5.png');"></div>
-                <div class="size4 zbTableNameCell">Корм для чіхуахуа</div>
-                <div class="size4">З мінералами і екстрактами</div>
-                <div class="size2">9 999</div>
-                <div class="size2">9 999.99</div>
-                <div class="size3">Прихований</div>
-                <div class="size3">Категорія 2</div>
-                <div class="size3">Royal Canin</div>
-                <div class="size2">347151</div>
-              </div>
+              <?php foreach($productList as $product) { ?>
+                <div class="zbTableRow">
+                  <div class="size1"><?php echo($product["id"]); ?></div>
+                  <div class="size4 zbTablePhotoCell" style="background-image: URL('<?php echo(PATHFORUSERIMAGES.$product["image"]); ?>');"></div>
+                  <div class="size4 zbTableNameCell"><?php echo($product["name"]); ?></div>
+                  <div class="size4"><?php echo(($product["description"] != '') ? mb_strimwidth($product["description"],0,100,'...') : '<немає опису>'); ?></div>
+                  <div class="size2"><?php echo($product["value"]); ?></div>
+                  <div class="size2"><?php echo($product["price"]); ?></div>
+                  <div class="size3"><?php echo($product["statusid"]); ?></div>
+                  <div class="size3"><?php echo($product["categoryid"]); ?></div>
+                  <div class="size3"><?php echo($product["brandid"]); ?></div>
+                  <div class="size2"><?php echo($product["code1c"]); ?></div>
+                </div>
+              <?php } ?>
             </div>
 
           </div>
