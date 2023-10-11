@@ -41,8 +41,23 @@ use Models\Product;
     $tmpCategories[] = $lastCategoryOther;
     $categoriesList = $tmpCategories;
 
+                /*<div class="size1">ID</div>
+                <div class="size4">Фото</div>
+                <div class="size4">Назва</div>
+                <div class="size4">Опис</div>
+                <div class="size2">Наявн.</div>
+                <div class="size2">Ціна</div>
+                <div class="size3">Статус</div>
+                <div class="size3">Категорія</div>
+                <div class="size3">Бренд</div>
+                <div class="size2">Код 1С</div>
+
+    $sortVariants = array(
+        "id" => ["order" => "id", "direction" => "asc"], "name" => ["order" => "id", "direction" => "asc"], "value" => ["order" => "id", "direction" => "asc"],
+        "price" => ["order" => "id", "direction" => "asc"], "status" => ["order" => "id", "direction" => "asc"], "category" => ["order" => "id", "direction" => "asc"],
+        // Зупинився на brand id / brand name */
     $sortOptions = array(
-        array("name" => "Зростання ціни", "selected" => (($params["sort"] == "price") || empty($params["sort"])), "link" => empty($paramsButSort) ? $page : $page."?".$paramsButSort),
+        array("selected_forward" => ($params["sort"] == "id"), "selected_backward" => ($params["sort"] == "id_reverse"), "link" => empty($paramsButSort) ? $page : $page."?".$paramsButSort),
         array("name" => "Зменшення ціни", "selected" => ($params["sort"] == "price_reverse"), "link" => empty($paramsButSort) ? $page."?sort=price_reverse" : $page."?sort=price_reverse&".$paramsButSort),
         array("name" => "Назва", "selected" => ($params["sort"] == "name"), "link" => empty($paramsButSort) ? $page."?sort=name" : $page."?sort=name&".$paramsButSort)
     );
@@ -58,9 +73,10 @@ use Models\Product;
 
     $productObj = new Product();
     if (empty($params["category"])) {
-        $productList = $productObj->GetAll($orderField, $orderDirection);
+        //$productList = $productObj->GetAll($orderField, $orderDirection);
+        $productList = $productObj->GetWithJoinNamesFromDict('', '', $orderField, $orderDirection);
     } else {
-        $productList = $productObj->GetListBySingleCondition('categoryid', $params["category"], $orderField, $orderDirection);
+        $productList = $productObj->GetWithJoinNamesFromDict('categoryid', $params["category"], $orderField, $orderDirection);
     }
     if (filled($params["brand"])) {       
         $tmpProducts = array();
