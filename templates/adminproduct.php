@@ -3,18 +3,18 @@
           <div class="mainContentAsSingleColumn">
             <h2>Адміністрування. Корм для чіхуахуа "Нямням".</h2>
             <div class="alignCenterVert columnGap15 canWrap fullWidthContainer mb-3">
-              <a href="#"><< повернутись до каталога</a>
+              <a href="admincatalog.php<?php if (filled($paramsString)) echo('?'.$paramsString); ?>"><< повернутись до каталога</a>
             </div>
             <div class="input-group">
               <span class="input-group-text" id="property1">Назва:</span>
-              <input type="text" class="form-control" id="property1input" aria-describedby="property1">
+              <input type="text" class="form-control" id="property1input" aria-describedby="property1" value="<?php echo($product["name"]); ?>">
             </div>
             <div class="input-group">
               <span class="input-group-text">Опис:</span>
-              <textarea rows="4" class="form-control"></textarea>
+              <textarea rows="8" class="form-control"><?php echo($product["description"]); ?></textarea>
             </div>
             <div class="columnGap15 canWrap fullWidthContainer">
-              <div class="adminProductCardPhoto" style="background-image: URL('images_user/pic2.png');"></div>
+              <div class="adminProductCardPhoto" <?php if (filled($product["image"])) echo("style=\"background-image: URL('".PATHFORUSERIMAGES.$product["image"]."');\""); ?>></div>
               <div class="propertySelectGroup rowGap15">
                 <button class="btn btn-primary btn-sm" type="button">Обрати зображення</button>
                 <button class="btn btn-secondary btn-sm" type="button">Видалити зображення</button>
@@ -23,36 +23,36 @@
             <div class="columnGap15 canWrap fullWidthContainer">
               <div class="propertySelectGroup">
                 <label class="form-label">Бренд</label>
-                <select class="form-select">
-                  <option value="1">Бренд 1</option>
-                  <option value="2">Chappi</option>
-                  <option value="3">Royal Canin</option>
+                <select class="form-select" required>
+                  <?php foreach($brandList as $brand) { ?>
+                    <option value="<?php echo($brand["name"]); ?>" <?php if ($brand["selected"]) echo("selected"); ?>><?php echo($brand["name"]); ?></option>
+                  <?php } ?>
                 </select>
                 <div class="invalid-feedback">
-                  Оберіть статус
+                  Текст помилки
                 </div>
               </div>
               <div class="propertySelectGroup">
                 <label class="form-label">Категорія</label>
-                <select class="form-select is-invalid">
-                  <option value="1" selected>Категорія 0</option>
-                  <option value="2">Категорія 1</option>
-                  <option value="3">Категорія 2</option>
+                <select class="form-select" required>
+                  <?php foreach($categoryList as $category) { ?>
+                    <option value="<?php echo($category["name"]); ?>" <?php if ($category["selected"]) echo("selected"); ?>><?php echo($category["name"]); ?></option>
+                  <?php } ?>
                 </select>
                 <div class="invalid-feedback">
-                  Оберіть статус
+                  Текст помилки
                 </div>
               </div>
               <div class="propertySelectGroup">
                 <label class="form-label">Статус товару</label>
-                  <select class="form-select is-invalid" required>
-                  <option selected disabled value="">Оберіть статус...</option>
-                  <option value="1">Категорія 0</option>
-                  <option value="2">Категорія 1</option>
-                  <option value="3">Категорія 2</option>
+                  <select class="form-select" required>
+                  <!-- <option selected disabled value="">Оберіть статус...</option> -->
+                  <?php foreach($statusList as $status) { ?>
+                    <option value="<?php echo($status["name"]); ?>" <?php if ($status["selected"]) echo("selected"); ?>><?php echo($status["name"]); ?></option>
+                  <?php } ?>
                 </select>
                 <div class="invalid-feedback">
-                  Оберіть статус
+                  Текст помилки
                 </div>
               </div>
             </div>
@@ -60,28 +60,28 @@
               <div class="propertySelectGroup">
                 <div class="input-group">
                   <span class="input-group-text" id="property2">Кількість:</span>
-                  <input type="number" class="form-control is-invalid" id="property2input" aria-describedby="property2">
+                  <input type="number" class="form-control" id="property2input" aria-describedby="property2" value="<?php echo($product["value"]); ?>">
                   <div class="invalid-feedback">
-                    Оберіть статус
+                    Текст помилки
                   </div>
                 </div>
               </div>
               <div class="propertySelectGroup">
                 <div class="input-group">
                   <span class="input-group-text" id="property3">Ціна:</span>
-                  <input type="number" class="form-control is-invalid" id="property3input" aria-describedby="property3">
+                  <input type="number" class="form-control" id="property3input" aria-describedby="property3" value="<?php echo($product["price"]); ?>">
                   <span class="input-group-text">грн</span>
                   <div class="invalid-feedback">
-                    Оберіть статус
+                    Текст помилки
                   </div>
                 </div>
               </div>
               <div class="propertySelectGroup">
                 <div class="input-group">
                   <span class="input-group-text" id="property4">Код 1С:</span>
-                  <input type="text" class="form-control is-invalid" id="property4input" aria-describedby="property4">
+                  <input type="text" class="form-control" id="property4input" aria-describedby="property4" value="<?php echo($product["code1c"]); ?>">
                   <div class="invalid-feedback">
-                    Оберіть статус
+                    Текст помилки
                   </div>
                 </div>
               </div>
