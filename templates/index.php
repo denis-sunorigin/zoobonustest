@@ -22,7 +22,7 @@
               </fieldset>
             </div>
             <div class="mainContentSecondColumn">
-              <h2>Товари в категорії "Корм" брендів "Chappi", "Royal Canin" (18)</h2>
+              <h2>Товари в категорії <?php echo ('"'.$selectedCategoryName.'" '.$selectedBrandsName.' ('.count($productList).')'); ?></h2>
               <div class="alignCenterVert columnGap15 canWrap fullWidthContainer">
                 <?php if (filled($sortOptions)) { ?>
                   Сортування:

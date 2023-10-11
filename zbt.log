@@ -5966,3 +5966,313 @@ id, name, description, value, price, code1c, image, brandid, categoryid, statusi
 2023-10-11 02:14:41 Models\DBTable::GetAll(products): sql-запит виконано
 2023-10-11 02:14:41 Models\DBTable::GetAll(products): результат запиту до БД не false
 2023-10-11 02:14:41 Models\DBTable::GetAll(products): результат запиту до БД містить більше ніж 0 строк
+2023-10-11 02:39:20 Models\DBTable::GetAll(brands): значення сортування не отримано (або вони не коректні)
+2023-10-11 02:39:20 Models\DBTable::GetAll(brands): підʼєднано до сервера БД
+2023-10-11 02:39:20 Models\DBTable::GetAll(brands): sql-запит виконано
+2023-10-11 02:39:20 Models\DBTable::GetAll(brands): результат запиту до БД не false
+2023-10-11 02:39:20 Models\DBTable::GetAll(brands): результат запиту до БД містить більше ніж 0 строк
+2023-10-11 02:39:20 Models\DBTable::GetAll(categories): значення сортування не отримано (або вони не коректні)
+2023-10-11 02:39:20 Models\DBTable::GetAll(categories): підʼєднано до сервера БД
+2023-10-11 02:39:20 Models\DBTable::GetAll(categories): sql-запит виконано
+2023-10-11 02:39:20 Models\DBTable::GetAll(categories): результат запиту до БД не false
+2023-10-11 02:39:20 Models\DBTable::GetAll(categories): результат запиту до БД містить більше ніж 0 строк
+2023-10-11 02:39:20 Models\DBTable::GetAll(products): отримано коректні значення сортування, а саме "price", "asc".
+2023-10-11 02:39:20 Models\DBTable::GetAll(products): підʼєднано до сервера БД
+2023-10-11 02:39:20 Models\DBTable::GetAll(products): sql-запит виконано
+2023-10-11 02:39:20 Models\DBTable::GetAll(products): результат запиту до БД не false
+2023-10-11 02:39:20 Models\DBTable::GetAll(products): результат запиту до БД містить більше ніж 0 строк
+2023-10-11 02:39:20 перевірка телеграму
+2023-10-11 10:29:42 Models\DBTable::GetAll(brands): значення сортування не отримано (або вони не коректні)
+2023-10-11 10:29:44 Models\DBTable::GetAll(brands): підʼєднано до сервера БД
+2023-10-11 10:29:44 Models\DBTable::GetAll(brands): sql-запит виконано
+2023-10-11 10:29:44 Models\DBTable::GetAll(brands): результат запиту до БД не false
+2023-10-11 10:29:44 Models\DBTable::GetAll(brands): результат запиту до БД містить більше ніж 0 строк
+2023-10-11 10:29:44 Models\DBTable::GetAll(categories): значення сортування не отримано (або вони не коректні)
+2023-10-11 10:29:44 Models\DBTable::GetAll(categories): підʼєднано до сервера БД
+2023-10-11 10:29:44 Models\DBTable::GetAll(categories): sql-запит виконано
+2023-10-11 10:29:44 Models\DBTable::GetAll(categories): результат запиту до БД не false
+2023-10-11 10:29:44 Models\DBTable::GetAll(categories): результат запиту до БД містить більше ніж 0 строк
+2023-10-11 10:29:44 Models\DBTable::GetAll(products): отримано коректні значення сортування, а саме "price", "asc".
+2023-10-11 10:29:44 Models\DBTable::GetAll(products): підʼєднано до сервера БД
+2023-10-11 10:29:44 Models\DBTable::GetAll(products): sql-запит виконано
+2023-10-11 10:29:44 Models\DBTable::GetAll(products): результат запиту до БД не false
+2023-10-11 10:29:44 Models\DBTable::GetAll(products): результат запиту до БД містить більше ніж 0 строк
+2023-10-11 10:29:59 Models\DBTable::GetAll(brands): значення сортування не отримано (або вони не коректні)
+2023-10-11 10:29:59 Models\DBTable::GetAll(brands): підʼєднано до сервера БД
+2023-10-11 10:29:59 Models\DBTable::GetAll(brands): sql-запит виконано
+2023-10-11 10:29:59 Models\DBTable::GetAll(brands): результат запиту до БД не false
+2023-10-11 10:29:59 Models\DBTable::GetAll(brands): результат запиту до БД містить більше ніж 0 строк
+2023-10-11 10:29:59 Models\DBTable::GetAll(categories): значення сортування не отримано (або вони не коректні)
+2023-10-11 10:29:59 Models\DBTable::GetAll(categories): підʼєднано до сервера БД
+2023-10-11 10:29:59 Models\DBTable::GetAll(categories): sql-запит виконано
+2023-10-11 10:29:59 Models\DBTable::GetAll(categories): результат запиту до БД не false
+2023-10-11 10:29:59 Models\DBTable::GetAll(categories): результат запиту до БД містить більше ніж 0 строк
+2023-10-11 10:29:59 Models\DBTable::GetAll(products): отримано коректні значення сортування, а саме "price", "asc".
+2023-10-11 10:29:59 Models\DBTable::GetAll(products): підʼєднано до сервера БД
+2023-10-11 10:29:59 Models\DBTable::GetAll(products): sql-запит виконано
+2023-10-11 10:29:59 Models\DBTable::GetAll(products): результат запиту до БД не false
+2023-10-11 10:29:59 Models\DBTable::GetAll(products): результат запиту до БД містить більше ніж 0 строк
+2023-10-11 10:30:05 Models\DBTable::GetAll(brands): значення сортування не отримано (або вони не коректні)
+2023-10-11 10:30:05 Models\DBTable::GetAll(brands): підʼєднано до сервера БД
+2023-10-11 10:30:05 Models\DBTable::GetAll(brands): sql-запит виконано
+2023-10-11 10:30:05 Models\DBTable::GetAll(brands): результат запиту до БД не false
+2023-10-11 10:30:05 Models\DBTable::GetAll(brands): результат запиту до БД містить більше ніж 0 строк
+2023-10-11 10:30:05 Models\DBTable::GetAll(categories): значення сортування не отримано (або вони не коректні)
+2023-10-11 10:30:05 Models\DBTable::GetAll(categories): підʼєднано до сервера БД
+2023-10-11 10:30:05 Models\DBTable::GetAll(categories): sql-запит виконано
+2023-10-11 10:30:05 Models\DBTable::GetAll(categories): результат запиту до БД не false
+2023-10-11 10:30:05 Models\DBTable::GetAll(categories): результат запиту до БД містить більше ніж 0 строк
+2023-10-11 10:30:05 Models\DBTable::GetAll(products): отримано коректні значення сортування, а саме "price", "asc".
+2023-10-11 10:30:05 Models\DBTable::GetAll(products): підʼєднано до сервера БД
+2023-10-11 10:30:05 Models\DBTable::GetAll(products): sql-запит виконано
+2023-10-11 10:30:05 Models\DBTable::GetAll(products): результат запиту до БД не false
+2023-10-11 10:30:05 Models\DBTable::GetAll(products): результат запиту до БД містить більше ніж 0 строк
+2023-10-11 10:30:07 Models\DBTable::GetAll(brands): значення сортування не отримано (або вони не коректні)
+2023-10-11 10:30:07 Models\DBTable::GetAll(brands): підʼєднано до сервера БД
+2023-10-11 10:30:07 Models\DBTable::GetAll(brands): sql-запит виконано
+2023-10-11 10:30:07 Models\DBTable::GetAll(brands): результат запиту до БД не false
+2023-10-11 10:30:07 Models\DBTable::GetAll(brands): результат запиту до БД містить більше ніж 0 строк
+2023-10-11 10:30:07 Models\DBTable::GetAll(categories): значення сортування не отримано (або вони не коректні)
+2023-10-11 10:30:07 Models\DBTable::GetAll(categories): підʼєднано до сервера БД
+2023-10-11 10:30:07 Models\DBTable::GetAll(categories): sql-запит виконано
+2023-10-11 10:30:07 Models\DBTable::GetAll(categories): результат запиту до БД не false
+2023-10-11 10:30:07 Models\DBTable::GetAll(categories): результат запиту до БД містить більше ніж 0 строк
+2023-10-11 10:30:07 Models\DBTable::GetAll(products): отримано коректні значення сортування, а саме "price", "asc".
+2023-10-11 10:30:07 Models\DBTable::GetAll(products): підʼєднано до сервера БД
+2023-10-11 10:30:07 Models\DBTable::GetAll(products): sql-запит виконано
+2023-10-11 10:30:07 Models\DBTable::GetAll(products): результат запиту до БД не false
+2023-10-11 10:30:07 Models\DBTable::GetAll(products): результат запиту до БД містить більше ніж 0 строк
+2023-10-11 10:30:10 Models\DBTable::GetAll(brands): значення сортування не отримано (або вони не коректні)
+2023-10-11 10:30:10 Models\DBTable::GetAll(brands): підʼєднано до сервера БД
+2023-10-11 10:30:10 Models\DBTable::GetAll(brands): sql-запит виконано
+2023-10-11 10:30:10 Models\DBTable::GetAll(brands): результат запиту до БД не false
+2023-10-11 10:30:10 Models\DBTable::GetAll(brands): результат запиту до БД містить більше ніж 0 строк
+2023-10-11 10:30:10 Models\DBTable::GetAll(categories): значення сортування не отримано (або вони не коректні)
+2023-10-11 10:30:10 Models\DBTable::GetAll(categories): підʼєднано до сервера БД
+2023-10-11 10:30:10 Models\DBTable::GetAll(categories): sql-запит виконано
+2023-10-11 10:30:10 Models\DBTable::GetAll(categories): результат запиту до БД не false
+2023-10-11 10:30:10 Models\DBTable::GetAll(categories): результат запиту до БД містить більше ніж 0 строк
+2023-10-11 10:30:10 Models\DBTable::GetAll(products): отримано коректні значення сортування, а саме "price", "asc".
+2023-10-11 10:30:10 Models\DBTable::GetAll(products): підʼєднано до сервера БД
+2023-10-11 10:30:10 Models\DBTable::GetAll(products): sql-запит виконано
+2023-10-11 10:30:10 Models\DBTable::GetAll(products): результат запиту до БД не false
+2023-10-11 10:30:10 Models\DBTable::GetAll(products): результат запиту до БД містить більше ніж 0 строк
+2023-10-11 10:30:11 Models\DBTable::GetAll(brands): значення сортування не отримано (або вони не коректні)
+2023-10-11 10:30:11 Models\DBTable::GetAll(brands): підʼєднано до сервера БД
+2023-10-11 10:30:11 Models\DBTable::GetAll(brands): sql-запит виконано
+2023-10-11 10:30:11 Models\DBTable::GetAll(brands): результат запиту до БД не false
+2023-10-11 10:30:11 Models\DBTable::GetAll(brands): результат запиту до БД містить більше ніж 0 строк
+2023-10-11 10:30:11 Models\DBTable::GetAll(categories): значення сортування не отримано (або вони не коректні)
+2023-10-11 10:30:11 Models\DBTable::GetAll(categories): підʼєднано до сервера БД
+2023-10-11 10:30:11 Models\DBTable::GetAll(categories): sql-запит виконано
+2023-10-11 10:30:11 Models\DBTable::GetAll(categories): результат запиту до БД не false
+2023-10-11 10:30:11 Models\DBTable::GetAll(categories): результат запиту до БД містить більше ніж 0 строк
+2023-10-11 10:30:11 Models\DBTable::GetAll(products): отримано коректні значення сортування, а саме "price", "asc".
+2023-10-11 10:30:11 Models\DBTable::GetAll(products): підʼєднано до сервера БД
+2023-10-11 10:30:11 Models\DBTable::GetAll(products): sql-запит виконано
+2023-10-11 10:30:11 Models\DBTable::GetAll(products): результат запиту до БД не false
+2023-10-11 10:30:11 Models\DBTable::GetAll(products): результат запиту до БД містить більше ніж 0 строк
+2023-10-11 10:30:13 Models\DBTable::GetAll(brands): значення сортування не отримано (або вони не коректні)
+2023-10-11 10:30:13 Models\DBTable::GetAll(brands): підʼєднано до сервера БД
+2023-10-11 10:30:13 Models\DBTable::GetAll(brands): sql-запит виконано
+2023-10-11 10:30:13 Models\DBTable::GetAll(brands): результат запиту до БД не false
+2023-10-11 10:30:13 Models\DBTable::GetAll(brands): результат запиту до БД містить більше ніж 0 строк
+2023-10-11 10:30:13 Models\DBTable::GetAll(categories): значення сортування не отримано (або вони не коректні)
+2023-10-11 10:30:13 Models\DBTable::GetAll(categories): підʼєднано до сервера БД
+2023-10-11 10:30:13 Models\DBTable::GetAll(categories): sql-запит виконано
+2023-10-11 10:30:13 Models\DBTable::GetAll(categories): результат запиту до БД не false
+2023-10-11 10:30:13 Models\DBTable::GetAll(categories): результат запиту до БД містить більше ніж 0 строк
+2023-10-11 10:30:13 Models\DBTable::GetAll(products): отримано коректні значення сортування, а саме "price", "asc".
+2023-10-11 10:30:13 Models\DBTable::GetAll(products): підʼєднано до сервера БД
+2023-10-11 10:30:13 Models\DBTable::GetAll(products): sql-запит виконано
+2023-10-11 10:30:13 Models\DBTable::GetAll(products): результат запиту до БД не false
+2023-10-11 10:30:13 Models\DBTable::GetAll(products): результат запиту до БД містить більше ніж 0 строк
+2023-10-11 10:35:05 Models\DBTable::GetAll(brands): значення сортування не отримано (або вони не коректні)
+2023-10-11 10:35:05 Models\DBTable::GetAll(brands): підʼєднано до сервера БД
+2023-10-11 10:35:05 Models\DBTable::GetAll(brands): sql-запит виконано
+2023-10-11 10:35:05 Models\DBTable::GetAll(brands): результат запиту до БД не false
+2023-10-11 10:35:05 Models\DBTable::GetAll(brands): результат запиту до БД містить більше ніж 0 строк
+2023-10-11 10:35:05 Models\DBTable::GetAll(categories): значення сортування не отримано (або вони не коректні)
+2023-10-11 10:35:05 Models\DBTable::GetAll(categories): підʼєднано до сервера БД
+2023-10-11 10:35:05 Models\DBTable::GetAll(categories): sql-запит виконано
+2023-10-11 10:35:05 Models\DBTable::GetAll(categories): результат запиту до БД не false
+2023-10-11 10:35:05 Models\DBTable::GetAll(categories): результат запиту до БД містить більше ніж 0 строк
+2023-10-11 10:35:05 Models\DBTable::GetAll(products): отримано коректні значення сортування, а саме "price", "asc".
+2023-10-11 10:35:05 Models\DBTable::GetAll(products): підʼєднано до сервера БД
+2023-10-11 10:35:05 Models\DBTable::GetAll(products): sql-запит виконано
+2023-10-11 10:35:05 Models\DBTable::GetAll(products): результат запиту до БД не false
+2023-10-11 10:35:05 Models\DBTable::GetAll(products): результат запиту до БД містить більше ніж 0 строк
+2023-10-11 10:44:18 Models\DBTable::GetAll(brands): значення сортування не отримано (або вони не коректні)
+2023-10-11 10:44:18 Models\DBTable::GetAll(brands): підʼєднано до сервера БД
+2023-10-11 10:44:18 Models\DBTable::GetAll(brands): sql-запит виконано
+2023-10-11 10:44:18 Models\DBTable::GetAll(brands): результат запиту до БД не false
+2023-10-11 10:44:18 Models\DBTable::GetAll(brands): результат запиту до БД містить більше ніж 0 строк
+2023-10-11 10:44:18 Models\DBTable::GetAll(categories): значення сортування не отримано (або вони не коректні)
+2023-10-11 10:44:18 Models\DBTable::GetAll(categories): підʼєднано до сервера БД
+2023-10-11 10:44:18 Models\DBTable::GetAll(categories): sql-запит виконано
+2023-10-11 10:44:18 Models\DBTable::GetAll(categories): результат запиту до БД не false
+2023-10-11 10:44:18 Models\DBTable::GetAll(categories): результат запиту до БД містить більше ніж 0 строк
+2023-10-11 10:44:18 Models\DBTable::GetAll(products): отримано коректні значення сортування, а саме "price", "asc".
+2023-10-11 10:44:18 Models\DBTable::GetAll(products): підʼєднано до сервера БД
+2023-10-11 10:44:18 Models\DBTable::GetAll(products): sql-запит виконано
+2023-10-11 10:44:18 Models\DBTable::GetAll(products): результат запиту до БД не false
+2023-10-11 10:44:18 Models\DBTable::GetAll(products): результат запиту до БД містить більше ніж 0 строк
+2023-10-11 10:44:44 Models\DBTable::GetAll(brands): значення сортування не отримано (або вони не коректні)
+2023-10-11 10:44:44 Models\DBTable::GetAll(brands): підʼєднано до сервера БД
+2023-10-11 10:44:44 Models\DBTable::GetAll(brands): sql-запит виконано
+2023-10-11 10:44:44 Models\DBTable::GetAll(brands): результат запиту до БД не false
+2023-10-11 10:44:44 Models\DBTable::GetAll(brands): результат запиту до БД містить більше ніж 0 строк
+2023-10-11 10:44:44 Models\DBTable::GetAll(categories): значення сортування не отримано (або вони не коректні)
+2023-10-11 10:44:44 Models\DBTable::GetAll(categories): підʼєднано до сервера БД
+2023-10-11 10:44:44 Models\DBTable::GetAll(categories): sql-запит виконано
+2023-10-11 10:44:44 Models\DBTable::GetAll(categories): результат запиту до БД не false
+2023-10-11 10:44:44 Models\DBTable::GetAll(categories): результат запиту до БД містить більше ніж 0 строк
+2023-10-11 10:44:44 Models\DBTable::GetAll(products): отримано коректні значення сортування, а саме "price", "asc".
+2023-10-11 10:44:44 Models\DBTable::GetAll(products): підʼєднано до сервера БД
+2023-10-11 10:44:44 Models\DBTable::GetAll(products): sql-запит виконано
+2023-10-11 10:44:44 Models\DBTable::GetAll(products): результат запиту до БД не false
+2023-10-11 10:44:44 Models\DBTable::GetAll(products): результат запиту до БД містить більше ніж 0 строк
+2023-10-11 10:46:14 Models\DBTable::GetAll(brands): значення сортування не отримано (або вони не коректні)
+2023-10-11 10:46:14 Models\DBTable::GetAll(brands): підʼєднано до сервера БД
+2023-10-11 10:46:14 Models\DBTable::GetAll(brands): sql-запит виконано
+2023-10-11 10:46:14 Models\DBTable::GetAll(brands): результат запиту до БД не false
+2023-10-11 10:46:14 Models\DBTable::GetAll(brands): результат запиту до БД містить більше ніж 0 строк
+2023-10-11 10:46:14 Models\DBTable::GetAll(categories): значення сортування не отримано (або вони не коректні)
+2023-10-11 10:46:14 Models\DBTable::GetAll(categories): підʼєднано до сервера БД
+2023-10-11 10:46:14 Models\DBTable::GetAll(categories): sql-запит виконано
+2023-10-11 10:46:14 Models\DBTable::GetAll(categories): результат запиту до БД не false
+2023-10-11 10:46:14 Models\DBTable::GetAll(categories): результат запиту до БД містить більше ніж 0 строк
+2023-10-11 10:46:14 Models\DBTable::GetAll(products): отримано коректні значення сортування, а саме "price", "asc".
+2023-10-11 10:46:14 Models\DBTable::GetAll(products): підʼєднано до сервера БД
+2023-10-11 10:46:14 Models\DBTable::GetAll(products): sql-запит виконано
+2023-10-11 10:46:14 Models\DBTable::GetAll(products): результат запиту до БД не false
+2023-10-11 10:46:14 Models\DBTable::GetAll(products): результат запиту до БД містить більше ніж 0 строк
+2023-10-11 10:48:38 Models\DBTable::GetAll(brands): значення сортування не отримано (або вони не коректні)
+2023-10-11 10:48:38 Models\DBTable::GetAll(brands): підʼєднано до сервера БД
+2023-10-11 10:48:38 Models\DBTable::GetAll(brands): sql-запит виконано
+2023-10-11 10:48:38 Models\DBTable::GetAll(brands): результат запиту до БД не false
+2023-10-11 10:48:38 Models\DBTable::GetAll(brands): результат запиту до БД містить більше ніж 0 строк
+2023-10-11 10:48:55 Models\DBTable::GetAll(brands): значення сортування не отримано (або вони не коректні)
+2023-10-11 10:48:55 Models\DBTable::GetAll(brands): підʼєднано до сервера БД
+2023-10-11 10:48:55 Models\DBTable::GetAll(brands): sql-запит виконано
+2023-10-11 10:48:55 Models\DBTable::GetAll(brands): результат запиту до БД не false
+2023-10-11 10:48:55 Models\DBTable::GetAll(brands): результат запиту до БД містить більше ніж 0 строк
+2023-10-11 10:48:55 Models\DBTable::GetAll(categories): значення сортування не отримано (або вони не коректні)
+2023-10-11 10:48:55 Models\DBTable::GetAll(categories): підʼєднано до сервера БД
+2023-10-11 10:48:55 Models\DBTable::GetAll(categories): sql-запит виконано
+2023-10-11 10:48:55 Models\DBTable::GetAll(categories): результат запиту до БД не false
+2023-10-11 10:48:55 Models\DBTable::GetAll(categories): результат запиту до БД містить більше ніж 0 строк
+2023-10-11 10:48:55 Models\DBTable::GetAll(products): отримано коректні значення сортування, а саме "price", "asc".
+2023-10-11 10:48:55 Models\DBTable::GetAll(products): підʼєднано до сервера БД
+2023-10-11 10:48:55 Models\DBTable::GetAll(products): sql-запит виконано
+2023-10-11 10:48:55 Models\DBTable::GetAll(products): результат запиту до БД не false
+2023-10-11 10:48:55 Models\DBTable::GetAll(products): результат запиту до БД містить більше ніж 0 строк
+2023-10-11 10:49:02 Models\DBTable::GetAll(brands): значення сортування не отримано (або вони не коректні)
+2023-10-11 10:49:02 Models\DBTable::GetAll(brands): підʼєднано до сервера БД
+2023-10-11 10:49:02 Models\DBTable::GetAll(brands): sql-запит виконано
+2023-10-11 10:49:02 Models\DBTable::GetAll(brands): результат запиту до БД не false
+2023-10-11 10:49:02 Models\DBTable::GetAll(brands): результат запиту до БД містить більше ніж 0 строк
+2023-10-11 10:49:02 Models\DBTable::GetAll(categories): значення сортування не отримано (або вони не коректні)
+2023-10-11 10:49:02 Models\DBTable::GetAll(categories): підʼєднано до сервера БД
+2023-10-11 10:49:02 Models\DBTable::GetAll(categories): sql-запит виконано
+2023-10-11 10:49:02 Models\DBTable::GetAll(categories): результат запиту до БД не false
+2023-10-11 10:49:02 Models\DBTable::GetAll(categories): результат запиту до БД містить більше ніж 0 строк
+2023-10-11 10:49:02 Models\DBTable::GetAll(products): отримано коректні значення сортування, а саме "price", "asc".
+2023-10-11 10:49:02 Models\DBTable::GetAll(products): підʼєднано до сервера БД
+2023-10-11 10:49:02 Models\DBTable::GetAll(products): sql-запит виконано
+2023-10-11 10:49:02 Models\DBTable::GetAll(products): результат запиту до БД не false
+2023-10-11 10:49:02 Models\DBTable::GetAll(products): результат запиту до БД містить більше ніж 0 строк
+2023-10-11 10:49:04 Models\DBTable::GetAll(brands): значення сортування не отримано (або вони не коректні)
+2023-10-11 10:49:04 Models\DBTable::GetAll(brands): підʼєднано до сервера БД
+2023-10-11 10:49:04 Models\DBTable::GetAll(brands): sql-запит виконано
+2023-10-11 10:49:04 Models\DBTable::GetAll(brands): результат запиту до БД не false
+2023-10-11 10:49:04 Models\DBTable::GetAll(brands): результат запиту до БД містить більше ніж 0 строк
+2023-10-11 10:49:04 Models\DBTable::GetAll(categories): значення сортування не отримано (або вони не коректні)
+2023-10-11 10:49:04 Models\DBTable::GetAll(categories): підʼєднано до сервера БД
+2023-10-11 10:49:04 Models\DBTable::GetAll(categories): sql-запит виконано
+2023-10-11 10:49:04 Models\DBTable::GetAll(categories): результат запиту до БД не false
+2023-10-11 10:49:04 Models\DBTable::GetAll(categories): результат запиту до БД містить більше ніж 0 строк
+2023-10-11 10:49:04 Models\DBTable::GetAll(products): отримано коректні значення сортування, а саме "price", "asc".
+2023-10-11 10:49:04 Models\DBTable::GetAll(products): підʼєднано до сервера БД
+2023-10-11 10:49:04 Models\DBTable::GetAll(products): sql-запит виконано
+2023-10-11 10:49:04 Models\DBTable::GetAll(products): результат запиту до БД не false
+2023-10-11 10:49:04 Models\DBTable::GetAll(products): результат запиту до БД містить більше ніж 0 строк
+2023-10-11 10:49:05 Models\DBTable::GetAll(brands): значення сортування не отримано (або вони не коректні)
+2023-10-11 10:49:05 Models\DBTable::GetAll(brands): підʼєднано до сервера БД
+2023-10-11 10:49:05 Models\DBTable::GetAll(brands): sql-запит виконано
+2023-10-11 10:49:05 Models\DBTable::GetAll(brands): результат запиту до БД не false
+2023-10-11 10:49:05 Models\DBTable::GetAll(brands): результат запиту до БД містить більше ніж 0 строк
+2023-10-11 10:49:05 Models\DBTable::GetAll(categories): значення сортування не отримано (або вони не коректні)
+2023-10-11 10:49:05 Models\DBTable::GetAll(categories): підʼєднано до сервера БД
+2023-10-11 10:49:05 Models\DBTable::GetAll(categories): sql-запит виконано
+2023-10-11 10:49:05 Models\DBTable::GetAll(categories): результат запиту до БД не false
+2023-10-11 10:49:05 Models\DBTable::GetAll(categories): результат запиту до БД містить більше ніж 0 строк
+2023-10-11 10:49:05 Models\DBTable::GetAll(products): отримано коректні значення сортування, а саме "price", "asc".
+2023-10-11 10:49:05 Models\DBTable::GetAll(products): підʼєднано до сервера БД
+2023-10-11 10:49:05 Models\DBTable::GetAll(products): sql-запит виконано
+2023-10-11 10:49:05 Models\DBTable::GetAll(products): результат запиту до БД не false
+2023-10-11 10:49:05 Models\DBTable::GetAll(products): результат запиту до БД містить більше ніж 0 строк
+2023-10-11 10:49:07 Models\DBTable::GetAll(brands): значення сортування не отримано (або вони не коректні)
+2023-10-11 10:49:07 Models\DBTable::GetAll(brands): підʼєднано до сервера БД
+2023-10-11 10:49:07 Models\DBTable::GetAll(brands): sql-запит виконано
+2023-10-11 10:49:07 Models\DBTable::GetAll(brands): результат запиту до БД не false
+2023-10-11 10:49:07 Models\DBTable::GetAll(brands): результат запиту до БД містить більше ніж 0 строк
+2023-10-11 10:49:07 Models\DBTable::GetAll(categories): значення сортування не отримано (або вони не коректні)
+2023-10-11 10:49:07 Models\DBTable::GetAll(categories): підʼєднано до сервера БД
+2023-10-11 10:49:07 Models\DBTable::GetAll(categories): sql-запит виконано
+2023-10-11 10:49:07 Models\DBTable::GetAll(categories): результат запиту до БД не false
+2023-10-11 10:49:07 Models\DBTable::GetAll(categories): результат запиту до БД містить більше ніж 0 строк
+2023-10-11 10:49:07 Models\DBTable::GetListBySingleCondition(products): під час визова функції запиту з фільтрацією отримано коректні назву і значення поля, а саме "categoryid"="5".
+2023-10-11 10:49:07 Models\DBTable::GetListBySingleCondition(products): отримано коректні значення сортування, а саме "price", "asc".
+2023-10-11 10:49:07 Models\DBTable::GetListBySingleCondition(products): підʼєднано до сервера БД
+2023-10-11 10:49:07 Models\DBTable::GetListBySingleCondition(products): sql-запит виконано
+2023-10-11 10:49:07 Models\DBTable::GetListBySingleCondition(products): результат запиту до БД не false
+2023-10-11 10:49:07 Models\DBTable::GetListBySingleCondition(products): результат запиту до БД містить більше ніж 0 строк
+2023-10-11 10:49:12 Models\DBTable::GetAll(brands): значення сортування не отримано (або вони не коректні)
+2023-10-11 10:49:12 Models\DBTable::GetAll(brands): підʼєднано до сервера БД
+2023-10-11 10:49:12 Models\DBTable::GetAll(brands): sql-запит виконано
+2023-10-11 10:49:12 Models\DBTable::GetAll(brands): результат запиту до БД не false
+2023-10-11 10:49:12 Models\DBTable::GetAll(brands): результат запиту до БД містить більше ніж 0 строк
+2023-10-11 10:49:12 Models\DBTable::GetAll(categories): значення сортування не отримано (або вони не коректні)
+2023-10-11 10:49:12 Models\DBTable::GetAll(categories): підʼєднано до сервера БД
+2023-10-11 10:49:12 Models\DBTable::GetAll(categories): sql-запит виконано
+2023-10-11 10:49:12 Models\DBTable::GetAll(categories): результат запиту до БД не false
+2023-10-11 10:49:12 Models\DBTable::GetAll(categories): результат запиту до БД містить більше ніж 0 строк
+2023-10-11 10:49:12 Models\DBTable::GetListBySingleCondition(products): під час визова функції запиту з фільтрацією отримано коректні назву і значення поля, а саме "categoryid"="5".
+2023-10-11 10:49:12 Models\DBTable::GetListBySingleCondition(products): отримано коректні значення сортування, а саме "price", "asc".
+2023-10-11 10:49:12 Models\DBTable::GetListBySingleCondition(products): підʼєднано до сервера БД
+2023-10-11 10:49:12 Models\DBTable::GetListBySingleCondition(products): sql-запит виконано
+2023-10-11 10:49:12 Models\DBTable::GetListBySingleCondition(products): результат запиту до БД не false
+2023-10-11 10:49:12 Models\DBTable::GetListBySingleCondition(products): результат запиту до БД містить більше ніж 0 строк
+2023-10-11 10:49:13 Models\DBTable::GetAll(brands): значення сортування не отримано (або вони не коректні)
+2023-10-11 10:49:13 Models\DBTable::GetAll(brands): підʼєднано до сервера БД
+2023-10-11 10:49:13 Models\DBTable::GetAll(brands): sql-запит виконано
+2023-10-11 10:49:13 Models\DBTable::GetAll(brands): результат запиту до БД не false
+2023-10-11 10:49:13 Models\DBTable::GetAll(brands): результат запиту до БД містить більше ніж 0 строк
+2023-10-11 10:49:13 Models\DBTable::GetAll(categories): значення сортування не отримано (або вони не коректні)
+2023-10-11 10:49:13 Models\DBTable::GetAll(categories): підʼєднано до сервера БД
+2023-10-11 10:49:13 Models\DBTable::GetAll(categories): sql-запит виконано
+2023-10-11 10:49:13 Models\DBTable::GetAll(categories): результат запиту до БД не false
+2023-10-11 10:49:13 Models\DBTable::GetAll(categories): результат запиту до БД містить більше ніж 0 строк
+2023-10-11 10:49:13 Models\DBTable::GetListBySingleCondition(products): під час визова функції запиту з фільтрацією отримано коректні назву і значення поля, а саме "categoryid"="5".
+2023-10-11 10:49:13 Models\DBTable::GetListBySingleCondition(products): отримано коректні значення сортування, а саме "price", "asc".
+2023-10-11 10:49:13 Models\DBTable::GetListBySingleCondition(products): підʼєднано до сервера БД
+2023-10-11 10:49:13 Models\DBTable::GetListBySingleCondition(products): sql-запит виконано
+2023-10-11 10:49:13 Models\DBTable::GetListBySingleCondition(products): результат запиту до БД не false
+2023-10-11 10:49:13 Models\DBTable::GetListBySingleCondition(products): результат запиту до БД містить більше ніж 0 строк
+2023-10-11 10:49:16 Models\DBTable::GetAll(brands): значення сортування не отримано (або вони не коректні)
+2023-10-11 10:49:16 Models\DBTable::GetAll(brands): підʼєднано до сервера БД
+2023-10-11 10:49:16 Models\DBTable::GetAll(brands): sql-запит виконано
+2023-10-11 10:49:16 Models\DBTable::GetAll(brands): результат запиту до БД не false
+2023-10-11 10:49:16 Models\DBTable::GetAll(brands): результат запиту до БД містить більше ніж 0 строк
+2023-10-11 10:49:16 Models\DBTable::GetAll(categories): значення сортування не отримано (або вони не коректні)
+2023-10-11 10:49:16 Models\DBTable::GetAll(categories): підʼєднано до сервера БД
+2023-10-11 10:49:16 Models\DBTable::GetAll(categories): sql-запит виконано
+2023-10-11 10:49:16 Models\DBTable::GetAll(categories): результат запиту до БД не false
+2023-10-11 10:49:16 Models\DBTable::GetAll(categories): результат запиту до БД містить більше ніж 0 строк
+2023-10-11 10:49:16 Models\DBTable::GetListBySingleCondition(products): під час визова функції запиту з фільтрацією отримано коректні назву і значення поля, а саме "categoryid"="6".
+2023-10-11 10:49:16 Models\DBTable::GetListBySingleCondition(products): отримано коректні значення сортування, а саме "price", "asc".
+2023-10-11 10:49:16 Models\DBTable::GetListBySingleCondition(products): підʼєднано до сервера БД
+2023-10-11 10:49:16 Models\DBTable::GetListBySingleCondition(products): sql-запит виконано
+2023-10-11 10:49:16 Models\DBTable::GetListBySingleCondition(products): результат запиту до БД не false
+2023-10-11 10:49:16 Models\DBTable::GetListBySingleCondition(products): результат запиту до БД містить більше ніж 0 строк

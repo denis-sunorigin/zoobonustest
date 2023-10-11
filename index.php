@@ -6,7 +6,7 @@ use Models\Product;
 
     require_once('helpers.php');
 
-    function render($error = '', $brandList = array(), $categoriesList = array(), $productList = array(), $paramsString = '', $sortOptions = array()) {
+    function render($error = '', $brandList = array(), $categoriesList = array(), $productList = array(), $paramsString = '', $sortOptions = array(), $selectedCategoryName = '', $selectedBrandsName = '') {
         if (empty($error)) {
             include('templates/index.php');
         } else {
@@ -41,6 +41,13 @@ use Models\Product;
         if ($brand["id"] != 1) $tmpBrands[] = $brand; // Виробник "ХЗ" в фільтр не додаємо
     }
     $brandList = $tmpBrands;
+    $selectedBrandsName = '';
+    foreach ($brandList as $brand) if ($brand["selected"]) $selectedBrandsName .= '"'.$brand["name"].'", ';
+    if ($selectedBrandsName != '') {
+        $selectedBrandsName = 'брендів '.substr($selectedBrandsName, 0, -2);
+    } else {
+        $selectedBrandsName = 'всіх брендів';
+    }
 
     $categoryObj = new Category();
     $categoriesList = $categoryObj->GetAll();
@@ -60,6 +67,8 @@ use Models\Product;
     }
     $tmpCategories[] = $lastCategoryOther;
     $categoriesList = $tmpCategories;
+    $selectedCategoryName = '';
+    foreach ($categoriesList as $category) if ($category["selected"]) $selectedCategoryName = $category["name"];
 
     $sortOptions = array(
         array("name" => "Зростання ціни", "selected" => (($params["sort"] == "price") || empty($params["sort"])), "link" => empty($paramsButSort) ? "index.php" : "index.php?".$paramsButSort),
@@ -91,7 +100,7 @@ use Models\Product;
 
     //$error = '<pre>'.print_r($categoriesList, true).'</pre>';
 
-    render($error, $brandList, $categoriesList, $productList, $paramsString, $sortOptions);
+    render($error, $brandList, $categoriesList, $productList, $paramsString, $sortOptions, $selectedCategoryName, $selectedBrandsName);
 
     
 
