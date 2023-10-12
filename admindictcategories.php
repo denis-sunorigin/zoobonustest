@@ -14,6 +14,7 @@ use Models\Category;
         exit();
     }
 
+    if ( ! (isAuthorized())) header("Location: 403.php");
 
     $category = new Category();
     $itemsList = $category->GetAll();

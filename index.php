@@ -24,6 +24,8 @@ use Models\Product;
 
     $brandObj = new Brand();
     $brandList = $brandObj->GetAll();
+    if ($brandList === false) header("Location: dbdiag.php");
+
     $tmpBrands = array();
     foreach($brandList as $brand) {
         // Розставляємо обрані бренди в масив одразу, щоб не робити це у view. А також підготовлюємо посилання.

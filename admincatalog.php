@@ -15,6 +15,8 @@ use Models\Product;
         exit();
     }
 
+    if ( ! (isAuthorized())) header("Location: 403.php");
+
     $page = "admincatalog.php";
     $error = '';
     $params = parseGetParams();

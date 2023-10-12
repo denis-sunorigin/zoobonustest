@@ -17,6 +17,8 @@ use Models\ProductStatus;
         exit();
     }
 
+    if ( ! (isAuthorized())) header("Location: 403.php");
+
     $params = parseGetParams();
 
     $paramsString = paramsToURIString($params);

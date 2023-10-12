@@ -17,6 +17,14 @@ class DBTable
         }
     }
 
+    protected function clearParamString($value) : string { return preg_replace('/[^A-Za-z0-9\_\-]/', '', $value); } // Набір допустими символів добре б винести в константи/налаштування
+
+    protected function checkRequestParamsIsGood($params = array()) {
+        $isAllRight = true;
+        foreach ($params as $param) if (empty($this->clearParamString($param))) $isAllRight = false;
+        return $isAllRight;
+    }
+
 	public function GetAll(string $orderFieldName = '', string $orderDirection = '')
 	{
         // Щоб не ускладнювати логіку, замість помилок тупо 'false'. Інакше треба з цього рівня проводити помилки аж до фронта, це не дуже легко і не дуже потрібно.
@@ -95,6 +103,30 @@ class DBTable
         if ($sqlresult->num_rows === 0) return false;
         if (DEBUGLOG) ddlog(__METHOD__.'('.$this->tableName.'): результат запиту до БД містить більше ніж 0 строк');
         return ($sqlresult->fetch_assoc());
+	}
+
+    public function UpdateProperty(string $updateFieldName, string $updateValue, string $whereFieldName = '', string $whereValue = '')
+	{
+        if ( ! ($this->checkRequestParamsIsGood([$updateFieldName, $updateValue, $whereFieldName, $whereValue]))) return false;
+        $mysqli = $this->connectToDBServer();
+        if (!$mysqli) return false;
+        if (DEBUGLOG) ddlog(__METHOD__.'('.$this->tableName.'): підʼєднано до сервера БД');
+        $sql =  "UPDATE ".$this->tableName." SET ".$this->clearParamString($updateFieldName)."='".$this->clearParamString($updateValue)."' ";
+        $sql .= "WHERE ".$this->clearParamString($whereFieldName)."='".$this->clearParamString($whereValue)."';";
+        if (DEBUGLOG) ddlog(__METHOD__.'('.$this->tableName.'):'.PHP_EOL.'SQL:'.PHP_EOL.$sql.PHP_EOL);
+        try {
+            $sqlresult = $mysqli->query($sql);
+            if (DEBUGLOG) ddlog(__METHOD__.'('.$this->tableName.'): sql-запит виконано');
+        } catch (Exception $e) {
+            if (DEBUGLOG) ddlog(__METHOD__.'('.$this->tableName.'): sql-запит НЕ виконано, exception під час виконання');
+            return false;
+        }
+        $ar = $mysqli->affected_rows;
+        $mysqli->close();
+        if (DEBUGLOG) ddlog(__METHOD__.'('.$this->tableName.'): запит торкнувся '.$ar.' рядків');
+        if (!$sqlresult) return false;
+        if (DEBUGLOG) ddlog(__METHOD__.'('.$this->tableName.'): результат запиту до БД не false');
+        return $ar;
 	}
 }
 

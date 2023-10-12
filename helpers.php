@@ -70,6 +70,14 @@
         return $result;
     }
 
+    function isAuthorized() {
+        if (isset($_SESSION) && array_key_exists("authorized", $_SESSION) && isset($_SESSION["authorized"]) && !empty($_SESSION["authorized"])) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     spl_autoload_register(function (string $className) {
         // Автоматичне завантаження файлів для відсутніх класів у відповідності до їх простіру імен
         require_once __DIR__.'/'.str_replace('\\', '/', $className).'.php';

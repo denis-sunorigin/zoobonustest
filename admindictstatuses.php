@@ -14,6 +14,7 @@ use Models\ProductStatus;
         exit();
     }
 
+    if ( ! (isAuthorized())) header("Location: 403.php");
 
     $productStatus = new ProductStatus();
     $itemsList = $productStatus->GetAll();

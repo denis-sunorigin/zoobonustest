@@ -14,6 +14,7 @@ use Models\Brand;
         exit();
     }
 
+    if ( ! (isAuthorized())) header("Location: 403.php");
 
     $brand = new Brand();
     $itemsList = $brand->GetAll();
