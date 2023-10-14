@@ -76,7 +76,7 @@ function dictElemDeleteClick(parent) {
 
 function dictElemDelete() {
     let parent = dictElemForDelete;
-    ajaxRequest('api/dictelemdelete.php', { className: className, dictElemId: parent.dataset.dictElemId })
+    ajaxRequest('API/dictelemdelete.php', { className: className, dictElemId: parent.dataset.dictElemId })
     .then((data) => {
         console.log(data);
         if (!data.success) {
@@ -103,7 +103,7 @@ function dictElemConfirmChangesClick(parent) {
     dictElemSetButtonsToViewMode(parent);
     inputName.disabled=true;
     inputDescription.disabled=true;
-    ajaxRequest('api/dictelemupdate.php', { className: className, nameValue: inputName.value, descriptionValue: inputDescription.value, dictElemId: parent.dataset.dictElemId })
+    ajaxRequest('API/dictelemupdate.php', { className: className, nameValue: inputName.value, descriptionValue: inputDescription.value, dictElemId: parent.dataset.dictElemId })
     .then((data) => {
         console.log(data);
         if (!data.success) {
