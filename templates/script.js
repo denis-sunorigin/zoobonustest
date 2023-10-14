@@ -103,17 +103,13 @@ function dictElemConfirmChangesClick(parent) {
     dictElemSetButtonsToViewMode(parent);
     inputName.disabled=true;
     inputDescription.disabled=true;
-    parent.querySelector('.editButtonTag').classList.remove('zbHidden');
-    if (parent.querySelector('.deleteButtonTag')) parent.querySelector('.deleteButtonTag').classList.remove('zbHidden');
-    parent.querySelector('.confirmButtonTag').classList.add('zbHidden');
-    parent.querySelector('.cancelButtonTag').classList.add('zbHidden');
-    ajaxRequest(appurl+'/savedictelem', { dictClass: parent.dataset.dictClass, dictElemNewValue: newValue, dictElemOldValue: oldValue, dictElemId: parent.dataset.dictElemId })
+    ajaxRequest('api/dictelemupdate.php', { className: className, nameValue: inputName.value, descriptionValue: inputDescription.value, dictElemId: parent.dataset.dictElemId })
     .then((data) => {
-        //console.log(data);
+        console.log(data);
         if (!data.success) {
-        showMessageBox(data.message);
+            showMessageBox(data.message);
         } else {
-        showMessageBox('Збережено');
+            showMessageBox('Збережено');
         }
     });
 }

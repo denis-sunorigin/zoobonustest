@@ -7,6 +7,15 @@ use mysqli;
 
 class DBTable
 {
+    /*
+    public function GetAll(string $orderFieldName = '', string $orderDirection = '')
+    public function GetListBySingleCondition(string $fieldName, string $value, string $orderFieldName = '', string $orderDirection = '')
+    public function GetFirstBySingleCondition(string $fieldName, string $value)
+    public function GetById(int $id = 0)
+    public function UpdateProperty(string $updateFieldName, string $updateValue, string $whereFieldName = '', string $whereValue = '')    
+    public function DeleteById(int $id = 0)
+    */
+
     protected $tableName;
 
     protected function connectToDBServer() {
@@ -130,11 +139,14 @@ class DBTable
 
     public function UpdateProperty(string $updateFieldName, string $updateValue, string $whereFieldName = '', string $whereValue = '')
 	{
-        if ( ! ($this->checkRequestParamsIsGood([$updateFieldName, $updateValue, $whereFieldName, $whereValue]))) return false;
+        if ( ! ($this->checkRequestParamsIsGood([$updateFieldName, $whereFieldName, $whereValue]))) {
+            if (DEBUGLOG) ddlog(__METHOD__.'('.$this->tableName.'): один або декілька отриманих параметрів є пустими');
+            return false;
+        }
         $mysqli = $this->connectToDBServer();
         if (!$mysqli) return false;
         if (DEBUGLOG) ddlog(__METHOD__.'('.$this->tableName.'): підʼєднано до сервера БД');
-        $sql =  "UPDATE ".$this->tableName." SET ".$this->clearParamString($updateFieldName)."='".$this->clearParamString($updateValue)."' ";
+        $sql =  "UPDATE ".$this->tableName." SET ".$this->clearParamString($updateFieldName)."='".htmlspecialchars($updateValue)."' ";
         $sql .= "WHERE ".$this->clearParamString($whereFieldName)."='".$this->clearParamString($whereValue)."';";
         if (DEBUGLOG) ddlog(__METHOD__.'('.$this->tableName.'):'.PHP_EOL.'SQL:'.PHP_EOL.$sql.PHP_EOL);
         try {

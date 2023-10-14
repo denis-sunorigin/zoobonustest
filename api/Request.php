@@ -43,9 +43,9 @@
             $rd = $this->requestData;
             switch ($typeOfRequest) {
                 case "dictElemDelete":
-                    $id = (array_key_exists("dictElemId", $rd)) ? (int)$rd["dictElemId"] : -1;
+                    $dictElemId = (array_key_exists("dictElemId", $rd)) ? (int)$rd["dictElemId"] : -1;
                     $className = (array_key_exists("className", $rd)) ? (string)$rd["className"] : '';
-                    if ($id < 0) { $result["message"] = 'Не зазначено обовʼязковий параметр dictElemId'; return $result; }
+                    if ($dictElemId < 0) { $result["message"] = 'Не зазначено обовʼязковий параметр dictElemId'; return $result; }
                     if ($className == '') { $result["message"] = 'Не зазначено обовʼязковий параметр className'; return $result; }
                     if ( ! (in_array($className, ['Brand', 'Category', 'ProductStatus'])) ) {
                         $result["message"] = "Параметр className має неприпустиме значення";
@@ -53,7 +53,17 @@
                         $result["success"] = true;
                     }
                     break;
-                case "other":
+                case "dictElemUpdate":
+                    $dictElemId = (array_key_exists("dictElemId", $rd)) ? (int)$rd["dictElemId"] : -1;
+                    $className = (array_key_exists("className", $rd)) ? (string)$rd["className"] : '';
+                    $nameValue = (array_key_exists("nameValue", $rd)) ? htmlspecialchars($rd["nameValue"]) : '';
+                    $rd["nameValue"] = $nameValue;
+                    $descriptionValue = (array_key_exists("descriptionValue", $rd)) ? htmlspecialchars($rd["descriptionValue"]) : '';
+                    $rd["descriptionValue"] = $descriptionValue;
+                    if ($dictElemId < 0) { $result["message"] = 'Не зазначено обовʼязковий параметр dictElemId'; return $result; }
+                    if ($className == '') { $result["message"] = 'Не зазначено обовʼязковий параметр className'; return $result; }
+                    if ($nameValue == '') { $result["message"] = 'Не зазначено обовʼязковий параметр nameValue'; return $result; }
+                    $result["success"] = true;
                     break;
                 default:
                     $result["message"] = 'Невідомий тип запиту, що підлягає валідації';
