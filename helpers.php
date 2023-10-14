@@ -78,6 +78,14 @@
         }
     }
 
+    function returnJSON($HTTPCode = 200, $successExec = true, $message = 'Все добре. Слава Україні!') {
+        header('Content-Type: application/json; charset=utf-8');
+        http_response_code($HTTPCode);
+        $answer = array('success' => $successExec, 'message' => $message);
+        echo json_encode($answer);
+        exit;
+    }
+
     spl_autoload_register(function (string $className) {
         // Автоматичне завантаження файлів для відсутніх класів у відповідності до їх простіру імен
         require_once __DIR__.'/'.str_replace('\\', '/', $className).'.php';

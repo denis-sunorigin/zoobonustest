@@ -12,6 +12,25 @@
   <body>
     <div class="fullPageBlock">
       <div class="fullPageColumn">
+
+        <div class="messageBox" id="messageBox">
+            <div class="messageBoxText" id="messageBoxText">
+                Ви дійсно бажаєтет видалити цей елемент?
+            </div>
+            <div class="messageBoxButtonBlock">
+                <button class="btn btn-primary" onclick="messageBoxAcceptClick();">Підтвердити</button>
+                <button class="btn btn-primary" onclick="messageBoxCancelClick();">Скасувати</button>
+            </div>
+        </div>
+        <div class="messageBox" id="messageBoxOneButton">
+            <div class="messageBoxText" id="messageBoxOneButtonText">
+                Повідомлення про результат виконання операції.
+            </div>
+            <div class="messageBoxButtonBlock">
+                <button class="btn btn-primary" style="min-width: 200px;" onclick="this.parentElement.parentElement.style.display='none';">Ок</button>
+            </div>
+        </div>
+
         <div class="menuBarBlock">
           <div class="menuBarLogoBlock">
             <a href="index.php" title="На головну сторінку"><img src="templates/images_static/logo.png"></a>

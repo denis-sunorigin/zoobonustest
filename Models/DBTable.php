@@ -43,7 +43,7 @@ class DBTable
         } catch (Exception $e) {
             return false;
         }
-        if (DEBUGLOG) ddlog(__METHOD__.'('.$this->tableName.'): sql-запит виконано');
+        if (DEBUGLOG) ddlog(__METHOD__.'('.$this->tableName.'): sql-запит виконано без exceptionʼів');
         $mysqli->close();
         if (!$sqlresult) return false;
         if (DEBUGLOG) ddlog(__METHOD__.'('.$this->tableName.'): результат запиту до БД не false');
@@ -74,7 +74,30 @@ class DBTable
         } catch (Exception $e) {
             return false;
         }
-        if (DEBUGLOG) ddlog(__METHOD__.'('.$this->tableName.'): sql-запит виконано');
+        if (DEBUGLOG) ddlog(__METHOD__.'('.$this->tableName.'): sql-запит виконано без exceptionʼів');
+        $mysqli->close();
+        if (!$sqlresult) return false;
+        if (DEBUGLOG) ddlog(__METHOD__.'('.$this->tableName.'): результат запиту до БД не false');
+        if ($sqlresult->num_rows === 0) return false;
+        if (DEBUGLOG) ddlog(__METHOD__.'('.$this->tableName.'): результат запиту до БД містить більше ніж 0 строк');
+        return ($sqlresult->fetch_all(MYSQLI_ASSOC));
+	}
+
+    public function GetFirstBySingleCondition(string $fieldName, string $value)
+	{
+        $fieldName = preg_replace('/[^A-Za-z0-9\_]/', '', $fieldName);
+        $value = preg_replace('/[^A-Za-z0-9\_]/', '', $value);
+        if (empty($fieldName) || empty($value)) return false;
+        if (DEBUGLOG) ddlog(__METHOD__.'('.$this->tableName.'): під час визова функції запиту з фільтрацією отримано коректні назву і значення поля, а саме "'.$fieldName.'"="'.$value.'".');
+        $mysqli = $this->connectToDBServer();
+        if (!$mysqli) return false;
+        if (DEBUGLOG) ddlog(__METHOD__.'('.$this->tableName.'): підʼєднано до сервера БД');
+        try {
+            $sqlresult = $mysqli->query("SELECT * FROM ".$this->tableName." WHERE ".$fieldName."='".$value."' LIMIT 1;");
+        } catch (Exception $e) {
+            return false;
+        }
+        if (DEBUGLOG) ddlog(__METHOD__.'('.$this->tableName.'): sql-запит виконано без exceptionʼів');
         $mysqli->close();
         if (!$sqlresult) return false;
         if (DEBUGLOG) ddlog(__METHOD__.'('.$this->tableName.'): результат запиту до БД не false');
@@ -96,7 +119,7 @@ class DBTable
         } catch (Exception $e) {
             return false;
         }
-        if (DEBUGLOG) ddlog(__METHOD__.'('.$this->tableName.'): sql-запит виконано');
+        if (DEBUGLOG) ddlog(__METHOD__.'('.$this->tableName.'): sql-запит виконано без exceptionʼів');
         $mysqli->close();
         if (!$sqlresult) return false;
         if (DEBUGLOG) ddlog(__METHOD__.'('.$this->tableName.'): результат запиту до БД не false');
@@ -116,7 +139,7 @@ class DBTable
         if (DEBUGLOG) ddlog(__METHOD__.'('.$this->tableName.'):'.PHP_EOL.'SQL:'.PHP_EOL.$sql.PHP_EOL);
         try {
             $sqlresult = $mysqli->query($sql);
-            if (DEBUGLOG) ddlog(__METHOD__.'('.$this->tableName.'): sql-запит виконано');
+            if (DEBUGLOG) ddlog(__METHOD__.'('.$this->tableName.'): sql-запит виконано без exceptionʼів');
         } catch (Exception $e) {
             if (DEBUGLOG) ddlog(__METHOD__.'('.$this->tableName.'): sql-запит НЕ виконано, exception під час виконання');
             return false;
@@ -125,6 +148,32 @@ class DBTable
         $mysqli->close();
         if (DEBUGLOG) ddlog(__METHOD__.'('.$this->tableName.'): запит торкнувся '.$ar.' рядків');
         if (!$sqlresult) return false;
+        if (DEBUGLOG) ddlog(__METHOD__.'('.$this->tableName.'): результат запиту до БД не false');
+        return $ar;
+	}
+
+    public function DeleteById(int $id = 0)
+	{
+        $id = preg_replace('/[^0-9]/', '', $id);
+        if ($id < 1) return false;
+        if (DEBUGLOG) ddlog(__METHOD__.'('.$this->tableName.'): під час виклику функції отримано коректний id="'.$id.'"');
+        $mysqli = $this->connectToDBServer();
+        if (!$mysqli) return false;
+        if (DEBUGLOG) ddlog(__METHOD__.'('.$this->tableName.'): підʼєднано до сервера БД');
+        try {
+            $sqlresult = $mysqli->query("DELETE FROM ".$this->tableName." WHERE id='".$id."';");
+        } catch (Exception $e) {
+            return false;
+        }
+        if (DEBUGLOG) ddlog(__METHOD__.'('.$this->tableName.'): sql-запит виконано без exceptionʼів');
+        $ar = $mysqli->affected_rows;
+        if ($mysqli->error) if (DEBUGLOG) ddlog($mysqli->error);
+        $mysqli->close();
+        if (DEBUGLOG) ddlog(__METHOD__.'('.$this->tableName.'): запит торкнувся '.$ar.' рядків');
+        if (!$sqlresult || ($ar == -1)) {
+            if (DEBUGLOG) ddlog(__METHOD__.'('.$this->tableName.'): запит до БД виконано невдало, ОТРИМАНО НЕКОРЕКТНУ ВІДПОВІДЬ');
+            return false;
+        }
         if (DEBUGLOG) ddlog(__METHOD__.'('.$this->tableName.'): результат запиту до БД не false');
         return $ar;
 	}
