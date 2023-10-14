@@ -40,6 +40,8 @@ function dictElemSetButtonsToViewMode(parent) {
     document.getElementById("addDictElemButton").disabled = false;
     parent.querySelector('.descriptionInputTag').disabled = true;
     parent.querySelector('.nameInputTag').disabled = true;
+    parent.querySelector('.descriptionInputTag').classList.remove('is-invalid');
+    parent.querySelector('.nameInputTag').classList.remove('is-invalid');
 }
 
 function dictElemBeginEditClick(parent) {
@@ -69,10 +71,8 @@ function dictElemCancelEdit(parent) {
     }
     inputName.setAttribute('value', oldValueName);
     inputName.value = oldValueName;
-    inputName.classList.remove('is-invalid');
     inputDescription.setAttribute('value', oldValueDescription);
     inputDescription.value = oldValueDescription;
-    inputDescription.classList.remove('is-invalid');
     dictElemSetButtonsToViewMode(parent);
 }
 
