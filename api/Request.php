@@ -1,5 +1,5 @@
 <?php
-    namespace API;
+    namespace api;
 
     class Request {
         public $requestData;
