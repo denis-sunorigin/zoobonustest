@@ -5,7 +5,7 @@ use Models\ProductStatus;
 
     require_once('helpers.php');
 
-    function render($error = '', $itemsList = array(), $dictName = '', $className = '') {
+    function render($error = '', $itemsList = array(), $dictName = '', $className = '', $maxId = 0) {
         if (empty($error)) {
             include('templates/admindict.php');
         } else {
@@ -19,14 +19,15 @@ use Models\ProductStatus;
 
     $productObj = new Product();
     $productStatusObj = new ProductStatus();
-    $tmpArray = $productStatusObj->GetAll();
-    $itemsList = array();
+    $tmpArray = $productStatusObj->GetAll('name', 'asc');
+    $itemsList = array(); $maxId = 0;
     foreach ($tmpArray as $productStatus) {
         $product = $productObj->GetFirstBySingleCondition("statusid", $productStatus["id"]);
         $productStatus["deletable"] = ($product === false);
         $itemsList[] = $productStatus;
+        if ($productStatus["id"] > $maxId) $maxId = $productStatus["id"];
     }
 
-    render('', $itemsList, 'довідник статусів', 'ProductStatus');
+    render('', $itemsList, 'довідник статусів', 'ProductStatus', $maxId);
 
 ?>

@@ -14,6 +14,7 @@ class DBTable
     public function GetById(int $id = 0)
     public function UpdateProperty(string $updateFieldName, string $updateValue, string $whereFieldName = '', string $whereValue = '')    
     public function DeleteById(int $id = 0)
+    public function InsertElement(string $fieldNames, string $values)
     */
 
     protected $tableName;
@@ -64,7 +65,7 @@ class DBTable
     public function GetListBySingleCondition(string $fieldName, string $value, string $orderFieldName = '', string $orderDirection = '')
 	{
         $fieldName = preg_replace('/[^A-Za-z0-9\_]/', '', $fieldName);  // Імпровізований захист від SQL-ін'єкцій
-        $value = preg_replace('/[^A-Za-z0-9\_]/', '', $value);
+        $value = htmlspecialchars($value);
         $orderFieldName = preg_replace('/[^A-Za-z0-9\_]/', '', $orderFieldName);
         if (empty($fieldName) || empty($value)) return false;
         if (DEBUGLOG) ddlog(__METHOD__.'('.$this->tableName.'): під час визова функції запиту з фільтрацією отримано коректні назву і значення поля, а саме "'.$fieldName.'"="'.$value.'".');
@@ -95,7 +96,7 @@ class DBTable
     public function GetFirstBySingleCondition(string $fieldName, string $value)
 	{
         $fieldName = preg_replace('/[^A-Za-z0-9\_]/', '', $fieldName);
-        $value = preg_replace('/[^A-Za-z0-9\_]/', '', $value);
+        $value = htmlspecialchars($value);
         if (empty($fieldName) || empty($value)) return false;
         if (DEBUGLOG) ddlog(__METHOD__.'('.$this->tableName.'): під час визова функції запиту з фільтрацією отримано коректні назву і значення поля, а саме "'.$fieldName.'"="'.$value.'".');
         $mysqli = $this->connectToDBServer();
@@ -188,6 +189,27 @@ class DBTable
         }
         if (DEBUGLOG) ddlog(__METHOD__.'('.$this->tableName.'): результат запиту до БД не false');
         return $ar;
+	}
+
+    public function InsertElement(string $fieldNames, string $values)
+	{
+        if (empty($fieldNames) || empty($values)) return false;
+        $mysqli = $this->connectToDBServer();
+        if (!$mysqli) return false;
+        if (DEBUGLOG) ddlog(__METHOD__.'('.$this->tableName.'): підʼєднано до сервера БД');
+        try {
+            $sqlresult = $mysqli->query("INSERT INTO ".$this->tableName." (".$fieldNames.") VALUES (".$values.");");
+        } catch (Exception $e) {
+            return false;
+        }
+        if (DEBUGLOG) ddlog(__METHOD__.'('.$this->tableName.'): sql-запит виконано без exceptionʼів');
+        $id = $mysqli->insert_id;
+        if (DEBUGLOG) ddlog(__METHOD__.'('.$this->tableName.'): insert id: '.$id);
+        if ($mysqli->error) if (DEBUGLOG) ddlog($mysqli->error);
+        $mysqli->close();
+        if (!$sqlresult) return false;
+        if (DEBUGLOG) ddlog(__METHOD__.'('.$this->tableName.'): результат запиту до БД не false');
+        return $id;
 	}
 }
 

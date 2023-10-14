@@ -5,7 +5,7 @@ use Models\Product;
 
     require_once('helpers.php');
 
-    function render($error = '', $itemsList = array(), $dictName = '', $className = '') {
+    function render($error = '', $itemsList = array(), $dictName = '', $className = '', $maxId = 0) {
         if (empty($error)) {
             include('templates/admindict.php');
         } else {
@@ -19,14 +19,15 @@ use Models\Product;
 
     $productObj = new Product();
     $brandObj = new Brand();
-    $tmpArray = $brandObj->GetAll();
-    $itemsList = array();
+    $tmpArray = $brandObj->GetAll('name', 'asc');
+    $itemsList = array(); $maxId = 0;
     foreach ($tmpArray as $brand) {
         $product = $productObj->GetFirstBySingleCondition("brandid", $brand["id"]);
         $brand["deletable"] = ($product === false);
         $itemsList[] = $brand;
+        if ($brand["id"] > $maxId) $maxId = $brand["id"];
     }
 
-    render('', $itemsList, 'довідник брендів', 'Brand');
+    render('', $itemsList, 'довідник брендів', 'Brand', $maxId);
 
 ?>

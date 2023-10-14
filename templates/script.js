@@ -27,6 +27,9 @@ function dictElemSetButtonsToEditMode(parent) {
     if (parent.querySelector('.deleteButtonTag')) parent.querySelector('.deleteButtonTag').classList.add('zbHidden');
     parent.querySelector('.confirmButtonTag').classList.remove('zbHidden');
     parent.querySelector('.cancelButtonTag').classList.remove('zbHidden');
+    document.getElementById("addDictElemButton").disabled = true;
+    parent.querySelector('.descriptionInputTag').disabled = false;
+    parent.querySelector('.nameInputTag').disabled = false;
 }
 
 function dictElemSetButtonsToViewMode(parent) {
@@ -34,16 +37,17 @@ function dictElemSetButtonsToViewMode(parent) {
     if (parent.querySelector('.deleteButtonTag')) parent.querySelector('.deleteButtonTag').classList.remove('zbHidden');
     parent.querySelector('.confirmButtonTag').classList.add('zbHidden');
     parent.querySelector('.cancelButtonTag').classList.add('zbHidden');
+    document.getElementById("addDictElemButton").disabled = false;
+    parent.querySelector('.descriptionInputTag').disabled = true;
+    parent.querySelector('.nameInputTag').disabled = true;
 }
 
 function dictElemBeginEditClick(parent) {
     if (!parent) return;
     dictElemSetButtonsToEditMode(parent);
     let input = parent.querySelector('.descriptionInputTag');
-    input.disabled=false;
     input.dataset.previousValue = input.value;
     input = parent.querySelector('.nameInputTag');
-    input.disabled=false;
     input.dataset.previousValue = input.value;
     input.focus();
 }
@@ -54,16 +58,21 @@ function dictElemCancelEditClick(parent) {
 }
 
 function dictElemCancelEdit(parent) {
-    let input = parent.querySelector('.nameInputTag');
-    let oldValue = input.dataset.previousValue;
-    input.setAttribute('value', oldValue);
-    input.value = oldValue;
-    input.disabled=true;
-    input = parent.querySelector('.descriptionInputTag');
-    oldValue = input.dataset.previousValue;
-    input.setAttribute('value', oldValue);
-    input.value = oldValue;
-    input.disabled=true;
+    let inputName = parent.querySelector('.nameInputTag');
+    let oldValueName = inputName.dataset.previousValue;
+    let inputDescription = parent.querySelector('.descriptionInputTag');
+    let oldValueDescription = inputDescription.dataset.previousValue;
+    if ((oldValueName == '') && (oldValueDescription == '')) {
+        parent.remove();
+        document.getElementById("addDictElemButton").disabled = false;
+        return;
+    }
+    inputName.setAttribute('value', oldValueName);
+    inputName.value = oldValueName;
+    inputName.classList.remove('is-invalid');
+    inputDescription.setAttribute('value', oldValueDescription);
+    inputDescription.value = oldValueDescription;
+    inputDescription.classList.remove('is-invalid');
     dictElemSetButtonsToViewMode(parent);
 }
 
@@ -87,31 +96,59 @@ function dictElemDelete() {
     });
 }
 
+function dictElemAddClick() {
+    parentContainer = document.getElementById("dictionaryElementsContainer");
+    let newDictElem = document.createElement('div');
+    maxId++; // Це лише для збереження унікальності id DOM-елементів. Для id в базі він не застосовується, оскільки може втратити актуальність впродовж редагування.
+	newDictElem.classList.add('columnGap15');
+    newDictElem.classList.add('canWrap');
+    newDictElem.classList.add('fullWidthContainer');
+    newDictElem.dataset.dictElemId = 0; // Це як раз id редагування, або, в даному випадку, - створення.
+    newDictElem.innerHTML =
+        '<div class="propertySelectGroup"><div class="input-group"><span class="input-group-text">Назва:</span>'+
+        '<input disabled type="text" value="" class="form-control nameInputTag" data-elem-id="'+maxId+'">'+
+        '<div class="invalid-feedback" id="nameError'+maxId+'">Текст помилки</div></div></div>'+
+        '<div class="propertySelectGroup"><div class="input-group"><span class="input-group-text">Опис:</span>'+
+        '<input disabled type="text" value="" class="form-control descriptionInputTag" data-elem-id="'+maxId+'">'+
+        '<div class="invalid-feedback" id="descriptionError'+maxId+'">Текст помилки</div></div></div>'+
+        '<button class="btn btn-outline-primary editButtonTag" type="button" onclick="dictElemBeginEditClick(this.parentElement);">Редагувати</button>'+
+        '<button class="btn btn-outline-danger deleteButtonTag" type="button" onclick="dictElemDeleteClick(this.parentElement);">Видалити</button>'+
+        '<button class="btn btn-primary zbHidden confirmButtonTag" type="button" onclick="dictElemConfirmChangesClick(this.parentElement);">Зберегти</button>'+
+        '<button class="btn btn-primary zbHidden cancelButtonTag" type="button" onclick="dictElemCancelEditClick(this.parentElement);">Скасувати</button>';
+    parentContainer.appendChild(newDictElem);
+    dictElemBeginEditClick(newDictElem);
+}
+
 function dictElemConfirmChangesClick(parent) {
     if (!parent) return;
     let inputName = parent.querySelector('.nameInputTag');
     let inputDescription = parent.querySelector('.descriptionInputTag');
+    if (inputName.value == '') {
+        errorElement = document.getElementById("nameError"+inputName.dataset.elemId);
+        errorElement.innerHTML = 'Це обовʼязкове поле';
+        inputName.classList.add("is-invalid");
+        //showMessageBox('Для повного видалення елементу скористайтесь кнопкою видалення. Елементи, які вже у використанні, видалити неможна.');
+        return;
+    }
     if ((inputName.value == inputName.dataset.previousValue) && (inputDescription.value == inputDescription.dataset.previousValue)) {
         dictElemCancelEdit(parent);
         return;
     }
-    if (inputName.value == '') {
-        showMessageBox('Для повного видалення елементу скористайтесь кнопкою видалення. Елементи, які вже у використанні, видалити неможна.');
-        dictElemCancelEdit(parent);
-        return;
-    }
-    dictElemSetButtonsToViewMode(parent);
-    inputName.disabled=true;
-    inputDescription.disabled=true;
     ajaxRequest('API/dictelemupdate.php', { className: className, nameValue: inputName.value, descriptionValue: inputDescription.value, dictElemId: parent.dataset.dictElemId })
     .then((data) => {
         console.log(data);
         if (!data.success) {
             showMessageBox(data.message);
         } else {
+            parent.dataset.dictElemId = data.id;
+            dictElemSetButtonsToViewMode(parent);
             showMessageBox('Збережено');
         }
     });
+}
+
+function checkValue(elem) {
+    if (elem.value && (elem.value != '')) elem.classList.remove('is-invalid');
 }
 
 function showConfirmBox(messageId = 0, customText = '') {
