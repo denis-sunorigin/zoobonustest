@@ -1,6 +1,7 @@
 var messageBoxAcceptFunction = function() {}
 var messageBoxCancelFunction = function() {}
 var dictElemForDelete;
+var productIdForDelete;
 
 async function ajaxRequest(url = '', data = {}) {
     console.log(url);
@@ -96,6 +97,26 @@ function dictElemDelete() {
     });
 }
 
+function productDeleteClick(productId) {
+    if (typeof productId != 'number') return;
+    if (productId < 0) return;
+    productIdForDelete = productId;
+    // Тут має бути логіка обробки того, що саме підлягає видаленню - існуючий товар, або щойно створений.
+    showConfirmBox('productDelete');
+}
+
+function productDelete() {
+    ajaxRequest('API/productdelete.php', { productId: productIdForDelete })
+    .then((data) => {
+        console.log(data);
+        if (!data.success) {
+            showMessageBox(data.message);
+        } else {
+            document.location=(document.getElementById("backLink").href);
+        }
+    });
+}
+
 function dictElemAddClick() {
     parentContainer = document.getElementById("dictionaryElementsContainer");
     let newDictElem = document.createElement('div');
@@ -155,10 +176,13 @@ function showConfirmBox(messageId = 0, customText = '') {
     if (messageId == 0) return;
     let elem = document.getElementById('messageBoxText');
     if (messageId == 'dictElemDelete') {
-    elem.innerHTML = 'Ви дійсно бажаєте видалити елемент довідника "'+customText+'"?';
-    messageBoxAcceptFunction = dictElemDelete;
+        elem.innerHTML = 'Ви дійсно бажаєте видалити елемент довідника "'+customText+'"?';
+        messageBoxAcceptFunction = dictElemDelete;
     }
-    
+    if (messageId == 'productDelete') {
+        elem.innerHTML = 'Ви дійсно бажаєте повністю видалити картку товара?';
+        messageBoxAcceptFunction = productDelete;
+    }
     elem = document.getElementById('messageBox');
     elem.style.display = "flex";
 }

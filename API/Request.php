@@ -65,6 +65,11 @@
                     if ($nameValue == '') { $result["message"] = 'Не зазначено обовʼязковий параметр nameValue'; return $result; }
                     $result["success"] = true;
                     break;
+                case "productDelete":
+                    $productId = (array_key_exists("productId", $rd)) ? (int)$rd["productId"] : -1;
+                    if ($productId < 0) { $result["message"] = 'Не зазначено обовʼязковий параметр productId'; return $result; }
+                    $result["success"] = true;
+                    break;
                 default:
                     $result["message"] = 'Невідомий тип запиту, що підлягає валідації';
             }

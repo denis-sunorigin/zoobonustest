@@ -3,7 +3,7 @@
           <div class="mainContentAsSingleColumn">
             <h2>Адміністрування. Корм для чіхуахуа "Нямням".</h2>
             <div class="alignCenterVert columnGap15 canWrap fullWidthContainer mb-3">
-              <a href="admincatalog.php<?php if (filled($paramsString)) echo('?'.$paramsString); ?>"><< повернутись до каталога</a>
+              <a id="backLink" href="admincatalog.php<?php if (filled($paramsString)) echo('?'.$paramsString); ?>"><< повернутись до каталога</a>
             </div>
             <div class="input-group">
               <span class="input-group-text" id="property1">Назва:</span>
@@ -89,8 +89,8 @@
             <div></div>
             <div class="columnGap15 canWrap fullWidthContainer">
               <button class="btn btn-primary" type="button">Зберегти</button>
-              <button class="btn btn-primary" type="button">Скасувати</button>
-              <button class="btn btn-danger" type="button">Видалити товар</button>
+              <button class="btn btn-primary" type="button">Скасувати зміни</button>
+              <button class="btn btn-danger" type="button" onclick="productDeleteClick(<?php echo($product['id']); ?>);">Видалити товар</button>
             </div>
             
 
