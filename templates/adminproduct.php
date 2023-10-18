@@ -14,7 +14,7 @@
             </div>
             <div class="input-group">
               <span class="input-group-text">Опис:</span>
-              <textarea rows="8" class="form-control"><?php echo($product["description"]); ?></textarea>
+              <textarea rows="8" class="form-control" id="productDescriptionTextarea"><?php echo($product["description"]); ?></textarea>
             </div>
             <div class="columnGap15 canWrap fullWidthContainer">
               <div class="adminProductCardPhoto" id="adminProductCardPhoto" <?php if (filled($product["image"])) echo("data-file-path='".PATHFORUSERIMAGES.$product["image"]."' style=\"background-image: URL('".PATHFORUSERIMAGES.$product["image"]."');\""); ?>></div>
@@ -27,9 +27,9 @@
             <div class="columnGap15 canWrap fullWidthContainer">
               <div class="propertySelectGroup">
                 <label class="form-label">Бренд</label>
-                <select class="form-select" required>
+                <select class="form-select" data-brand-id="<?php echo($selectedBrandId); ?>" id="productBrandSelect" required onchange="this.dataset.brandId = this.options[this.selectedIndex].dataset.brandId;">
                   <?php foreach($brandList as $brand) { ?>
-                    <option value="<?php echo($brand["name"]); ?>" <?php if ($brand["selected"]) echo("selected"); ?>><?php echo($brand["name"]); ?></option>
+                    <option data-brand-id="<?php echo($brand["id"]); ?>" value="<?php echo($brand["name"]); ?>" <?php if ($brand["selected"]) echo("selected"); ?>><?php echo($brand["name"]); ?></option>
                   <?php } ?>
                 </select>
                 <div class="invalid-feedback">
@@ -38,9 +38,9 @@
               </div>
               <div class="propertySelectGroup">
                 <label class="form-label">Категорія</label>
-                <select class="form-select" required>
+                <select class="form-select" data-category-id="<?php echo($selectedCategoryId); ?>" id="productCategorySelect" required onchange="this.dataset.categoryId = this.options[this.selectedIndex].dataset.categoryId;">
                   <?php foreach($categoryList as $category) { ?>
-                    <option value="<?php echo($category["name"]); ?>" <?php if ($category["selected"]) echo("selected"); ?>><?php echo($category["name"]); ?></option>
+                    <option data-category-id="<?php echo($category["id"]); ?>" value="<?php echo($category["name"]); ?>" <?php if ($category["selected"]) echo("selected"); ?>><?php echo($category["name"]); ?></option>
                   <?php } ?>
                 </select>
                 <div class="invalid-feedback">
@@ -49,10 +49,10 @@
               </div>
               <div class="propertySelectGroup">
                 <label class="form-label">Статус товару</label>
-                  <select class="form-select" required>
+                  <select class="form-select" data-status-id="<?php echo($selectedStatusId); ?>" id="productStatusSelect" required onchange="this.dataset.statusId = this.options[this.selectedIndex].dataset.statusId;">
                   <!-- <option selected disabled value="">Оберіть статус...</option> -->
                   <?php foreach($statusList as $status) { ?>
-                    <option value="<?php echo($status["name"]); ?>" <?php if ($status["selected"]) echo("selected"); ?>><?php echo($status["name"]); ?></option>
+                    <option data-status-id="<?php echo($status["id"]); ?>" value="<?php echo($status["name"]); ?>" <?php if ($status["selected"]) echo("selected"); ?>><?php echo($status["name"]); ?></option>
                   <?php } ?>
                 </select>
                 <div class="invalid-feedback">
@@ -63,8 +63,8 @@
             <div class="columnGap15 canWrap fullWidthContainer">
               <div class="propertySelectGroup">
                 <div class="input-group">
-                  <span class="input-group-text" id="property2">Кількість:</span>
-                  <input type="number" class="form-control" id="property2input" aria-describedby="property2" value="<?php echo($product["value"]); ?>">
+                  <span class="input-group-text">Кількість:</span>
+                  <input type="number" class="form-control" id="productValueInput" aria-describedby="property2" value="<?php echo($product["value"]); ?>">
                   <div class="invalid-feedback">
                     Текст помилки
                   </div>
@@ -72,8 +72,8 @@
               </div>
               <div class="propertySelectGroup">
                 <div class="input-group">
-                  <span class="input-group-text" id="property3">Ціна:</span>
-                  <input type="number" class="form-control" id="property3input" aria-describedby="property3" value="<?php echo($product["price"]); ?>">
+                  <span class="input-group-text">Ціна:</span>
+                  <input type="number" class="form-control" id="productPriceInput" aria-describedby="property3" value="<?php echo($product["price"]); ?>">
                   <span class="input-group-text">грн</span>
                   <div class="invalid-feedback">
                     Текст помилки
@@ -82,8 +82,8 @@
               </div>
               <div class="propertySelectGroup">
                 <div class="input-group">
-                  <span class="input-group-text" id="property4">Код 1С:</span>
-                  <input type="text" class="form-control" id="property4input" aria-describedby="property4" value="<?php echo($product["code1c"]); ?>">
+                  <span class="input-group-text">Код 1С:</span>
+                  <input type="text" class="form-control" id="productCode1CInput" aria-describedby="property4" value="<?php echo($product["code1c"]); ?>">
                   <div class="invalid-feedback">
                     Текст помилки
                   </div>

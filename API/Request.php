@@ -70,6 +70,34 @@
                     if ($productId < 0) { $result["message"] = 'Не зазначено обовʼязковий параметр productId'; return $result; }
                     $result["success"] = true;
                     break;
+                case "productUpdate":
+                    // id, name, description, imagePath, brandId, categoryId, statusId, value, price, code1C
+                    // Звісно, краще зробити універсальний валідатор для масштабованої системи. Особисто я б в моделі зазначив тип полів, а також які саме з них обов'язкові (NOT NULL).
+                    // Потім бажано зробити окремий метод валідації, який візьме цей перелік з моделі і зіставить з отриманими параметрами.
+                    // Тоді цю поточну спагетті-функцію можна вилучити, і зробити валідацію в контролері одним рядком. Буде навіть зручніше, ніж в Laravel.
+                    // На кшталт, $product = new Product(); $request = new Request(); if ($product->isValidForWrite($request->params)) ...
+                    // Але не зараз :)
+                    $id = (array_key_exists("id", $rd)) ? (int)$rd["id"] : -1;
+                    $name = (array_key_exists("name", $rd)) ? htmlspecialchars($rd["name"]) : '';
+                    $rd["name"] = $name;
+                    $description = (array_key_exists("description", $rd)) ? htmlspecialchars($rd["description"]) : '';
+                    $rd["description"] = $description;
+                    $imagePath = (array_key_exists("imagePath", $rd)) ? htmlspecialchars($rd["imagePath"]) : '';
+                    $rd["imagePath"] = $imagePath;
+                    $brandId = (array_key_exists("brandId", $rd)) ? (int)$rd["brandId"] : -1;
+                    $categoryId = (array_key_exists("categoryId", $rd)) ? (int)$rd["categoryId"] : -1;
+                    $statusId = (array_key_exists("statusId", $rd)) ? (int)$rd["statusId"] : -1;
+                    $value = (array_key_exists("value", $rd)) ? (int)$rd["value"] : 0;
+                    $price = (array_key_exists("price", $rd)) ? (int)$rd["price"] : 0;
+                    $code1C = (array_key_exists("code1C", $rd)) ? htmlspecialchars($rd["code1C"]) : '';
+                    $rd["code1C"] = $code1C;
+                    if ($id < 0) { $result["message"] = 'Не зазначено обовʼязковий параметр id продукта'; return $result; }
+                    if ($brandId < 0) { $result["message"] = 'Не зазначено обовʼязковий параметр id торгової марки'; return $result; }
+                    if ($categoryId < 0) { $result["message"] = 'Не зазначено обовʼязковий параметр id категорії продукта'; return $result; }
+                    if ($statusId < 0) { $result["message"] = 'Не зазначено обовʼязковий параметр id статуса товара'; return $result; }
+                    if ($name == '') { $result["message"] = 'Не зазначено обовʼязковий параметр name'; return $result; }
+                    $result["success"] = true;
+                    break;
                 default:
                     $result["message"] = 'Невідомий тип запиту, що підлягає валідації';
             }

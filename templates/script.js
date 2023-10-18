@@ -2,7 +2,6 @@ var messageBoxAcceptFunction = function() {}
 var messageBoxCancelFunction = function() {}
 var dictElemForDelete;
 var productIdForDelete;
-var productIdForLoad;
 
 async function ajaxRequest(url = '', data = {}) {
     console.log(url);
@@ -170,7 +169,6 @@ function productImageDelete() {
 function productReloadDataClick(id) {
     if ((typeof id != 'number') || (id < 0)) return;
     if (id > 0) {
-        productIdForLoad = id;
         showConfirmBox('productReloadData');
     } else {
         showConfirmBox('productCancelCreate');
@@ -187,9 +185,55 @@ function productReloadData() {
 
 function productSaveClick(id) {
     if ((typeof id != 'number') || (id < 0)) return;
+    noErrors = true;
     let elem = document.getElementById('productNameInput');
+    let name = elem.value;
+    if (!name) {
+        elem.classList.add('is-invalid');
+        noErrors = false;
+    }
+    /*elem = document.getElementById('productNameInput');
     if (!elem.value) {
         elem.classList.add('is-invalid');
+        noErrors = false;
+    }*/
+    // Решта перевірок
+
+    elem = document.getElementById("productDescriptionTextarea");
+    let description = elem.value;
+
+    elem = document.getElementById("adminProductCardPhoto");
+    let imagePath = elem.dataset.filePath;
+
+    elem = document.getElementById("productBrandSelect");
+    let brandId = elem.dataset.brandId;
+
+    elem = document.getElementById("productCategorySelect");
+    let categoryId = elem.dataset.categoryId;
+
+    elem = document.getElementById("productStatusSelect");
+    let statusId = elem.dataset.statusId;
+
+    elem = document.getElementById("productValueInput");
+    let value = elem.value;
+
+    elem = document.getElementById("productPriceInput");
+    let price = elem.value;
+
+    elem = document.getElementById("productCode1CInput");
+    let code1C = elem.value;
+
+    if (noErrors) {
+        ajaxRequest('API/productupdate.php', { id: id, name: name, description: description, imagePath: imagePath, brandId: brandId, categoryId: categoryId, statusId: statusId, value: value, price: price, code1C: code1C})
+        .then((data) => {
+            console.log(data);
+            if (!data.success) {
+                showMessageBox(data.message);
+            } else {
+                showMessageBox('Збережено.');
+                // Можна перезавантажити сторінку, повернутися до каталога, або ще щось зробити за смаком.
+            }
+        });
     }
 }
 
