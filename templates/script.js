@@ -2,6 +2,7 @@ var messageBoxAcceptFunction = function() {}
 var messageBoxCancelFunction = function() {}
 var dictElemForDelete;
 var productIdForDelete;
+var productIdForLoad;
 
 async function ajaxRequest(url = '', data = {}) {
     console.log(url);
@@ -156,6 +157,42 @@ function productImageSelectClick(file, productId) {
 	});
 }
 
+function productImageDeleteClick() {
+    showConfirmBox('productImageDelete');
+}
+
+function productImageDelete() {
+    let elem = document.getElementById('adminProductCardPhoto');
+    elem.style.backgroundImage = '';
+    elem.dataset.filePath = '';
+}
+
+function productReloadDataClick(id) {
+    if ((typeof id != 'number') || (id < 0)) return;
+    if (id > 0) {
+        productIdForLoad = id;
+        showConfirmBox('productReloadData');
+    } else {
+        showConfirmBox('productCancelCreate');
+    }
+}
+
+function productCancelCreate() {
+    document.location=(document.getElementById("backLink").href);
+}
+
+function productReloadData() {
+    location.reload();
+}
+
+function productSaveClick(id) {
+    if ((typeof id != 'number') || (id < 0)) return;
+    let elem = document.getElementById('productNameInput');
+    if (!elem.value) {
+        elem.classList.add('is-invalid');
+    }
+}
+
 function dictElemAddClick() {
     parentContainer = document.getElementById("dictionaryElementsContainer");
     let newDictElem = document.createElement('div');
@@ -227,6 +264,18 @@ function showConfirmBox(messageId = 0, customText = '') {
     if (messageId == 'productDelete') {
         elem.innerHTML = 'Ви дійсно бажаєте повністю видалити картку товара?';
         messageBoxAcceptFunction = productDelete;
+    }
+    if (messageId == 'productImageDelete') {
+        elem.innerHTML = 'Видалити зображення з картки товару?';
+        messageBoxAcceptFunction = productImageDelete;
+    }
+    if (messageId == 'productReloadData') {
+        elem.innerHTML = 'Відновити всі дані з БД? Всі внесені зміни буде скасовано.';
+        messageBoxAcceptFunction = productReloadData;
+    }
+    if (messageId == 'productCancelCreate') {
+        elem.innerHTML = 'Скасувати створення товару? Всі внесені дані буде загублено.';
+        messageBoxAcceptFunction = productCancelCreate;
     }
     elem = document.getElementById('messageBox');
     elem.style.display = "flex";

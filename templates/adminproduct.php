@@ -6,8 +6,11 @@
               <a id="backLink" href="admincatalog.php<?php if (filled($paramsString)) echo('?'.$paramsString); ?>"><< повернутись до каталога</a>
             </div>
             <div class="input-group">
-              <span class="input-group-text" id="property1">Назва:</span>
-              <input type="text" class="form-control" id="property1input" aria-describedby="property1" value="<?php echo($product["name"]); ?>">
+              <span class="input-group-text">Назва:</span>
+              <input type="text" oninput="checkValue(this);" class="form-control" id="productNameInput" aria-describedby="property1" value="<?php echo($product["name"]); ?>">
+              <div class="invalid-feedback" id="productNameError">
+                Це обовʼязкове поле
+              </div>
             </div>
             <div class="input-group">
               <span class="input-group-text">Опис:</span>
@@ -18,7 +21,7 @@
               <div class="propertySelectGroup rowGap15">
                 <input type="file" accept=".jpg, .jpeg, .png" id="imageSelectInput" onchange="productImageSelectClick(this.files[0], <?php echo($product['id']); ?>); this.value=null;" style="display:none" />
                 <button class="btn btn-primary btn-sm" type="button" onclick="document.getElementById('imageSelectInput').click();">Обрати зображення</button>
-                <button class="btn btn-secondary btn-sm" type="button">Видалити зображення</button>
+                <button class="btn btn-secondary btn-sm" type="button" onclick="productImageDeleteClick();">Видалити зображення</button>
               </div>
             </div>
             <div class="columnGap15 canWrap fullWidthContainer">
@@ -30,7 +33,7 @@
                   <?php } ?>
                 </select>
                 <div class="invalid-feedback">
-                  Текст помилки
+                  Оберіть торгову марку
                 </div>
               </div>
               <div class="propertySelectGroup">
@@ -41,7 +44,7 @@
                   <?php } ?>
                 </select>
                 <div class="invalid-feedback">
-                  Текст помилки
+                  Оберіть категорію
                 </div>
               </div>
               <div class="propertySelectGroup">
@@ -53,7 +56,7 @@
                   <?php } ?>
                 </select>
                 <div class="invalid-feedback">
-                  Текст помилки
+                  Оберіть статус
                 </div>
               </div>
             </div>
@@ -89,8 +92,8 @@
             </div>
             <div></div>
             <div class="columnGap15 canWrap fullWidthContainer">
-              <button class="btn btn-primary" type="button">Зберегти</button>
-              <button class="btn btn-primary" type="button">Скасувати зміни</button>
+              <button class="btn btn-primary" type="button" onclick="productSaveClick(<?php echo($product['id']); ?>);">Зберегти</button>
+              <button class="btn btn-primary" type="button" onclick="productReloadDataClick(<?php echo($product['id']); ?>);">Скасувати зміни</button>
               <button class="btn btn-danger" type="button" onclick="productDeleteClick(<?php echo($product['id']); ?>);">Видалити товар</button>
             </div>
             

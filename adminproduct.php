@@ -24,7 +24,7 @@ use Models\ProductStatus;
     $paramsString = paramsToURIString($params);
 
     $productObj = new Product();
-    $product = $productObj->GetById($params["id"]);
+    $product = ($params["id"] > 0) ? $productObj->GetById($params["id"]) : array();
 
     $brandObj = new Brand();
     $tmpBrands = $brandObj->GetAll();
