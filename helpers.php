@@ -78,10 +78,10 @@
         }
     }
 
-    function returnJSON($HTTPCode = 200, $successExec = true, $message = 'Все добре. Слава Україні!', $id = 0) {
+    function returnJSON($HTTPCode = 200, $successExec = true, $message = 'Все добре. Слава Україні!', $additionalParams = '') {
         header('Content-Type: application/json; charset=utf-8');
         http_response_code($HTTPCode);
-        $answer = array('success' => $successExec, 'message' => $message, 'id' => $id);
+        $answer = array('success' => $successExec, 'message' => $message, 'additionalParams' => json_encode($additionalParams));
         echo json_encode($answer);
         exit;
     }

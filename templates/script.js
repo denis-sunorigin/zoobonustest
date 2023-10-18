@@ -117,6 +117,45 @@ function productDelete() {
     });
 }
 
+function productImageSelectClick(file, productId) {
+    //console.log(file);
+    if (!file || (typeof productId != 'number') || (productId < 0)) return;
+	if (file.size > 3000000) {
+		showMessageBox("Файл зображення має бути розміром не більше 3МБ");
+		return;
+	}
+	let formData = new FormData();
+    formData.append("fileName", file.name);
+    formData.append("size", file.size);
+    formData.append("file", file);
+    formData.append("productId", productId);
+	let xhr = new XMLHttpRequest();
+	let link='API/fileupload.php';
+	xhr.open("POST",link,true);
+	xhr.responseType = "json";
+	xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
+	xhr.setRequestHeader("Content-Security-Policy", "none");
+	xhr.send(formData);
+	xhr.addEventListener("abort", () => reject());
+	xhr.addEventListener("loadend", () => {
+		let response = xhr.response;
+        //console.log(response);
+        if (response.success) {
+            let additionalParams = (response.additionalParams) ? JSON.parse(response.additionalParams) : {};
+            console.log(additionalParams);
+            if (additionalParams) {
+                let elem = document.getElementById('adminProductCardPhoto');
+                elem.style.backgroundImage = 'URL("'+additionalParams.filePath+'")';
+                elem.dataset.filePath = additionalParams.fileName;
+            } else {
+                showMessageBox('Помилка. Не отримано шлях до файла у відповіді сервера.');
+            }
+        } else {
+            showMessageBox('Помилка під час завантаження файла не сервер.');
+        }
+	});
+}
+
 function dictElemAddClick() {
     parentContainer = document.getElementById("dictionaryElementsContainer");
     let newDictElem = document.createElement('div');
@@ -161,9 +200,15 @@ function dictElemConfirmChangesClick(parent) {
         if (!data.success) {
             showMessageBox(data.message);
         } else {
-            parent.dataset.dictElemId = data.id;
-            dictElemSetButtonsToViewMode(parent);
-            showMessageBox('Збережено');
+            let additionalParams = (data.additionalParams) ? JSON.parse(data.additionalParams) : {};
+            console.log(additionalParams);
+            if (additionalParams.id) {
+                parent.dataset.dictElemId = additionalParams.id;
+                dictElemSetButtonsToViewMode(parent);
+                showMessageBox('Збережено');
+            } else {
+                showMessageBox('Невизначена помилка під час збереження елементу');
+            }
         }
     });
 }

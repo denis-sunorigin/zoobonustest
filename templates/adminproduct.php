@@ -14,9 +14,10 @@
               <textarea rows="8" class="form-control"><?php echo($product["description"]); ?></textarea>
             </div>
             <div class="columnGap15 canWrap fullWidthContainer">
-              <div class="adminProductCardPhoto" <?php if (filled($product["image"])) echo("style=\"background-image: URL('".PATHFORUSERIMAGES.$product["image"]."');\""); ?>></div>
+              <div class="adminProductCardPhoto" id="adminProductCardPhoto" <?php if (filled($product["image"])) echo("data-file-path='".PATHFORUSERIMAGES.$product["image"]."' style=\"background-image: URL('".PATHFORUSERIMAGES.$product["image"]."');\""); ?>></div>
               <div class="propertySelectGroup rowGap15">
-                <button class="btn btn-primary btn-sm" type="button">Обрати зображення</button>
+                <input type="file" accept=".jpg, .jpeg, .png" id="imageSelectInput" onchange="productImageSelectClick(this.files[0], <?php echo($product['id']); ?>); this.value=null;" style="display:none" />
+                <button class="btn btn-primary btn-sm" type="button" onclick="document.getElementById('imageSelectInput').click();">Обрати зображення</button>
                 <button class="btn btn-secondary btn-sm" type="button">Видалити зображення</button>
               </div>
             </div>
