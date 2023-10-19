@@ -1,9 +1,9 @@
 <?php include('header.php'); ?>
 
           <div class="mainContentAsSingleColumn">
-            <h2>Адміністрування. Корм для чіхуахуа "Нямням".</h2>
+            <h2><?php if (filled($product["name"])) { echo($product["name"]." &#150; редагування картки товара"); } else { echo("Створення товара."); } ?></h2>
             <div class="alignCenterVert columnGap15 canWrap fullWidthContainer mb-3">
-              <a id="backLink" href="admincatalog.php<?php if (filled($paramsString)) echo('?'.$paramsString); ?>"><< повернутись до каталога</a>
+              <a id="backLink" href="admincatalog.php<?php if (filled($paramsString)) echo('?'.$paramsString); ?>" data-url-params="<?php if (filled($paramsString)) echo($paramsString); ?>"><< повернутись до каталога</a>
             </div>
             <div class="input-group">
               <span class="input-group-text">Назва:</span>
@@ -27,7 +27,8 @@
             <div class="columnGap15 canWrap fullWidthContainer">
               <div class="propertySelectGroup">
                 <label class="form-label">Бренд</label>
-                <select class="form-select" data-brand-id="<?php echo($selectedBrandId); ?>" id="productBrandSelect" required onchange="this.dataset.brandId = this.options[this.selectedIndex].dataset.brandId;">
+                <select class="form-select" data-brand-id="<?php echo($selectedBrandId); ?>" id="productBrandSelect" required onchange="this.dataset.brandId = this.options[this.selectedIndex].dataset.brandId; this.classList.remove('is-invalid');">
+                  <?php if ($selectedBrandId == 0) echo("<option selected disabled value=''>Оберіть бренд...</option>"); ?>
                   <?php foreach($brandList as $brand) { ?>
                     <option data-brand-id="<?php echo($brand["id"]); ?>" value="<?php echo($brand["name"]); ?>" <?php if ($brand["selected"]) echo("selected"); ?>><?php echo($brand["name"]); ?></option>
                   <?php } ?>
@@ -38,7 +39,8 @@
               </div>
               <div class="propertySelectGroup">
                 <label class="form-label">Категорія</label>
-                <select class="form-select" data-category-id="<?php echo($selectedCategoryId); ?>" id="productCategorySelect" required onchange="this.dataset.categoryId = this.options[this.selectedIndex].dataset.categoryId;">
+                <select class="form-select" data-category-id="<?php echo($selectedCategoryId); ?>" id="productCategorySelect" required onchange="this.dataset.categoryId = this.options[this.selectedIndex].dataset.categoryId; this.classList.remove('is-invalid');">
+                  <?php if ($selectedCategoryId == 0) echo("<option selected disabled value=''>Оберіть категорію...</option>"); ?>
                   <?php foreach($categoryList as $category) { ?>
                     <option data-category-id="<?php echo($category["id"]); ?>" value="<?php echo($category["name"]); ?>" <?php if ($category["selected"]) echo("selected"); ?>><?php echo($category["name"]); ?></option>
                   <?php } ?>
@@ -49,8 +51,8 @@
               </div>
               <div class="propertySelectGroup">
                 <label class="form-label">Статус товару</label>
-                  <select class="form-select" data-status-id="<?php echo($selectedStatusId); ?>" id="productStatusSelect" required onchange="this.dataset.statusId = this.options[this.selectedIndex].dataset.statusId;">
-                  <!-- <option selected disabled value="">Оберіть статус...</option> -->
+                  <select class="form-select" data-status-id="<?php echo($selectedStatusId); ?>" id="productStatusSelect" required onchange="this.dataset.statusId = this.options[this.selectedIndex].dataset.statusId; this.classList.remove('is-invalid');">
+                  <?php if ($selectedStatusId == 0) echo("<option selected disabled value=''>Оберіть статус...</option>"); ?>
                   <?php foreach($statusList as $status) { ?>
                     <option data-status-id="<?php echo($status["id"]); ?>" value="<?php echo($status["name"]); ?>" <?php if ($status["selected"]) echo("selected"); ?>><?php echo($status["name"]); ?></option>
                   <?php } ?>

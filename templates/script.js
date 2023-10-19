@@ -186,33 +186,40 @@ function productReloadData() {
 function productSaveClick(id) {
     if ((typeof id != 'number') || (id < 0)) return;
     noErrors = true;
+
     let elem = document.getElementById('productNameInput');
     let name = elem.value;
     if (!name) {
         elem.classList.add('is-invalid');
         noErrors = false;
     }
-    /*elem = document.getElementById('productNameInput');
-    if (!elem.value) {
+
+    elem = document.getElementById("productBrandSelect");
+    let brandId = elem.dataset.brandId;
+    if (brandId == 0) {
         elem.classList.add('is-invalid');
         noErrors = false;
-    }*/
-    // Решта перевірок
+    }
+
+    elem = document.getElementById("productCategorySelect");
+    let categoryId = elem.dataset.categoryId;
+    if (categoryId == 0) {
+        elem.classList.add('is-invalid');
+        noErrors = false;
+    }
+
+    elem = document.getElementById("productStatusSelect");
+    let statusId = elem.dataset.statusId;
+    if (statusId == 0) {
+        elem.classList.add('is-invalid');
+        noErrors = false;
+    }
 
     elem = document.getElementById("productDescriptionTextarea");
     let description = elem.value;
 
     elem = document.getElementById("adminProductCardPhoto");
-    let imagePath = elem.dataset.filePath;
-
-    elem = document.getElementById("productBrandSelect");
-    let brandId = elem.dataset.brandId;
-
-    elem = document.getElementById("productCategorySelect");
-    let categoryId = elem.dataset.categoryId;
-
-    elem = document.getElementById("productStatusSelect");
-    let statusId = elem.dataset.statusId;
+    let imagePath = elem.dataset.filePath ?? "";
 
     elem = document.getElementById("productValueInput");
     let value = elem.value;
@@ -230,8 +237,22 @@ function productSaveClick(id) {
             if (!data.success) {
                 showMessageBox(data.message);
             } else {
-                showMessageBox('Збережено.');
-                // Можна перезавантажити сторінку, повернутися до каталога, або ще щось зробити за смаком.
+                let additionalParams = (data.additionalParams) ? JSON.parse(data.additionalParams) : {};
+                if (additionalParams && additionalParams.id) {
+                    let newId = additionalParams.id;
+                    if (newId != id) {
+                        // Якщо це створення нового товару, то відповідь сервера буде містить реальний новий id, який відрізнятиметься від поточного "0".
+                        let backLinkElem = document.getElementById("backLink");
+                        let currentLinkWithParams = "adminproduct.php?id="+newId;
+                        if (backLinkElem.dataset && backLinkElem.dataset.urlParams) currentLinkWithParams += "&" + backLinkElem.dataset.urlParams;
+                        document.location = currentLinkWithParams;
+                    } else {
+                        // Якщо id такий самий, як і було відправлено, то це не створення, а збереження картки товару.
+                        showMessageBox('Збережено.');
+                    }
+                } else {
+                    showMessageBox('Збережено.');
+                }
             }
         });
     }

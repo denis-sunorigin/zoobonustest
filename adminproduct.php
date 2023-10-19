@@ -57,6 +57,9 @@ use Models\ProductStatus;
     }
 
     $error = '';
+    if (empty($product)) {
+        $product = ["id" => 0, "name" => "", "description" => "", "image" => "", "brandid" => 0, "categoryid" => 0, "statusid" => 0, "value" => 0, "price" => 0, "code1c" => ""];
+    }
 
     render($error, $product, $paramsString, $brandList, $categoryList, $statusList, $selectedBrandId, $selectedCategoryId, $selectedStatusId);
 

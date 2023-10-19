@@ -17,7 +17,7 @@
                   <option value="3">Royal Canin</option>
                 </select>
               </div>
-              <button class="btn btn-primary btn-sm" type="button" onclick="document.location='adminproduct.php?id=0';">Додати товар</button>
+              <button class="btn btn-primary btn-sm" type="button" onclick="document.location='adminproduct.php?id=0<?php if (filled($paramsString)) echo ('&'.$paramsString); ?>';">Додати товар</button>
             </div>
 
             <?php if (filled($productList)) { ?>
